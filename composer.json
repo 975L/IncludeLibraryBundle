@@ -1,0 +1,35 @@
+{
+    "name": "c975l/includelibrary-bundle",
+    "type": "symfony-bundle",
+    "description": "Bundle to include easily main libraries jQuery, Bootstrap, etc. to your html header",
+    "keywords": ["symfony", "bundle", "library"],
+    "homepage": "https://github.com/975L/IncludeLibraryBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Laurent Marquet",
+            "email": "laurent.marquet@laposte.net",
+            "homepage": "https://github.com/Laurent3170",
+            "role": "Developer"
+        },
+        {
+            "name": "975L Community",
+            "homepage": "https://github.com/975L"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "symfony/framework-bundle": "^3",
+        "sensio/framework-extra-bundle": "^3"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": { "c975L\\IncludeLibraryBundle\\": ""
+        }
+    },
+    "support": {
+        "email": "contact@975l.com",
+        "source": "https://github.com/975L/IncludeLibraryBundle",
+        "issues": "https://github.com/975L/IncludeLibraryBundle/issues"
+    }
+}

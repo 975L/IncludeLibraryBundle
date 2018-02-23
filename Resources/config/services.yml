@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+    c975L\IncludeLibraryBundle\Service\:
+        resource: '../../Service/*'
+
+    c975L\IncludeLibraryBundle\Twig\:
+        resource: '../../Twig/*'
