@@ -3,7 +3,30 @@ IncludeLibraryBundle
 
 Fed up of having to look to latest, or specifc, version of jQuery, Bootstrap, etc. IncludeLibraryBundle is made for you ;-)
 
-IncludeLibraryBundle will let you specify which library and version to include, with a version's selector working like for composer.
+Want to replace this
+```html
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous" />
+
+    <script
+        type="text/javascript"
+        src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous">
+    </script>
+```
+
+by this?
+```html
+    {{ inc_lib('bootstrap', 'css', '3.3.7') }}
+    {{ inc_lib('bootstrap', 'js', '3.3.7') }}
+```
+
+IncludeLibraryBundle will let you specify which library and version to include, with a version's selector working like for composer (not yet implemented, working only for defined versions).
 
 [IncludeLibraryBundle dedicated web page](https://975l.com/en/pages/include-library-bundle).
 
@@ -35,7 +58,28 @@ class AppKernel extends Kernel
 }
 ```
 
-
 How to use
 ----------
-Simply add `{{ lib_inc('bootstrap', 'css', '^3') }}` to your header and that's it!
+Simply add `{{ lib_inc(library, type, version) }}` to your header and that's it! Check below for supported libraries and versions.
+
+
+Supported libraries
+===================
+
+Bootstrap
+---------
+- 3.3.7
+
+jQuery
+------
+- 3.2.1
+
+FontAwesome
+-----------
+- 5.0.6
+
+CookieConsent
+-------------
+- 3.0.4
+
+**Feel free to make PR's to add other libraries/versions**

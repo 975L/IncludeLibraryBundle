@@ -1,0 +1,18 @@
+{% spaceless %}
+<link
+    rel="stylesheet"
+    type="text/css"
+{# href #}
+    {% if data.href != null %}
+        href="{{ data.href }}"
+    {% endif %}
+{# integrity #}
+    {% if data.integrity != null %}
+        integrity="{{ data.integrity }}"
+    {% endif %}
+{# crossorigin #}
+    {% if data.crossorigin != null %}
+        crossorigin="{{ data.crossorigin }}"
+    {% endif %}
+ />
+{% endspaceless %}
