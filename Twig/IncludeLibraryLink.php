@@ -36,7 +36,7 @@ class IncludeLibraryLink extends \Twig_Extension
         );
     }
 
-    public function IncludeLibrary(\Twig_Environment $environment, $name, $type, $version = null)
+    public function IncludeLibrary(\Twig_Environment $environment, $name, $type, $version = 'latest')
     {
         //Defines fragment to use
         $fragment = null;
@@ -53,7 +53,7 @@ class IncludeLibraryLink extends \Twig_Extension
         //Returns xhtml code to be included
         if ($fragment !== null && $data != null) {
             return str_replace(array("\n", '  ', '  ', '  ', '  ', '  '), ' ', $environment->render($fragment, array('data' => $data)));
-        //Returns nothing, as nothing has been defined
+        //Returns nothing, as nothing has been found
         } else {
             return;
         }

@@ -60,26 +60,41 @@ class AppKernel extends Kernel
 
 How to use
 ----------
-Simply add `{{ lib_inc(library, type, version) }}` to your header and that's it! Check below for supported libraries and versions.
+Simply add `{{ lib_inc(library, type, version) }}` to your header and that's it!
+- library is the common name of the library, not case sensitive
+- type is `css` or `javascript`
+- Version is the version wanted, it can use wildcards or be omitted to get the latest one
 
+Specific version: `{{ lib_inc('bootstrap', 'css', '3.3.7') }}`
+Latest version: `{{ lib_inc('bootstrap', 'css') }}`
+Wildcard MAJOR version: `{{ lib_inc('bootstrap', 'css', '3.*') }}`
+Wildcard MINOR version: `{{ lib_inc('bootstrap', 'css', '3.3.*') }}`
+Wildcard PATCH version: `{{ lib_inc('bootstrap', 'css', '3.3.3.*') }}`
 
 Supported libraries
 ===================
 
-Bootstrap
----------
+Bootstrap (css + javascript)
+----------------------------
 - 3.3.7
 
-jQuery
-------
+jQuery (javascript)
+-------------------
 - 3.2.1
 
-FontAwesome
------------
+FontAwesome (css)
+-----------------
 - 5.0.6
 
-CookieConsent
--------------
+CookieConsent (css + javascript)
+--------------------------------
 - 3.0.4
 
+How to add libraries and/or versions
+------------------------------------
 **Feel free to make PR's to add other libraries/versions**
+
+- Go in the folder `Libraries`,
+- Open the library class (or add it if not present),
+- Locate the correspondint method `getCss()` or `getJavascript()`,
+- Add versions and wildcards, keeping the latest above

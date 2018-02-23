@@ -27,10 +27,17 @@ class Cookieconsent
         return;
     }
 
+    /*
+     * Refer to README.md for how-to add versions/library
+     */
     public function getCss($version)
     {
         switch ($version) {
+            case 'latest':
+            case '3.*':
+            case '3.0.*':
             case '3.0.4':
+            case '3.0.4.*':
                 $data = array(
                     'href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.4/cookieconsent.min.css',
                 );
@@ -43,10 +50,17 @@ class Cookieconsent
         return $data;
     }
 
+    /*
+     * Refer to README.md for how-to add versions/library
+     */
     public function getJavascript($version)
     {
         switch ($version) {
+            case 'latest':
+            case '3.*':
+            case '3.0.*':
             case '3.0.4':
+            case '3.0.4.*':
                 $data = array(
                     'src' => 'https//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.4/cookieconsent.min.js',
                 );

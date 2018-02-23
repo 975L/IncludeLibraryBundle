@@ -27,10 +27,17 @@ class Bootstrap
         return;
     }
 
+    /*
+     * Refer to README.md for how-to add versions/library
+     */
     public function getCss($version)
     {
         switch ($version) {
+            case 'latest':
+            case '3.*':
+            case '3.3.*':
             case '3.3.7':
+            case '3.3.7.*':
                 $data = array(
                     'href' => 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
                     'integrity' => 'sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u',
@@ -45,10 +52,17 @@ class Bootstrap
         return $data;
     }
 
+    /*
+     * Refer to README.md for how-to add versions/library
+     */
     public function getJavascript($version)
     {
         switch ($version) {
+            case 'latest':
+            case '3.*':
+            case '3.3.*':
             case '3.3.7':
+            case '3.3.7.*':
                 $data = array(
                     'src' => 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
                     'integrity' => 'sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa',

@@ -24,10 +24,17 @@ class Fontawesome
         return;
     }
 
+    /*
+     * Refer to README.md for how-to add versions/library
+     */
     public function getCss($version)
     {
         switch ($version) {
+            case 'latest':
+            case '5.*':
+            case '5.0.*':
             case '5.0.6':
+            case '5.0.6.*':
                 $data = array(
                     'href' => 'https://use.fontawesome.com/releases/v5.0.6/css/all.css',
                 );

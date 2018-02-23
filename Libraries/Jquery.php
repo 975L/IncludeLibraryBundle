@@ -24,10 +24,17 @@ class Jquery
         return;
     }
 
+    /*
+     * Refer to README.md for how-to add versions/library
+     */
     public function getJavascript($version)
     {
         switch ($version) {
+            case 'latest':
+            case '3.*':
+            case '3.2.*':
             case '3.2.1':
+            case '3.2.1.*':
                 $data = array(
                     'src' => 'https://code.jquery.com/jquery-3.2.1.min.js',
                     'integrity' => 'sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=',
