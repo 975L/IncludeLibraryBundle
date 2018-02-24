@@ -37,7 +37,7 @@ Step 1: Download the Bundle
 ---------------------------
 Use [Composer](https://getcomposer.org) to install the library
 ```bash
-    composer require c975l/IncludeLibrary-bundle
+    composer require c975l/includelibrary-bundle
 ```
 
 Step 2: Enable the Bundle
@@ -61,8 +61,8 @@ class AppKernel extends Kernel
 How to use
 ----------
 Simply add `{{ lib_inc(library, type, version) }}` to your header and that's it!
-- library is the common name of the library, indciated below. It is case unsensitive and can have "-" or "_".
-- type is `css` or `javascript`
+- library is the common name of the library, indicated below. It is case unsensitive and can have "-" or "_".
+- type is `css` or `javascript`, also case insensitive
 - Version is the version wanted, it can use wildcards or be omitted to get the latest one
 
 `{{ lib_inc('bootstrap', 'css') }}`: Latest version
@@ -116,7 +116,7 @@ name: popper
 
 How to add libraries and/or versions
 ====================================
-**Feel free to make PR's to add other libraries/versions**
+**Feel free to make PR's to add other libraries/versions :-)**
 
 - Go into the folder `Libraries`,
 - Open the library class (or add it if not present),

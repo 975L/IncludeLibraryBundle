@@ -1,5 +1,10 @@
 # Changelog
 
+v1.3.1
+------
+- Corrected composer require to lowercase in `README.md` (24/02/2018)
+- Added case unsensitive for type value (24/02/2018)
+
 v1.3
 ----
 - Added corrections and re-formatted `README.md` (24/02/2018)

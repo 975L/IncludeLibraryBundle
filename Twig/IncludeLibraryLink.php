@@ -38,6 +38,7 @@ class IncludeLibraryLink extends \Twig_Extension
     {
         //Defines fragment to use
         $fragment = null;
+        $type = strtolower($type);
         if ($type == 'css') {
             $fragment = '@c975LIncludeLibrary/fragments/css.html.twig';
         } elseif ($type == 'js' || $type == 'javascript' || $type == 'jscript' || $type == 'script') {
