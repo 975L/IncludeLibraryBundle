@@ -26,7 +26,7 @@ by this?
     {{ inc_lib('bootstrap', 'js', '3.3.7') }}
 ```
 
-IncludeLibraryBundle will let you specify which library and version to include, with a version's selector working like for composer (not yet implemented, working only for defined versions).
+IncludeLibraryBundle will let you specify which library and version to include, version can use wildcard "*", see "How to use" below.
 
 [IncludeLibraryBundle dedicated web page](https://975l.com/en/pages/include-library-bundle).
 
@@ -65,36 +65,37 @@ Simply add `{{ lib_inc(library, type, version) }}` to your header and that's it!
 - type is `css` or `javascript`
 - Version is the version wanted, it can use wildcards or be omitted to get the latest one
 
-Specific version: `{{ lib_inc('bootstrap', 'css', '3.3.7') }}`
-Latest version: `{{ lib_inc('bootstrap', 'css') }}`
-Wildcard MAJOR version: `{{ lib_inc('bootstrap', 'css', '3.*') }}`
-Wildcard MINOR version: `{{ lib_inc('bootstrap', 'css', '3.3.*') }}`
-Wildcard PATCH version: `{{ lib_inc('bootstrap', 'css', '3.3.3.*') }}`
+`{{ lib_inc('bootstrap', 'css') }}`: Latest version
+
+`{{ lib_inc('bootstrap', 'css', '3.3.7') }}`: Specific version
+
+`{{ lib_inc('bootstrap', 'css', '3.*') }}`: Wildcard MAJOR version
+
+`{{ lib_inc('bootstrap', 'css', '3.3.*') }}`: Wildcard MINOR version
+
+`{{ lib_inc('bootstrap', 'css', '3.3.3.*') }}`: Wildcard PATCH version
 
 Supported libraries
 ===================
 
-Bootstrap (css + javascript)
-----------------------------
+**[Bootstrap](http://getbootstrap.com) (css + javascript)**
 - 3.3.7
 
-jQuery (javascript)
--------------------
+**[jQuery](https://jquery.com) (javascript)**
 - 3.2.1
 
-FontAwesome (css)
------------------
+**[FontAwesome](https://fontawesome.com) (css)**
 - 5.0.6
 
-CookieConsent (css + javascript)
---------------------------------
+**[CookieConsent](https://silktide.com/tools/cookie-consent) (css + javascript)**
 - 3.0.4
 
 How to add libraries and/or versions
-------------------------------------
+====================================
 **Feel free to make PR's to add other libraries/versions**
 
-- Go in the folder `Libraries`,
+- Go into the folder `Libraries`,
 - Open the library class (or add it if not present),
-- Locate the correspondint method `getCss()` or `getJavascript()`,
-- Add versions and wildcards, keeping the latest above
+- Locate the corresponding method `getCss()` or `getJavascript()`,
+- Add versions and wildcards to the switch function, keeping the latest above,
+- Add the needed data (take example as existing one).
