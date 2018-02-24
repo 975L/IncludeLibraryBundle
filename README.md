@@ -61,7 +61,7 @@ class AppKernel extends Kernel
 How to use
 ----------
 Simply add `{{ lib_inc(library, type, version) }}` to your header and that's it!
-- library is the common name of the library, not case sensitive
+- library is the common name of the library, indciated below. It is case unsensitive and can have "-" or "_".
 - type is `css` or `javascript`
 - Version is the version wanted, it can use wildcards or be omitted to get the latest one
 
@@ -79,16 +79,40 @@ Supported libraries
 ===================
 
 **[Bootstrap](http://getbootstrap.com) (css + javascript)**
-- 3.3.7
+
+name: bootstrap
+
+- 3.3.7, 4.0.0
 
 **[jQuery](https://jquery.com) (javascript)**
-- 3.2.1
 
-**[FontAwesome](https://fontawesome.com) (css)**
+name: jquery / jquery-slim
+
+- 2.2.4 > 3.3.1
+
+**[jQueryUI](https://jquery.com/ui) (javascript)**
+
+name: jquery-ui
+
+- 1.12.1
+
+**[FontAwesome](https://fontawesome.com) (css + javascript)**
+
+name: fontawesome / fontawesome-brands / fontawesome-solids
+
 - 5.0.6
 
-**[CookieConsent](https://silktide.com/tools/cookie-consent) (css + javascript)**
-- 3.0.4
+**[CookieConsent](https://cookieconsent.insites.com/) (css + javascript)**
+
+name: cookieconsent
+
+- 3.0.3
+
+**[Popper](https://popper.js.org) (javascript)**
+
+name: popper
+
+- 1.12.9
 
 How to add libraries and/or versions
 ====================================

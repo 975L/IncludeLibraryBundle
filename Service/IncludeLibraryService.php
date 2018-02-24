@@ -13,16 +13,24 @@ class IncludeLibraryService
     public function getData($name, $type, $version)
     {
         //Gets Library name
-        $libraryName = ucfirst(strtolower($name));
+        $libraryName = ucfirst(strtolower(str_replace(array('_', '-'), '', $name)));
 
         //Loads data from library
         if (file_exists(__DIR__ . '/../Libraries/' . $libraryName . '.php')) {
-            include_once(__DIR__ . '/../Libraries/' . $libraryName . '.php');
-
+            //Defines Library to use
             $library = 'c975L\IncludeLibraryBundle\Libraries\\' . $libraryName;
             $libraryObject = new $library();
 
-            return $libraryObject->getData($type, $version);
+            //Defines method to use
+            $method = 'get' . ucfirst($type);
+
+            //Gets data
+            if (method_exists($libraryObject, $method)) {
+                return $libraryObject->$method($version);
+            }
+
+            //Will display an error
+            return null;
         }
 
     return null;

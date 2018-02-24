@@ -1,16 +1,17 @@
 {% spaceless %}
 <script
+    defer
     type="text/javascript"
 {# src #}
-    {% if data.src != null %}
+    {% if data.src is defined %}
         src="{{ data.src }}"
     {% endif %}
 {# integrity #}
-    {% if data.integrity != null %}
+    {% if data.integrity is defined %}
         integrity="{{ data.integrity }}"
     {% endif %}
 {# crossorigin #}
-    {% if data.crossorigin != null %}
+    {% if data.crossorigin is defined %}
         crossorigin="{{ data.crossorigin }}"
     {% endif %}
 ></script>

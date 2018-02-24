@@ -10,40 +10,29 @@
 namespace c975L\IncludeLibraryBundle\Libraries;
 
 /*
- * CookieConsent - https://silktide.com/tools/cookie-consent
+ * CookieConsent - https://cookieconsent.insites.com/
  */
 class Cookieconsent
 {
-    public function getData($type, $version)
-    {
-        //Gets css
-        if ($type == 'css') {
-            return $this->getCss($version);
-        //Gets javascript
-        } elseif ($type == 'javascript') {
-            return $this->getJavascript($version);
-        }
-
-        return;
-    }
-
     /*
-     * Refer to README.md for how-to add versions/library
+     * Refer to README.md for how-to add versions
      */
     public function getCss($version)
     {
         switch ($version) {
             case 'latest':
+
             case '3.*':
             case '3.0.*':
-            case '3.0.4':
-            case '3.0.4.*':
+            case '3.0.3':
+            case '3.0.3.*':
                 $data = array(
-                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.4/cookieconsent.min.css',
+                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css',
                 );
                 break;
+
             default:
-                $data = '';
+                $data = null;
                 break;
         }
 
@@ -51,22 +40,24 @@ class Cookieconsent
     }
 
     /*
-     * Refer to README.md for how-to add versions/library
+     * Refer to README.md for how-to add versions
      */
     public function getJavascript($version)
     {
         switch ($version) {
             case 'latest':
+
             case '3.*':
             case '3.0.*':
-            case '3.0.4':
-            case '3.0.4.*':
+            case '3.0.3':
+            case '3.0.3.*':
                 $data = array(
-                    'src' => 'https//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.4/cookieconsent.min.js',
+                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min',
                 );
                 break;
+
             default:
-                $data = '';
+                $data = null;
                 break;
         }
 

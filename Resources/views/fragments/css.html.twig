@@ -3,15 +3,15 @@
     rel="stylesheet"
     type="text/css"
 {# href #}
-    {% if data.href != null %}
+    {% if data.href is defined %}
         href="{{ data.href }}"
     {% endif %}
 {# integrity #}
-    {% if data.integrity != null %}
+    {% if data.integrity is defined %}
         integrity="{{ data.integrity }}"
     {% endif %}
 {# crossorigin #}
-    {% if data.crossorigin != null %}
+    {% if data.crossorigin is defined %}
         crossorigin="{{ data.crossorigin }}"
     {% endif %}
  />

@@ -7,8 +7,6 @@
  * with this source code in the file LICENSE.
  */
 
-//use c975L\IncludeLibraryBundle\Service\IncludeLibraryService;
-
 namespace c975L\IncludeLibraryBundle\Twig;
 
 class IncludeLibraryLink extends \Twig_Extension
@@ -53,9 +51,9 @@ class IncludeLibraryLink extends \Twig_Extension
         //Returns xhtml code to be included
         if ($fragment !== null && $data != null) {
             return str_replace(array("\n", '  ', '  ', '  ', '  ', '  '), ' ', $environment->render($fragment, array('data' => $data)));
-        //Returns nothing, as nothing has been found
-        } else {
-            return;
         }
+
+        //Throws an error if not found
+        throw new \Twig_Error('The Library "' . $name . ' (' . $type . ') version ' . $version . '" requested via "inc_lib()" was not found. Please check name and supported library/versions.');
     }
 }

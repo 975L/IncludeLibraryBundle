@@ -12,7 +12,7 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 /*
  * Fontawesome - https://fontawesome.com
  */
-class Fontawesome
+class Fontawesomebrands
 {
     /*
      * Refer to README.md for how-to add versions
@@ -27,7 +27,7 @@ class Fontawesome
             case '5.0.6':
             case '5.0.6.*':
                 $data = array(
-                    'href' => 'https://use.fontawesome.com/releases/v5.0.6/css/all.css',
+                    'href' => 'https://use.fontawesome.com/releases/v5.0.6/css/brands.css',
                 );
                 break;
 
@@ -52,7 +52,7 @@ class Fontawesome
             case '5.0.6':
             case '5.0.6.*':
                 $data = array(
-                    'src' => 'https://use.fontawesome.com/releases/v5.0.6/js/all.js',
+                    'src' => 'https://use.fontawesome.com/releases/v5.0.6/js/brands.js',
                 );
                 break;
 

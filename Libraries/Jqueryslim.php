@@ -12,7 +12,7 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 /*
  * jQuery - https://jquery.com
  */
-class Jquery
+class Jqueryslim
 {
     /*
      * Refer to README.md for how-to add versions
@@ -27,8 +27,8 @@ class Jquery
             case '3.3.1':
             case '3.3.1.*':
                 $data = array(
-                    'src' => 'https://code.jquery.com/jquery-3.3.1.min.js',
-                    'integrity' => 'sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=',
+                    'src' => 'https://code.jquery.com/jquery-3.3.1.slim.min.js',
+                    'integrity' => 'sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=',
                     'crossorigin' => 'anonymous',
                 );
                 break;
@@ -36,8 +36,8 @@ class Jquery
             case '3.3.0':
             case '3.3.0.*':
                 $data = array(
-                    'src' => 'https://code.jquery.com/jquery-3.3.0.min.js',
-                    'integrity' => 'sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=',
+                    'src' => 'https://code.jquery.com/jquery-3.3.0.slim.min.js',
+                    'integrity' => 'sha256-AMg3I7ya76OLPD9M+Mk7kqrA29HUn/FuGBfT/9Uf9ls=',
                     'crossorigin' => 'anonymous',
                 );
                 break;
@@ -46,8 +46,8 @@ class Jquery
             case '3.2.1':
             case '3.2.1.*':
                 $data = array(
-                    'src' => 'https://code.jquery.com/jquery-3.2.1.min.js',
-                    'integrity' => 'sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=',
+                    'src' => 'https://code.jquery.com/jquery-3.2.1.slim.min.js',
+                    'integrity' => 'sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=',
                     'crossorigin' => 'anonymous',
                 );
                 break;
@@ -55,8 +55,8 @@ class Jquery
             case '3.2.0':
             case '3.2.0.*':
                 $data = array(
-                    'src' => 'https://code.jquery.com/jquery-3.2.0.min.js',
-                    'integrity' => 'sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=',
+                    'src' => 'https://code.jquery.com/jquery-3.2.0.slim.min.js',
+                    'integrity' => 'sha256-qLAv0kBAihcHZLI3fv3WITKeRsUX27hd6upBBa0MSow=',
                     'crossorigin' => 'anonymous',
                 );
                 break;
@@ -65,8 +65,8 @@ class Jquery
             case '3.1.1':
             case '3.1.1.*':
                 $data = array(
-                    'src' => 'https://code.jquery.com/jquery-3.1.1.min.js',
-                    'integrity' => 'sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=',
+                    'src' => 'https://code.jquery.com/jquery-3.1.1.slim.min.js',
+                    'integrity' => 'sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=',
                     'crossorigin' => 'anonymous',
                 );
                 break;
@@ -74,8 +74,8 @@ class Jquery
             case '3.1.0':
             case '3.1.0.*':
                 $data = array(
-                    'src' => 'https://code.jquery.com/jquery-3.1.0.min.js',
-                    'integrity' => 'sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=',
+                    'src' => 'https://code.jquery.com/jquery-3.1.0.slim.min.js',
+                    'integrity' => 'sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=',
                     'crossorigin' => 'anonymous',
                 );
                 break;
@@ -84,19 +84,8 @@ class Jquery
             case '3.0.0':
             case '3.0.0.*':
                 $data = array(
-                    'src' => 'https://code.jquery.com/jquery-3.0.0.min.js',
-                    'integrity' => 'sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=',
-                    'crossorigin' => 'anonymous',
-                );
-                break;
-
-            case '2.*':
-            case '2.2.*':
-            case '2.2.4':
-            case '2.2.4.*':
-                $data = array(
-                    'src' => 'https://code.jquery.com/jquery-2.2.4.min.js',
-                    'integrity' => 'sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=',
+                    'src' => 'https://code.jquery.com/jquery-3.0.0.slim.min.js',
+                    'integrity' => 'sha256-Rf4BadfyCtsvHmO89BUZcbYvNNvZvOT08ALfEzvCsD0=',
                     'crossorigin' => 'anonymous',
                 );
                 break;
