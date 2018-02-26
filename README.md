@@ -62,7 +62,7 @@ How to use
 ----------
 Simply add `{{ inc_lib('library', 'type', 'version') }}` to your header and that's it!
 - library is the common name of the library, indicated below. It is case unsensitive and can have "-" or "_".
-- type is `css` or `javascript`, also case insensitive
+- type is `css` or `js`, also case insensitive
 - Version is the version wanted, it can use wildcards or be omitted to get the latest one
 
 `{{ inc_lib('bootstrap', 'css') }}`: Latest version
