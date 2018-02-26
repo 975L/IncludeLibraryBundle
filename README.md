@@ -77,7 +77,7 @@ Simply add `{{ inc_lib('library', 'type', 'version') }}` to your header and that
 
 Supported libraries
 ===================
-Use one of the names between '' to specify in the function `inc_lib`.
+Use one of the names between '' to specify in the function `inc_lib` and wildcard for versions as indicated above.
 
 - **[Bootstrap](http://getbootstrap.com) (css + javascript)** -> 'bootstrap': 3.3.7, 4.0.0
 - **[jQuery](https://jquery.com) (javascript)** -> 'jquery', 'jquery-slim': 2.2.4 > 3.3.1
