@@ -10,9 +10,9 @@
 namespace c975L\IncludeLibraryBundle\Libraries;
 
 /*
- * CookieConsent - https://cookieconsent.insites.com
+ * Select2 - https://select2.org
  */
-class Cookieconsent
+class Select2
 {
     /*
      * Refer to README.md for how-to add versions
@@ -22,12 +22,19 @@ class Cookieconsent
         switch ($version) {
             case 'latest':
 
-            case '3.*':
-            case '3.0.*':
-            case '3.0.3':
-            case '3.0.3.*':
+            case '4.*':
+            case '4.0.*':
+            case '4.0.6':
+            case '4.0.6.*':
                 $data = array(
-                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css',
+                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css',
+                );
+                break;
+
+            case '4.0.3':
+            case '4.0.3.*':
+                $data = array(
+                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css',
                 );
                 break;
 
@@ -47,12 +54,19 @@ class Cookieconsent
         switch ($version) {
             case 'latest':
 
-            case '3.*':
-            case '3.0.*':
-            case '3.0.3':
-            case '3.0.3.*':
+            case '4.*':
+            case '4.0.*':
+            case '4.0.6':
+            case '4.0.6.*':
                 $data = array(
-                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min',
+                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js',
+                );
+                break;
+
+            case '4.0.3':
+            case '4.0.3.*':
+                $data = array(
+                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js',
                 );
                 break;
 

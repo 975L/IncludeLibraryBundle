@@ -1,8 +1,13 @@
 # Changelog
 
+v1.3.2
+------
+- Corrected and updated README.md (26/02/2018)
+- Added select2 library (26/02/2018)
+
 v1.3.1
 ------
-- Corrected composer require to lowercase in `README.md` (24/02/2018)
+- Corrected `composer require` to lowercase in `README.md` (24/02/2018)
 - Added case unsensitive for type value (24/02/2018)
 
 v1.3
