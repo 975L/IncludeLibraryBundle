@@ -85,7 +85,7 @@ Use one of the names between '' to specify in the function `inc_lib` and wildcar
 - **[FontAwesome](https://fontawesome.com) (css + javascript)** -> 'fontawesome', 'fontawesome-brands', 'fontawesome-solids': 5.0.6
 - **[CookieConsent](https://cookieconsent.insites.com) (css + javascript)** -> 'cookieconsent': 3.0.3
 - **[Popper](https://popper.js.org) (javascript)** -> 'popper': 1.12.9
-- **[Select2](https://select2.org) (javascript)** -> 'select2': 4.03, 4.0.6-rc-.0
+- **[Select2](https://select2.org) (css + javascript)** -> 'select2': 4.0.3, 4.0.6-rc-.0
 
 How to add libraries and/or versions
 ====================================

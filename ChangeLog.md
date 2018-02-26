@@ -1,8 +1,12 @@
 # Changelog
 
+v1.3.2.1
+--------
+- Corrected select2 versions in `README.md` (26/02/2018)
+
 v1.3.2
 ------
-- Corrected and updated README.md (26/02/2018)
+- Corrected and updated `README.md` (26/02/2018)
 - Added select2 library (26/02/2018)
 
 v1.3.1
