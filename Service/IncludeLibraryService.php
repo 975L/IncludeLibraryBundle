@@ -29,10 +29,11 @@ class IncludeLibraryService
                 return $libraryObject->$method($version);
             }
 
-            //Will display an error
+            //Will throw an error in Twig function
             return null;
         }
 
-    return null;
+        //Will throw an error in Twig function
+        return null;
     }
 }
