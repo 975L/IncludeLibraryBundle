@@ -60,59 +60,31 @@ class AppKernel extends Kernel
 
 How to use
 ----------
-Simply add `{{ lib_inc(library, type, version) }}` to your header and that's it!
+Simply add `{{ inc_lib('library', 'type', 'version') }}` to your header and that's it!
 - library is the common name of the library, indicated below. It is case unsensitive and can have "-" or "_".
 - type is `css` or `javascript`, also case insensitive
 - Version is the version wanted, it can use wildcards or be omitted to get the latest one
 
-`{{ lib_inc('bootstrap', 'css') }}`: Latest version
+`{{ inc_lib('bootstrap', 'css') }}`: Latest version
 
-`{{ lib_inc('bootstrap', 'css', '3.3.7') }}`: Specific version
+`{{ inc_lib('bootstrap', 'css', '3.3.7') }}`: Specific version
 
-`{{ lib_inc('bootstrap', 'css', '3.*') }}`: Wildcard MAJOR version
+`{{ inc_lib('bootstrap', 'css', '3.*') }}`: Wildcard MAJOR version
 
-`{{ lib_inc('bootstrap', 'css', '3.3.*') }}`: Wildcard MINOR version
+`{{ inc_lib('bootstrap', 'css', '3.3.*') }}`: Wildcard MINOR version
 
-`{{ lib_inc('bootstrap', 'css', '3.3.3.*') }}`: Wildcard PATCH version
+`{{ inc_lib('bootstrap', 'css', '3.3.3.*') }}`: Wildcard PATCH version
 
 Supported libraries
 ===================
+Use one of the names between '' to specify in the function `inc_lib`.
 
-**[Bootstrap](http://getbootstrap.com) (css + javascript)**
-
-name: bootstrap
-
-- 3.3.7, 4.0.0
-
-**[jQuery](https://jquery.com) (javascript)**
-
-name: jquery / jquery-slim
-
-- 2.2.4 > 3.3.1
-
-**[jQueryUI](https://jquery.com/ui) (javascript)**
-
-name: jquery-ui
-
-- 1.12.1
-
-**[FontAwesome](https://fontawesome.com) (css + javascript)**
-
-name: fontawesome / fontawesome-brands / fontawesome-solids
-
-- 5.0.6
-
-**[CookieConsent](https://cookieconsent.insites.com/) (css + javascript)**
-
-name: cookieconsent
-
-- 3.0.3
-
-**[Popper](https://popper.js.org) (javascript)**
-
-name: popper
-
-- 1.12.9
+- **[Bootstrap](http://getbootstrap.com) (css + javascript)** -> 'bootstrap': 3.3.7, 4.0.0
+- **[jQuery](https://jquery.com) (javascript)** -> 'jquery', 'jquery-slim': 2.2.4 > 3.3.1
+- **[jQueryUI](https://jquery.com/ui) (javascript)** -> 'jquery-ui': 1.12.1
+- **[FontAwesome](https://fontawesome.com) (css + javascript)** -> 'fontawesome', 'fontawesome-brands', 'fontawesome-solids': 5.0.6
+- **[CookieConsent](https://cookieconsent.insites.com/) (css + javascript)** -> 'cookieconsent': 3.0.3
+- **[Popper](https://popper.js.org) (javascript)** -> 'popper': 1.12.9
 
 How to add libraries and/or versions
 ====================================
