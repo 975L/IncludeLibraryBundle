@@ -1,6 +1,8 @@
 {% spaceless %}
 <script
-    defer
+    {% if not data.defer is defined or data.defer == true %}
+        defer
+    {% endif %}
     type="text/javascript"
 {# src #}
     {% if data.src is defined %}

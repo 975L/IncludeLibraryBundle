@@ -10,9 +10,9 @@
 namespace c975L\IncludeLibraryBundle\Libraries;
 
 /*
- * CookieConsent - https://cookieconsent.insites.com
+ * Bootstrap DatePicker - https://github.com/uxsolutions/bootstrap-datepicker
  */
-class Cookieconsent
+class Bootstrapdatepicker
 {
     /*
      * Refer to README.md for how-to add versions
@@ -22,12 +22,12 @@ class Cookieconsent
         switch ($version) {
             case 'latest':
 
-            case '3.*':
-            case '3.0.*':
-            case '3.0.3':
-            case '3.0.3.*':
+            case '1.*':
+            case '1.7.*':
+            case '1.7.1':
+            case '1.7.1.*':
                 $data = array(
-                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css',
+                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css',
                 );
                 break;
 
@@ -47,12 +47,12 @@ class Cookieconsent
         switch ($version) {
             case 'latest':
 
-            case '3.*':
-            case '3.0.*':
-            case '3.0.3':
-            case '3.0.3.*':
+            case '1.*':
+            case '1.7.*':
+            case '1.7.1':
+            case '1.7.1.*':
                 $data = array(
-                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js',
+                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js',
                 );
                 break;
 

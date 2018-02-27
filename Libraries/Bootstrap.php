@@ -87,6 +87,9 @@ class Bootstrap
                 break;
         }
 
+        //Removes defer attribute
+        $data['defer'] = false;
+
         return $data;
     }
 }

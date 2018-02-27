@@ -1,5 +1,15 @@
 # Changelog
 
+v1.4
+----
+- Added library Bootstrap-DatePicker (27/02/2018)
+- Added possibility to remove `defer` attribute for javascript files (27/02/2018)
+- Removed `defer` attribute for jQuery and Bootstrap javascript files as it may causes problems (27/02/2018)
+- Corrected javascript href value for CookieConsent (27/02/2018)
+- Added Tinymce stable (27/02/2018)
+- Renamed Twig Extension `IncludeLibraryLink` to `IncludeLibraryCode` (27/02/2018)
+- Added Twig Extension `IncludeLibraryLink` to return only the href (css) or src (js) part (27/02/2018)
+
 v1.3.2.1
 --------
 - Corrected select2 versions in `README.md` (26/02/2018)

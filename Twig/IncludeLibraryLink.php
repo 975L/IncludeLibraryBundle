@@ -24,37 +24,24 @@ class IncludeLibraryLink extends \Twig_Extension
     {
         return array(
             new \Twig_SimpleFunction(
-                'inc_lib',
-                array($this, 'IncludeLibrary'),
-                array(
-                'needs_environment' => true,
-                'is_safe' => array('html'),
-                )
+                'inc_link',
+                array($this, 'Link')
             ),
         );
     }
 
-    public function IncludeLibrary(\Twig_Environment $environment, $name, $type, $version = 'latest')
+    public function Link($name, $type, $version = 'latest')
     {
-        //Defines fragment to use
-        $fragment = null;
-        $type = strtolower($type);
-        if ($type == 'css') {
-            $fragment = '@c975LIncludeLibrary/fragments/css.html.twig';
-        } elseif ($type == 'js' || $type == 'javascript' || $type == 'jscript' || $type == 'script') {
-            $fragment = '@c975LIncludeLibrary/fragments/javascript.html.twig';
-            $type = 'javascript';
-        }
-
         //Gets data
+        $type = strtolower($type);
         $data = $this->service->getData($name, $type, $version);
 
-        //Returns xhtml code to be included
-        if ($fragment !== null && $data != null) {
-            return str_replace(array("\n", '  ', '  ', '  ', '  ', '  '), ' ', $environment->render($fragment, array('data' => $data)));
+        //Returns the href or src part
+        if ($data !== null) {
+            return $type == 'css' ? $data['href'] : $data['src'];
         }
 
         //Throws an error if not found
-        throw new \Twig_Error('The Library "' . $name . ' (' . $type . ') version ' . $version . '" requested via "inc_lib()" was not found. Please check name and supported library/versions.');
+        throw new \Twig_Error('The Library "' . $name . ' (' . $type . ') version ' . $version . '" requested via "inc_link()" was not found. Please check name and supported library/versions.');
     }
 }

@@ -75,13 +75,17 @@ Simply add `{{ inc_lib('library', 'type', 'version') }}` to your header and that
 
 `{{ inc_lib('bootstrap', 'css', '3.3.3.*') }}`: Wildcard PATCH version
 
+You can also use `{{ inc_link('bootstrap', 'css', '3.3.3.*') }}` in the same way to get only the href (css) or src (js) part.
+
 Supported libraries
 ===================
 Use one of the names between '' to specify in the function `inc_lib` and wildcard for versions as indicated above.
 
 - **[Bootstrap](http://getbootstrap.com) (css + javascript)** -> 'bootstrap': 3.3.7, 4.0.0
+- **[Bootstrap DatePicker]https://github.com/uxsolutions/bootstrap-datepicker) (css + javascript)** -> 'bootstrap-datepicker': 1.7.1
 - **[jQuery](https://jquery.com) (javascript)** -> 'jquery', 'jquery-slim': 2.2.4 > 3.3.1
 - **[jQueryUI](https://jquery.com/ui) (javascript)** -> 'jquery-ui': 1.12.1
+- **[Tinymce](https://www.tinymce.com) (javascript)** -> 'tinymce': stable
 - **[FontAwesome](https://fontawesome.com) (css + javascript)** -> 'fontawesome', 'fontawesome-brands', 'fontawesome-solids': 5.0.6
 - **[CookieConsent](https://cookieconsent.insites.com) (css + javascript)** -> 'cookieconsent': 3.0.3
 - **[Popper](https://popper.js.org) (javascript)** -> 'popper': 1.12.9
