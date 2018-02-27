@@ -75,7 +75,7 @@ Simply add `{{ inc_lib('library', 'type', 'version') }}` to your header and that
 
 `{{ inc_lib('bootstrap', 'css', '3.3.3.*') }}`: Wildcard PATCH version
 
-You can also use `{{ inc_link('bootstrap', 'css', '3.3.3.*') }}` in the same way to get only the href (css) or src (js) part.
+You can also use `inc_link` in the same way `{{ inc_link('bootstrap', 'css', '3.*') }}` to get only the href (css) or src (js) part (url).
 
 Supported libraries
 ===================

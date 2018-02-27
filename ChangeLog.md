@@ -1,5 +1,9 @@
 # Changelog
 
+v1.4.1
+------
+- Updated `README.md` for `inc_link` (27/02/2018)
+
 v1.4
 ----
 - Added library Bootstrap-DatePicker (27/02/2018)
