@@ -1,5 +1,10 @@
 # Changelog
 
+v1.5.1
+------
+- Better explanation of params for javascript in `README.md` (01/03/2018)
+- Removed the test to include params in Twig template `javascript.html.twig` as not needed (01/03/2018)
+
 v1.5
 ----
 - Added the possibility to provide url params for javascript files (01/03/2018)
