@@ -60,7 +60,7 @@ class AppKernel extends Kernel
 
 How to use
 ----------
-Simply add `{{ inc_lib('library', 'type', 'version') }}` to your header and that's it!
+Simply add `{{ inc_lib('library', 'type', 'version', 'params') }}` to your header and that's it!
 - library is the common name of the library, indicated below. It is case unsensitive and can have "-" or "_".
 - type is `css` or `js`, also case insensitive
 - Version is the version wanted, it can use wildcards or be omitted to get the latest one
@@ -77,9 +77,9 @@ Simply add `{{ inc_lib('library', 'type', 'version') }}` to your header and that
 
 You can also use `inc_link` in the same way `{{ inc_link('bootstrap', 'css', '3.*') }}` to get only the href (css) or src (js) part (url).
 
-If you need to add some url query parameters, you can do so by calling the fourth argument.
+For **javascript**, if you need to add some url query parameters, you can do so by calling the fourth argument of `inc_lib()`.
 
-For example, for Tinymce to provide its apiKey `{{ inc_lib('tinymce', 'js', 'stable', '?apiKey=YOUR_API_KEY') }}`, you simply need to provide the full query parameters, including "?" and "&" as it will added to the srcipt call.
+For example, Tinymce needs an apiKey, so call it like this: `{{ inc_lib('tinymce', 'js', 'stable', '?apiKey=YOUR_API_KEY') }}`, you simply need to provide the full query parameters, including "?" and "&" as it will be added to the srcipt call.
 
 
 Supported libraries
