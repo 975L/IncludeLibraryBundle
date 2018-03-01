@@ -1,5 +1,9 @@
 # Changelog
 
+v1.5
+----
+- Added the possibility to provide url params for javascript files (01/03/2018)
+
 v1.4.1
 ------
 - Updated `README.md` for `inc_link` (27/02/2018)

@@ -34,7 +34,7 @@ class IncludeLibraryCode extends \Twig_Extension
         );
     }
 
-    public function Code(\Twig_Environment $environment, $name, $type, $version = 'latest')
+    public function Code(\Twig_Environment $environment, $name, $type, $version = 'latest', $params = null)
     {
         //Defines fragment to use
         $fragment = null;
@@ -51,7 +51,12 @@ class IncludeLibraryCode extends \Twig_Extension
 
         //Returns xhtml code to be included
         if ($fragment !== null && $data !== null) {
-            return str_replace(array("\n", '  ', '  ', '  ', '  ', '  '), ' ', $environment->render($fragment, array('data' => $data)));
+            $render = $environment->render($fragment, array(
+                'data' => $data,
+                'params' => $params,
+                ));
+
+            return str_replace(array("\n", '  ', '  ', '  ', '  ', '  '), ' ', $render);
         }
 
         //Throws an error if not found

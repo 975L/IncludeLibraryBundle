@@ -77,6 +77,11 @@ Simply add `{{ inc_lib('library', 'type', 'version') }}` to your header and that
 
 You can also use `inc_link` in the same way `{{ inc_link('bootstrap', 'css', '3.*') }}` to get only the href (css) or src (js) part (url).
 
+If you need to add some url query parameters, you can do so by calling the fourth argument.
+
+For example, for Tinymce to provide its apiKey `{{ inc_lib('tinymce', 'js', 'stable', '?apiKey=YOUR_API_KEY') }}`, you simply need to provide the full query parameters, including "?" and "&" as it will added to the srcipt call.
+
+
 Supported libraries
 ===================
 Use one of the names between '' to specify in the function `inc_lib` and wildcard for versions as indicated above.

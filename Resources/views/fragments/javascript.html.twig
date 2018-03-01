@@ -6,7 +6,7 @@
     type="text/javascript"
 {# src #}
     {% if data.src is defined %}
-        src="{{ data.src }}"
+        src="{{ data.src }}{% if params != null %}{{ params }}{% endif %}"
     {% endif %}
 {# integrity #}
     {% if data.integrity is defined %}
