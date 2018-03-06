@@ -32,8 +32,9 @@ class IncludeLibraryLink extends \Twig_Extension
 
     public function Link($name, $type, $version = 'latest')
     {
-        //Gets data
         $type = strtolower($type);
+
+        //Gets data
         $data = $this->service->getData($name, $type, $version);
 
         //Returns the href or src part

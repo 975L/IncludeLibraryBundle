@@ -62,7 +62,7 @@ How to use
 ----------
 Simply add `{{ inc_lib('library', 'type', 'version', 'params') }}` to your header and that's it!
 - library is the common name of the library, indicated below. It is case unsensitive and can have "-" or "_".
-- type is `css` or `js`, also case insensitive
+- type is `css` or `js` or `local`, also case insensitive
 - Version is the version wanted, it can use wildcards or be omitted to get the latest one
 
 `{{ inc_lib('bootstrap', 'css') }}`: Latest version
@@ -75,12 +75,17 @@ Simply add `{{ inc_lib('library', 'type', 'version', 'params') }}` to your heade
 
 `{{ inc_lib('bootstrap', 'css', '3.3.3.*') }}`: Wildcard PATCH version
 
-You can also use `inc_link` in the same way `{{ inc_link('bootstrap', 'css', '3.*') }}` to get only the href (css) or src (js) part (url).
+`{{ inc_lib(absolute_url(asset('css/styles.min.css')), 'local') }}`: local file
 
-For **javascript**, if you need to add some url query parameters, you can do so by calling the fourth argument of `inc_lib()`.
+To include a local file, you need to provide an absolute url. **Important** the type is determined by the extension of the file, so it has to be '.css' or '.js'. While it's not really useful for `inc_lib()`, it is for `inc_content()` as it will allow to include content of in the html, which can be useful when creating PDF files with `wkhtmltopdf` for example.
+
+You can also use `inc_link` in the same way `{{ inc_link('bootstrap', 'css', '3.*') }}` to get only the href (css) or src (js) part (url). **Does not work for a local file** as it will return the same thing as required.
+
+If you need to get the content to include, i.e. for `wkhtmltopdf`, you can use the function `inc_content` in the same way `{{ inc_content('bootstrap', 'css', '3.*') }}`. Works also for local file. Content will be wrapped within `<style type="text/css"></style>` for `css` and `<script type="text/javascript"></script>` for `js`.
+
+For **javascript**, if you need to add some url query parameters, you can do so by calling the fourth argument `params` of `inc_lib()`. Works also for local file.
 
 For example, Tinymce needs an apiKey, so call it like this: `{{ inc_lib('tinymce', 'js', 'stable', '?apiKey=YOUR_API_KEY') }}`, you simply need to provide the full query parameters, including "?" and "&" as it will be added to the srcipt call.
-
 
 Supported libraries
 ===================

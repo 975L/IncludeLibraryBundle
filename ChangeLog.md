@@ -1,5 +1,10 @@
 # Changelog
 
+v1.6
+----
+- Added Twig Extension `IncludeLibraryContent` (06/03/2018)
+- Added possibility to call a local file (06/03/2018)
+
 v1.5.1
 ------
 - Better explanation of params for javascript in `README.md` (01/03/2018)
