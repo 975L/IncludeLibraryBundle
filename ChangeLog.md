@@ -1,5 +1,9 @@
 # Changelog
 
+v1.6.1
+------
+- Updated `README.md` (06/03/2018)
+
 v1.6
 ----
 - Added Twig Extension `IncludeLibraryContent` (06/03/2018)
