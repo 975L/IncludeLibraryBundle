@@ -9,7 +9,7 @@
 
 namespace c975L\IncludeLibraryBundle\Twig;
 
-class IncludeLibraryCode extends \Twig_Extension
+class IncludeLibraryContent extends \Twig_Extension
 {
     private $service;
 
@@ -24,17 +24,16 @@ class IncludeLibraryCode extends \Twig_Extension
     {
         return array(
             new \Twig_SimpleFunction(
-                'inc_lib',
-                array($this, 'Code'),
+                'inc_content',
+                array($this, 'Content'),
                 array(
-                    'needs_environment' => true,
                     'is_safe' => array('html'),
                 )
             ),
         );
     }
 
-    public function Code(\Twig_Environment $environment, $name, $type, $version = 'latest', $params = null)
+    public function Content($name, $type, $version = 'latest')
     {
         $type = strtolower($type);
 
@@ -45,15 +44,6 @@ class IncludeLibraryCode extends \Twig_Extension
             $type = strtolower(substr($name, strrpos($name, '.') + 1));
         }
 
-        //Defines fragment to use
-        $fragment = null;
-        if ($type == 'css') {
-            $fragment = '@c975LIncludeLibrary/fragments/css.html.twig';
-        } elseif ($type == 'js' || $type == 'javascript' || $type == 'jscript' || $type == 'script') {
-            $fragment = '@c975LIncludeLibrary/fragments/javascript.html.twig';
-            $type = 'javascript';
-        }
-
         //Gets data for local file
         if ($local === true) {
             $data = $type == 'css' ? array('href' => $name) : array('src' => $name);
@@ -62,17 +52,19 @@ class IncludeLibraryCode extends \Twig_Extension
             $data = $this->service->getData($name, $type, $version);
         }
 
-        //Returns xhtml code to be included
-        if ($fragment !== null && $data !== null) {
-            $render = $environment->render($fragment, array(
-                'data' => $data,
-                'params' => $params,
-                ));
+        //Returns the content from href or src part
+        if ($data !== null) {
+            $content = null;
+            if ($type == 'css') {
+                $content = '<style type="text/css">' . file_get_contents($data['href']) . '</style>';
+            } elseif ($type == 'js') {
+                $content = '<script type="text/javascript">' . file_get_contents($data['src']) . '</script>';
+            }
 
-            return str_replace(array("\n", '  ', '  ', '  ', '  ', '  '), ' ', $render);
+            return $content;
         }
 
         //Throws an error if not found
-        throw new \Twig_Error('The Library "' . $name . ' (' . $type . ') version ' . $version . '" requested via "inc_lib()" was not found. Please check name and supported library/versions.');
+        throw new \Twig_Error('The Library "' . $name . ' (' . $type . ') version ' . $version . '" requested via "inc_content()" was not found. Please check name and supported library/versions.');
     }
 }
