@@ -62,8 +62,9 @@ How to use
 ----------
 Simply add `{{ inc_lib('library', 'type', 'version', 'params') }}` to your header and that's it!
 - library is the common name of the library, indicated below. It is case unsensitive and can have "-" or "_".
-- type is `css` or `js` or `local`, also case insensitive
-- Version is the version wanted, it can use wildcards or be omitted to get the latest one
+- type is `css` or `js` or `local`, also case insensitive.
+- version is the version wanted, it can use wildcard or be omitted to get the latest one.
+- params is the parameters you want to add when calling a javascript.
 
 Examples
 --------
@@ -81,11 +82,11 @@ Examples
 
 Local file
 ----------
-To include a local file, you need to provide an absolute url. **Important** the type is determined by the extension of the file, so it has to be '.css' or '.js'. While it's not really useful for `inc_lib()`, it is for `inc_content()` as it will allow to include content of in the html, which can be useful when creating PDF files with `wkhtmltopdf` for example.
+To include a local file, you need to provide an absolute url. **Important** the type is determined by the extension of the file, so it has to be '.css' or '.js'. While it's not really useful for `inc_lib()`, it is for `inc_content()` as it will allow to include the content of the called library in the html, which can be useful when creating PDF files with `wkhtmltopdf` for example.
 
 Just get link
 -------------
-You can also use `inc_link` in the same way `{{ inc_link('bootstrap', 'css', '3.*') }}` to get only the href (css) or src (js) part (url). **Does not work for a local file** as it will return the same thing as required.
+You can also use `inc_link` in the same way `{{ inc_link('bootstrap', 'css', '3.*') }}` to get only the href (css) or src (js) part (url). **Does not work for a local file** as it will return the same url as provided.
 
 For example, Tinymce needs to get the css used on the website to display using those styles, so we need to provide it the url, `inc_link` will do so :
 ```javascript
@@ -111,7 +112,7 @@ For example, Tinymce needs an apiKey, so call it like this: `{{ inc_lib('tinymce
 
 Supported libraries
 ===================
-Use following names and versions (+ wildcard if wanted, as indicated above) in the function `inc_lib`:
+Use following names and versions (+ wildcard if wanted, as indicated above) in the functions `inc_lib`, `inc_link` or `inc_content`:
 
 - **[Bootstrap](http://getbootstrap.com) (css + javascript)** -> `bootstrap`: 3.3.7, 4.0.0
 - **[Bootstrap DatePicker](https://github.com/uxsolutions/bootstrap-datepicker) (css + javascript)** -> `bootstrap-datepicker`: 1.7.1
