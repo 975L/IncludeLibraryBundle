@@ -26,7 +26,9 @@ by this?
     {{ inc_lib('bootstrap', 'js', '3.3.7') }}
 ```
 
-IncludeLibraryBundle will let you specify which library and version to include, version can use wildcard "*", see "How to use" below.
+IncludeLibraryBundle will let you specify which library and version to include, version can use wildcard "*". **It will do a lot more**, see "How to use" below.
+
+**You can also include [Google Font](https://fonts.google.com), see below.**
 
 [IncludeLibraryBundle dedicated web page](https://975l.com/en/pages/include-library-bundle).
 
@@ -60,8 +62,12 @@ class AppKernel extends Kernel
 
 How to use
 ----------
+IncludeLibraryBundle provide the following Twig extension functions `inc_lib()`, `inc_link()`, `inc_content()` and `inc_font()`
+
+Include Library - `inc_lib()`
+-----------------------------
 Simply add `{{ inc_lib('library', 'type', 'version', 'params') }}` to your header and that's it!
-- library is the common name of the library, indicated below. It is case unsensitive and can have "-" or "_".
+- library is the name of the library (see below Supported libraries). It is case unsensitive and can have "-" or "_", if you want to use 'BoOsTrap', it will work ;-).
 - type is `css` or `js` or `local`, also case insensitive.
 - version is the version wanted, it can use wildcard or be omitted to get the latest one.
 - params is the parameters you want to add when calling a javascript.
@@ -82,10 +88,16 @@ Examples
 
 Local file
 ----------
-To include a local file, you need to provide an absolute url. **Important** the type is determined by the extension of the file, so it has to be '.css' or '.js'. While it's not really useful for `inc_lib()`, it is for `inc_content()` as it will allow to include the content of the called library in the html, which can be useful when creating PDF files with `wkhtmltopdf` for example.
+To include a local file, you need to provide an **absolute url**. **Important** the type is determined by the extension provided in the url, so it has to be '.css' or '.js'. While it's not really useful for `inc_lib()`, it is for `inc_content()` (see below) as it will allow to include the content of the called library in the html, which can be useful when creating PDF files with `wkhtmltopdf` for example.
 
-Just get link
--------------
+Javascript parameters
+---------------------
+For **javascript**, if you need to add some url query parameters, you can do so by calling the fourth argument `params` of `inc_lib()`. Works also for local file.
+
+For example, Tinymce needs an apiKey, so call it like this: `{{ inc_lib('tinymce', 'js', 'stable', '?apiKey=YOUR_API_KEY') }}`, you simply need to provide the full query parameters, including "?" and "&" as it will be added to the srcipt call.
+
+Just get link - `inc_link()`
+----------------------------
 You can also use `inc_link` in the same way `{{ inc_link('bootstrap', 'css', '3.*') }}` to get only the href (css) or src (js) part (url). **Does not work for a local file** as it will return the same url as provided.
 
 For example, Tinymce needs to get the css used on the website to display using those styles, so we need to provide it the url, `inc_link` will do so :
@@ -100,15 +112,13 @@ For example, Tinymce needs to get the css used on the website to display using t
 </script>
 ```
 
-Get content
------------
+Get content - `inc_content()`
+-----------------------------
 If you need to get the content to include, i.e. for `wkhtmltopdf`, you can use the function `inc_content` in the same way `{{ inc_content('bootstrap', 'css', '3.*') }}`. Works also for local file. Content will be wrapped within `<style type="text/css"></style>` for `css` and `<script type="text/javascript"></script>` for `js`.
 
-Javascript parameters
----------------------
-For **javascript**, if you need to add some url query parameters, you can do so by calling the fourth argument `params` of `inc_lib()`. Works also for local file.
-
-For example, Tinymce needs an apiKey, so call it like this: `{{ inc_lib('tinymce', 'js', 'stable', '?apiKey=YOUR_API_KEY') }}`, you simply need to provide the full query parameters, including "?" and "&" as it will be added to the srcipt call.
+Include Google font - `inc_font()`
+----------------------------------
+All you have to do is to worry about its name! Find your [Google Font](https://fonts.google.com/), pick its name and call it with `{{ inc_font('FONT_NAME') }}`. That's it! Now you can refer, using the same names in your css files!
 
 Supported libraries
 ===================

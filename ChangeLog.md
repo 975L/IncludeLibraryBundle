@@ -1,5 +1,10 @@
 # Changelog
 
+v1.7
+----
+- Added `inc_font()` to include Google font ! (08/03/2018)
+- Re-ordered `README.md` (08/03/2018)
+
 v1.6.1.1
 --------
 - Updated `README.md` (07/03/2018)
