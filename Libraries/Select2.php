@@ -17,7 +17,7 @@ class Select2
     /*
      * Refer to README.md for how-to add versions
      */
-    public function getCss($version, $params)
+    public function getCss($version)
     {
         switch ($version) {
             case 'latest':

@@ -1,5 +1,9 @@
 # Changelog
 
+v1.7.1
+------
+- Corrected `Select2 > getCss()` (09/03/2018)
+
 v1.7
 ----
 - Added `inc_font()` to include Google font ! (08/03/2018)
