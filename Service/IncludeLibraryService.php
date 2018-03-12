@@ -28,9 +28,6 @@ class IncludeLibraryService
             if (method_exists($libraryObject, $method)) {
                 return $libraryObject->$method($version);
             }
-
-            //Will throw an error in Twig function
-            return null;
         }
 
         //Will throw an error in Twig function
