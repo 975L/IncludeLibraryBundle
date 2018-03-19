@@ -1,5 +1,12 @@
 # Changelog
 
+v1.7.2
+------
+- Added fontawesome 5.0.4 + 5.0.8 + 5.0.6 missing data (19/03/2018)
+- Added fontawesomeregular (19/03/2018)
+- Added fontawesomebase as it has to be there when using brands, solid or regular (19/03/2018)
+- Renamed library `Fontawesomesolids` to `Fontawesomesolid` (without final "s") [BC-Break] (19/03/2018)
+
 v1.7.1
 ------
 - Corrected `Select2 > getCss()` (09/03/2018)
