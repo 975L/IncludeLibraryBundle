@@ -12,7 +12,7 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 /*
  * Fontawesome - https://fontawesome.com
  */
-class Fontawesome
+class Fontawesomeregular
 {
     /*
      * Refer to README.md for how-to add versions
