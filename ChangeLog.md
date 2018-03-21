@@ -1,5 +1,9 @@
 # Changelog
 
+v1.7.3
+------
+- Corrected classes names for `Fontawesomebase` and `Fontawesomeregular` (21/03/2018)
+
 v1.7.2
 ------
 - Added fontawesome 5.0.4 + 5.0.8 + 5.0.6 missing data (19/03/2018)
