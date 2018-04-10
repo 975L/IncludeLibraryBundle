@@ -1,5 +1,10 @@
 # Changelog
 
+v1.7.4
+------
+- Added popper 1.14.0 (10/04/2018)
+- Added bootstrap 4.1.0 (10/04/2018)
+
 v1.7.3
 ------
 - Corrected classes names for `Fontawesomebase` and `Fontawesomeregular` (21/03/2018)
