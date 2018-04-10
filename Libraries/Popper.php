@@ -23,6 +23,16 @@ class Popper
             case 'latest':
 
             case '1.*':
+            case '1.14.*':
+            case '1.14.0':
+            case '1.14.0.*':
+                $data = array(
+                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js',
+                    'integrity' => 'sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ',
+                    'crossorigin' => 'anonymous',
+                );
+                break;
+
             case '1.12.*':
             case '1.12.9':
             case '1.12.9.*':
