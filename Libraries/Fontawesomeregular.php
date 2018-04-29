@@ -84,6 +84,22 @@ class Fontawesomeregular
 
             case '5.*':
             case '5.0.*':
+            case '5.0.10':
+            case '5.0.10.*':
+                $data = array(
+                    'src' => 'https://use.fontawesome.com/releases/v5.0.10/js/regular.js',
+                    'integrity' => 'sha384-JWLWlnwX0pRcCBsI3ZzOEyVDoUmngnFnbXR9VedCc3ko4R3xDG+KTMYmVciWbf4N',
+                    'crossorigin' => 'anonymous',
+                );
+
+            case '5.0.9':
+            case '5.0.9.*':
+                $data = array(
+                    'src' => 'https://use.fontawesome.com/releases/v5.0.9/js/regular.js',
+                    'integrity' => 'sha384-BazKgf1FxrIbS1eyw7mhcLSSSD1IOsynTzzleWArWaBKoA8jItTB5QR+40+4tJT1',
+                    'crossorigin' => 'anonymous',
+                );
+
             case '5.0.8':
             case '5.0.8.*':
                 $data = array(

@@ -84,6 +84,22 @@ class Fontawesomebrands
 
             case '5.*':
             case '5.0.*':
+            case '5.0.10':
+            case '5.0.10.*':
+                $data = array(
+                    'src' => 'https://use.fontawesome.com/releases/v5.0.10/js/brands.js',
+                    'integrity' => 'sha384-6jhVhr5a+Z1nLr9h+fd7ocMEo847wnGFelCHddaOOACUeZNoQwFXTxh4ysXVam8u',
+                    'crossorigin' => 'anonymous',
+                );
+
+            case '5.0.9':
+            case '5.0.9.*':
+                $data = array(
+                    'src' => 'https://use.fontawesome.com/releases/v5.0.9/js/brands.js',
+                    'integrity' => 'sha384-qJKAzpOXfvmSjzbmsEtlYziSrpVjh5ROPNqb8UZ60myWy7rjTObnarseSKotmJIx',
+                    'crossorigin' => 'anonymous',
+                );
+
             case '5.0.8':
             case '5.0.8.*':
                 $data = array(
