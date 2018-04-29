@@ -24,6 +24,22 @@ class Fontawesomebrands
 
             case '5.*':
             case '5.0.*':
+            case '5.0.10':
+            case '5.0.10.*':
+                $data = array(
+                    'href' => 'https://use.fontawesome.com/releases/v5.0.10/css/brands.css',
+                    'integrity' => 'sha384-KtmfosZaF4BaDBojD9RXBSrq5pNEO79xGiggBxf8tsX+w2dBRpVW5o0BPto2Rb2F',
+                    'crossorigin' => 'anonymous',
+                );
+
+            case '5.0.9':
+            case '5.0.9.*':
+                $data = array(
+                    'href' => 'https://use.fontawesome.com/releases/v5.0.9/css/brands.css',
+                    'integrity' => 'sha384-ATC/oZittI09GYIoscTZKDdBr/kI3lCwzw3oBMnOYCPVNJ4i7elNlCxSgLfdfFbl',
+                    'crossorigin' => 'anonymous',
+                );
+
             case '5.0.8':
             case '5.0.8.*':
                 $data = array(

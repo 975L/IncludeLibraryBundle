@@ -129,7 +129,7 @@ Use following names and versions (+ wildcard if wanted, as indicated above) in t
 - **[jQuery](https://jquery.com) (javascript)** -> `jquery`, `jquery-slim`: 2.2.4 > 3.3.1
 - **[jQueryUI](https://jquery.com/ui) (javascript)** -> `jquery-ui`: 1.12.1
 - **[Tinymce](https://www.tinymce.com) (javascript)** -> `tinymce`: stable
-- **[FontAwesome](https://fontawesome.com) (css + javascript)** -> `fontawesome`, `fontawesome-base`, `fontawesome-regular`, `fontawesome-brands`, `fontawesome-solid`: 5.0.4, 5.0.6, 5.0.8
+- **[FontAwesome](https://fontawesome.com) (css + javascript)** -> `fontawesome`, `fontawesome-base`, `fontawesome-regular`, `fontawesome-brands`, `fontawesome-solid`: 5.0.4, 5.0.6, 5.0.8, 5.0.9, 5.0.10
 - **[CookieConsent](https://cookieconsent.insites.com) (css + javascript)** -> `cookieconsent`: 3.0.3
 - **[Popper](https://popper.js.org) (javascript)** -> `popper`: 1.12.9, 1.14.0
 - **[Select2](https://select2.org) (css + javascript)** -> `select2`: 4.0.3, 4.0.6-rc-.0

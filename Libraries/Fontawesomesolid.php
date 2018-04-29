@@ -24,6 +24,22 @@ class Fontawesomesolid
 
             case '5.*':
             case '5.0.*':
+            case '5.0.10':
+            case '5.0.10.*':
+                $data = array(
+                    'href' => 'https://use.fontawesome.com/releases/v5.0.10/css/solid.css',
+                    'integrity' => 'sha384-HTDlLIcgXajNzMJv5hiW5s2fwegQng6Hi+fN6t5VAcwO/9qbg2YEANIyKBlqLsiT',
+                    'crossorigin' => 'anonymous',
+                );
+
+            case '5.0.9':
+            case '5.0.9.*':
+                $data = array(
+                    'href' => 'https://use.fontawesome.com/releases/v5.0.9/css/solid.css',
+                    'integrity' => 'sha384-29Ax2Ao1SMo9Pz5CxU1KMYy+aRLHmOu6hJKgWiViCYpz3f9egAJNwjnKGgr+BXDN',
+                    'crossorigin' => 'anonymous',
+                );
+
             case '5.0.8':
             case '5.0.8.*':
                 $data = array(
