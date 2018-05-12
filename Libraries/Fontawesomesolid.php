@@ -24,6 +24,22 @@ class Fontawesomesolid
 
             case '5.*':
             case '5.0.*':
+            case '5.0.13':
+            case '5.0.13.*':
+                $data = array(
+                    'href' => 'https://use.fontawesome.com/releases/v5.0.13/css/solid.css',
+                    'integrity' => 'sha384-Rw5qeepMFvJVEZdSo1nDQD5B6wX0m7c5Z/pLNvjkB14W6Yki1hKbSEQaX9ffUbWe',
+                    'crossorigin' => 'anonymous',
+                );
+
+            case '5.0.12':
+            case '5.0.12.*':
+                $data = array(
+                    'href' => 'https://use.fontawesome.com/releases/v5.0.12/css/solid.css',
+                    'integrity' => 'sha384-VxweGom9fDoUf7YfLTHgO0r70LVNHP5+Oi8dcR4hbEjS8UnpRtrwTx7LpHq/MWLI',
+                    'crossorigin' => 'anonymous',
+                );
+
             case '5.0.10':
             case '5.0.10.*':
                 $data = array(
@@ -84,6 +100,22 @@ class Fontawesomesolid
 
             case '5.*':
             case '5.0.*':
+            case '5.0.13':
+            case '5.0.13.*':
+                $data = array(
+                    'src' => 'https://use.fontawesome.com/releases/v5.0.13/js/solid.js',
+                    'integrity' => 'sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ',
+                    'crossorigin' => 'anonymous',
+                );
+
+            case '5.0.12':
+            case '5.0.12.*':
+                $data = array(
+                    'src' => 'https://use.fontawesome.com/releases/v5.0.12/js/solid.js',
+                    'integrity' => 'sha384-652/z7yNdGONCCBu0u5h5uF9voJhBdgruAuIDVheEaQ7O/ZC9wyyV+yZsYb32Wy7',
+                    'crossorigin' => 'anonymous',
+                );
+
             case '5.0.10':
             case '5.0.10.*':
                 $data = array(

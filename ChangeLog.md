@@ -1,5 +1,9 @@
 # Changelog
 
+v1.7.6
+------
+- Added fontawesome 5.0.12 + 5.0.13 (12/05/2018)
+
 v1.7.5.1
 --------
 - Added javascript versions for FontAwesome (29/04/2018)
