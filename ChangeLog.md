@@ -1,5 +1,14 @@
 # Changelog
 
+v1.7.7
+------
+- Removed 'type="text/javascript"' for js include (24/05/2018)
+- Removed 'type="text/css"' for css include (24/05/2018)
+
+v1.7.6.1
+--------
+- Removed required in composer.json (22/05/2018)
+
 v1.7.6
 ------
 - Added fontawesome 5.0.12 + 5.0.13 (12/05/2018)
