@@ -23,6 +23,15 @@ class Fontawesome
             case 'latest':
 
             case '5.*':
+            case '5.1.*':
+            case '5.1.0':
+            case '5.1.0.*':
+                $data = array(
+                    'href' => 'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
+                    'integrity' => 'sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt',
+                    'crossorigin' => 'anonymous',
+                );
+
             case '5.0.*':
             case '5.0.13':
             case '5.0.13.*':
@@ -99,6 +108,15 @@ class Fontawesome
             case 'latest':
 
             case '5.*':
+            case '5.1.*':
+            case '5.1.0':
+            case '5.1.0.*':
+                $data = array(
+                    'src' => 'https://use.fontawesome.com/releases/v5.1.0/js/all.js',
+                    'integrity' => 'sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9',
+                    'crossorigin' => 'anonymous',
+                );
+
             case '5.0.*':
             case '5.0.13':
             case '5.0.13.*':

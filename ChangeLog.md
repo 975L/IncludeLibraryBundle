@@ -1,5 +1,9 @@
 # Changelog
 
+v1.7.8
+------
+- Added v5.1.0 for Fontawesome (23/06/2018)
+
 v1.7.7
 ------
 - Removed 'type="text/javascript"' for js include (24/05/2018)
