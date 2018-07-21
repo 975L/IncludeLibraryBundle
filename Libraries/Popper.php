@@ -9,10 +9,12 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
+use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
+
 /*
  * jQuery - https://popper.js.org
  */
-class Popper
+class Popper implements JavascriptInterface
 {
     /*
      * Refer to README.md for how-to add versions
@@ -24,6 +26,13 @@ class Popper
 
             case '1.*':
             case '1.14.*':
+            case '1.14.3':
+            case '1.14.3.*':
+                $data = array(
+                    'src' => 'https://unpkg.com/popper.js@1.14.3/dist/umd/popper.min.js',
+                );
+                break;
+
             case '1.14.0':
             case '1.14.0.*':
                 $data = array(

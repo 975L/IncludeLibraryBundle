@@ -9,10 +9,12 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
+use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
+
 /*
  * Tinymce - https://www.tinymce.com
  */
-class Tinymce
+class Tinymce implements JavascriptInterface
 {
     /*
      * Refer to README.md for how-to add versions

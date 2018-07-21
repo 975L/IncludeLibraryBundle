@@ -9,10 +9,13 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
+use c975L\IncludeLibraryBundle\Libraries\CssInterface;
+use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
+
 /*
  * Fontawesome - https://fontawesome.com
  */
-class Fontawesomesolid
+class Fontawesomesolid implements CssInterface, JavascriptInterface
 {
     /*
      * Refer to README.md for how-to add versions
@@ -24,6 +27,15 @@ class Fontawesomesolid
 
             case '5.*':
             case '5.1.*':
+            case '5.1.1':
+            case '5.1.1.*':
+                $data = array(
+                    'href' => 'https://use.fontawesome.com/releases/v5.1.1/css/solid.css',
+                    'integrity' => 'sha384-S2gVFTIn1tJ/Plf+40+RRAxBCiBU5oAMFUJxTXT3vOlxtXm7MGjVj62mDpbujs4C',
+                    'crossorigin' => 'anonymous',
+                );
+                break;
+
             case '5.1.0':
             case '5.1.0.*':
                 $data = array(
@@ -31,6 +43,7 @@ class Fontawesomesolid
                     'integrity' => 'sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp',
                     'crossorigin' => 'anonymous',
                 );
+                break;
 
             case '5.0.*':
             case '5.0.13':
@@ -40,6 +53,7 @@ class Fontawesomesolid
                     'integrity' => 'sha384-Rw5qeepMFvJVEZdSo1nDQD5B6wX0m7c5Z/pLNvjkB14W6Yki1hKbSEQaX9ffUbWe',
                     'crossorigin' => 'anonymous',
                 );
+                break;
 
             case '5.0.12':
             case '5.0.12.*':
@@ -48,6 +62,7 @@ class Fontawesomesolid
                     'integrity' => 'sha384-VxweGom9fDoUf7YfLTHgO0r70LVNHP5+Oi8dcR4hbEjS8UnpRtrwTx7LpHq/MWLI',
                     'crossorigin' => 'anonymous',
                 );
+                break;
 
             case '5.0.10':
             case '5.0.10.*':
@@ -56,6 +71,7 @@ class Fontawesomesolid
                     'integrity' => 'sha384-HTDlLIcgXajNzMJv5hiW5s2fwegQng6Hi+fN6t5VAcwO/9qbg2YEANIyKBlqLsiT',
                     'crossorigin' => 'anonymous',
                 );
+                break;
 
             case '5.0.9':
             case '5.0.9.*':
@@ -64,6 +80,7 @@ class Fontawesomesolid
                     'integrity' => 'sha384-29Ax2Ao1SMo9Pz5CxU1KMYy+aRLHmOu6hJKgWiViCYpz3f9egAJNwjnKGgr+BXDN',
                     'crossorigin' => 'anonymous',
                 );
+                break;
 
             case '5.0.8':
             case '5.0.8.*':
@@ -72,6 +89,7 @@ class Fontawesomesolid
                     'integrity' => 'sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk',
                     'crossorigin' => 'anonymous',
                 );
+                break;
 
             case '5.0.6':
             case '5.0.6.*':
@@ -109,6 +127,15 @@ class Fontawesomesolid
 
             case '5.*':
             case '5.1.*':
+            case '5.1.1':
+            case '5.1.1.*':
+                $data = array(
+                    'src' => 'https://use.fontawesome.com/releases/v5.1.1/js/solid.js',
+                    'integrity' => 'sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu',
+                    'crossorigin' => 'anonymous',
+                );
+                break;
+
             case '5.1.0':
             case '5.1.0.*':
                 $data = array(
@@ -116,6 +143,7 @@ class Fontawesomesolid
                     'integrity' => 'sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0',
                     'crossorigin' => 'anonymous',
                 );
+                break;
 
             case '5.0.*':
             case '5.0.13':
@@ -125,6 +153,7 @@ class Fontawesomesolid
                     'integrity' => 'sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ',
                     'crossorigin' => 'anonymous',
                 );
+                break;
 
             case '5.0.12':
             case '5.0.12.*':
@@ -133,6 +162,7 @@ class Fontawesomesolid
                     'integrity' => 'sha384-652/z7yNdGONCCBu0u5h5uF9voJhBdgruAuIDVheEaQ7O/ZC9wyyV+yZsYb32Wy7',
                     'crossorigin' => 'anonymous',
                 );
+                break;
 
             case '5.0.10':
             case '5.0.10.*':
@@ -141,6 +171,7 @@ class Fontawesomesolid
                     'integrity' => 'sha384-Q7KAHqDd5trmfsv85beYZBsUmw0lsreFBQZfsEhzUtUn5HhpjVzwY0Aq4z8DY9sA',
                     'crossorigin' => 'anonymous',
                 );
+                break;
 
             case '5.0.9':
             case '5.0.9.*':
@@ -149,6 +180,7 @@ class Fontawesomesolid
                     'integrity' => 'sha384-P4tSluxIpPk9wNy8WSD8wJDvA8YZIkC6AQ+BfAFLXcUZIPQGu4Ifv4Kqq+i2XzrM',
                     'crossorigin' => 'anonymous',
                 );
+                break;
 
             case '5.0.8':
             case '5.0.8.*':
@@ -157,6 +189,7 @@ class Fontawesomesolid
                     'integrity' => 'sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l',
                     'crossorigin' => 'anonymous',
                 );
+                break;
 
             case '5.0.6':
             case '5.0.6.*':

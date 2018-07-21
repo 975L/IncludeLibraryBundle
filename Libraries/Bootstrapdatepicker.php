@@ -9,10 +9,13 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
+use c975L\IncludeLibraryBundle\Libraries\CssInterface;
+use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
+
 /*
- * Bootstrap DatePicker - https://github.com/uxsolutions/bootstrap-datepicker
+ * Bootstrap DatePicker - https://cdnjs.com/libraries/bootstrap-datepicker
  */
-class Bootstrapdatepicker
+class Bootstrapdatepicker implements CssInterface, JavascriptInterface
 {
     /*
      * Refer to README.md for how-to add versions
@@ -23,6 +26,14 @@ class Bootstrapdatepicker
             case 'latest':
 
             case '1.*':
+            case '1.8.*':
+            case '1.8.0':
+            case '1.8.0.*':
+                $data = array(
+                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css',
+                );
+                break;
+
             case '1.7.*':
             case '1.7.1':
             case '1.7.1.*':
@@ -48,6 +59,14 @@ class Bootstrapdatepicker
             case 'latest':
 
             case '1.*':
+            case '1.8.*':
+            case '1.8.0':
+            case '1.8.0.*':
+                $data = array(
+                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js',
+                );
+                break;
+
             case '1.7.*':
             case '1.7.1':
             case '1.7.1.*':

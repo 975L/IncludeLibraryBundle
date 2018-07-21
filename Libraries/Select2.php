@@ -9,10 +9,13 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
+use c975L\IncludeLibraryBundle\Libraries\CssInterface;
+use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
+
 /*
  * Select2 - https://select2.org
  */
-class Select2
+class Select2 implements CssInterface, JavascriptInterface
 {
     /*
      * Refer to README.md for how-to add versions

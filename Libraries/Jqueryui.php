@@ -9,10 +9,12 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
+use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
+
 /*
  * jQuery - https://jquery.com/ui
  */
-class Jqueryui
+class Jqueryui implements JavascriptInterface
 {
     /*
      * Refer to README.md for how-to add versions

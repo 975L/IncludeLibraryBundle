@@ -9,10 +9,13 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
+use c975L\IncludeLibraryBundle\Libraries\CssInterface;
+use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
+
 /*
- * Bootstrap - http://getbootstrap.com
+ * Bootstrap - https://getbootstrap.com
  */
-class Bootstrap
+class Bootstrap implements CssInterface, JavascriptInterface
 {
     /*
      * Refer to README.md for how-to add versions
@@ -24,6 +27,15 @@ class Bootstrap
 
             case '4.*':
             case '4.1.*':
+            case '4.1.2':
+            case '4.1.2.*':
+                $data = array(
+                    'href' => 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css',
+                    'integrity' => 'sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B',
+                    'crossorigin' => 'anonymous',
+                );
+                break;
+
             case '4.1.0':
             case '4.1.0.*':
                 $data = array(
@@ -72,6 +84,15 @@ class Bootstrap
 
             case '4.*':
             case '4.1.*':
+            case '4.1.2':
+            case '4.1.2.*':
+                $data = array(
+                    'src' => 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js',
+                    'integrity' => 'sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em',
+                    'crossorigin' => 'anonymous',
+                );
+                break;
+
             case '4.1.0':
             case '4.1.0.*':
                 $data = array(

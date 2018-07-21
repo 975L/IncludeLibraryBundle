@@ -1,5 +1,15 @@
 # Changelog
 
+v1.8
+----
+- Added interfaces (21/07/2018)
+- Added Bootstrap 4.1.2 (21/07/2018)
+- Added BootstrapDatePicker 1.8.0 (21/07/2018)
+- Added CookieConsent2 3.1.0 (21/07/2018)
+- Added Fontawesome 5.1.1 (21/07/2018)
+- Added missing `break` (21/07/2018)
+- Added Popper 1.14.3 (21/07/2018)
+
 v1.7.8
 ------
 - Added v5.1.0 for Fontawesome (23/06/2018)

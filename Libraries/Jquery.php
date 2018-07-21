@@ -9,10 +9,12 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
+use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
+
 /*
- * jQuery - https://jquery.com
+ * jQuery - https://code.jquery.com
  */
-class Jquery
+class Jquery implements JavascriptInterface
 {
     /*
      * Refer to README.md for how-to add versions

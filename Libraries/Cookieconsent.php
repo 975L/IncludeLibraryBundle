@@ -9,10 +9,13 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
+use c975L\IncludeLibraryBundle\Libraries\CssInterface;
+use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
+
 /*
  * CookieConsent - https://cookieconsent.insites.com
  */
-class Cookieconsent
+class Cookieconsent implements CssInterface, JavascriptInterface
 {
     /*
      * Refer to README.md for how-to add versions
@@ -23,6 +26,14 @@ class Cookieconsent
             case 'latest':
 
             case '3.*':
+            case '3.1.*':
+            case '3.1.0':
+            case '3.1.0.*':
+                $data = array(
+                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css',
+                );
+                break;
+
             case '3.0.*':
             case '3.0.3':
             case '3.0.3.*':
@@ -48,6 +59,14 @@ class Cookieconsent
             case 'latest':
 
             case '3.*':
+            case '3.1.*':
+            case '3.1.0':
+            case '3.1.0.*':
+                $data = array(
+                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js',
+                );
+                break;
+
             case '3.0.*':
             case '3.0.3':
             case '3.0.3.*':

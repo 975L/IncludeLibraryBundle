@@ -124,14 +124,14 @@ Supported libraries
 ===================
 Use following names and versions (+ wildcard if wanted, as indicated above) in the functions `inc_lib`, `inc_link` or `inc_content`:
 
-- **[Bootstrap](http://getbootstrap.com) (css + javascript)** -> `bootstrap`: 3.3.7, 4.0.0, 4.1.0
-- **[Bootstrap DatePicker](https://github.com/uxsolutions/bootstrap-datepicker) (css + javascript)** -> `bootstrap-datepicker`: 1.7.1
+- **[Bootstrap](http://getbootstrap.com) (css + javascript)** -> `bootstrap`: 3.3.7, 4.0.0, 4.1.0, 4.1.2
+- **[Bootstrap DatePicker](https://github.com/uxsolutions/bootstrap-datepicker) (css + javascript)** -> `bootstrap-datepicker`: 1.7.1, 1.8.0
 - **[jQuery](https://jquery.com) (javascript)** -> `jquery`, `jquery-slim`: 2.2.4 > 3.3.1
 - **[jQueryUI](https://jquery.com/ui) (javascript)** -> `jquery-ui`: 1.12.1
 - **[Tinymce](https://www.tinymce.com) (javascript)** -> `tinymce`: stable
-- **[FontAwesome](https://fontawesome.com) (css + javascript)** -> `fontawesome`, `fontawesome-base`, `fontawesome-regular`, `fontawesome-brands`, `fontawesome-solid`: 5.0.4, 5.0.6, 5.0.8, 5.0.9, 5.0.10, 5.0.12, 5.0.13, 5.1.0
-- **[CookieConsent](https://cookieconsent.insites.com) (css + javascript)** -> `cookieconsent`: 3.0.3
-- **[Popper](https://popper.js.org) (javascript)** -> `popper`: 1.12.9, 1.14.0
+- **[FontAwesome](https://fontawesome.com) (css + javascript)** -> `fontawesome`, `fontawesome-base`, `fontawesome-regular`, `fontawesome-brands`, `fontawesome-solid`: 5.0.4, 5.0.6, 5.0.8, 5.0.9, 5.0.10, 5.0.12, 5.0.13, 5.1.0, 5.1.1
+- **[CookieConsent](https://cookieconsent.insites.com) (css + javascript)** -> `cookieconsent`: 3.0.3, 3.1.0
+- **[Popper](https://popper.js.org) (javascript)** -> `popper`: 1.12.9, 1.14.0, 1.14.3
 - **[Select2](https://select2.org) (css + javascript)** -> `select2`: 4.0.3, 4.0.6-rc-.0
 
 How to add libraries and/or versions
