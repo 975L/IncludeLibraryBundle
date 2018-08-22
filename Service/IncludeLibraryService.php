@@ -8,9 +8,19 @@
  */
 namespace c975L\IncludeLibraryBundle\Service;
 
-class IncludeLibraryService
+use c975L\IncludeLibraryBundle\Service\IncludeLibraryServiceInterface;
+
+/**
+ * Main services related to IncludeLibrary
+ * @author Laurent Marquet <laurent.marquet@laposte.net>
+ * @copyright 2018 975L <contact@975l.com>
+ */
+class IncludeLibraryService implements IncludeLibraryServiceInterface
 {
-    public function getData($name, $type, $version)
+    /**
+     * {@inheritdoc}
+     */
+    public function getData(string $name, string $type, string $version)
     {
         //Gets Library name
         $libraryName = ucfirst(strtolower(str_replace(array('_', '-'), '', $name)));

@@ -9,17 +9,13 @@
 
 namespace c975L\IncludeLibraryBundle\Twig;
 
+/**
+ * Twig extension to provide Library's data using `inc_font`
+ * @author Laurent Marquet <laurent.marquet@laposte.net>
+ * @copyright 2018 975L <contact@975l.com>
+ */
 class IncludeLibraryFont extends \Twig_Extension
 {
-    private $service;
-
-    public function __construct(
-        \c975L\IncludeLibraryBundle\Service\IncludeLibraryService $service
-        )
-    {
-        $this->service = $service;
-    }
-
     public function getFunctions()
     {
         return array(
@@ -34,6 +30,10 @@ class IncludeLibraryFont extends \Twig_Extension
         );
     }
 
+    /**
+     * Returns the font code to be included
+     * @return string
+     */
     public function Font(\Twig_Environment $environment, $name)
     {
         //Returns the font code

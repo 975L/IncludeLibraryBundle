@@ -32,6 +32,9 @@ IncludeLibraryBundle will let you specify which library and version to include, 
 
 [IncludeLibraryBundle dedicated web page](https://975l.com/en/pages/include-library-bundle).
 
+[IncludeLibraryBundle API documentation](https://975l.com/apidoc/c975L/IncludeLibraryBundle.html).
+
+
 Bundle installation
 ===================
 
@@ -124,15 +127,18 @@ Supported libraries
 ===================
 Use following names and versions (+ wildcard if wanted, as indicated above) in the functions `inc_lib`, `inc_link` or `inc_content`:
 
-- **[Bootstrap](http://getbootstrap.com) (css + javascript)** -> `bootstrap`: 3.3.7, 4.0.0, 4.1.0, 4.1.2
+- **[Angular](https://angularjs.org) (javascript)** -> `angular`: 1.2.32, 1.7.2
+- **[Bootstrap](http://getbootstrap.com) (css + javascript)** -> `bootstrap`: 3.3.7, 4.0.0, 4.1.0, 4.1.2, 4.1.3
 - **[Bootstrap DatePicker](https://github.com/uxsolutions/bootstrap-datepicker) (css + javascript)** -> `bootstrap-datepicker`: 1.7.1, 1.8.0
 - **[jQuery](https://jquery.com) (javascript)** -> `jquery`, `jquery-slim`: 2.2.4 > 3.3.1
 - **[jQueryUI](https://jquery.com/ui) (javascript)** -> `jquery-ui`: 1.12.1
 - **[Tinymce](https://www.tinymce.com) (javascript)** -> `tinymce`: stable
-- **[FontAwesome](https://fontawesome.com) (css + javascript)** -> `fontawesome`, `fontawesome-base`, `fontawesome-regular`, `fontawesome-brands`, `fontawesome-solid`: 5.0.4, 5.0.6, 5.0.8, 5.0.9, 5.0.10, 5.0.12, 5.0.13, 5.1.0, 5.1.1
+- **[FontAwesome](https://fontawesome.com) (css + javascript)** -> `fontawesome`, `fontawesome-base`, `fontawesome-regular`, `fontawesome-brands`, `fontawesome-solid`: 5.0.4, 5.0.6, 5.0.8, 5.0.9, 5.0.10, 5.0.12, 5.0.13, 5.1.0, 5.1.1, 5.2.0
 - **[CookieConsent](https://cookieconsent.insites.com) (css + javascript)** -> `cookieconsent`: 3.0.3, 3.1.0
-- **[Popper](https://popper.js.org) (javascript)** -> `popper`: 1.12.9, 1.14.0, 1.14.3
+- **[Popper](https://popper.js.org) (javascript)** -> `popper`: 1.12.9, 1.14.0, 1.14.3, 1.* (no versioning)
+- **[React](https://reactjs.org) (javascript)** -> `react`, `react-dom`: 16
 - **[Select2](https://select2.org) (css + javascript)** -> `select2`: 4.0.3, 4.0.6-rc-.0
+- **[Vue.js](https://vuejs.org) (javascript)** -> vue: 2.5.17 (without versioning)
 
 How to add libraries and/or versions
 ====================================
@@ -143,3 +149,5 @@ How to add libraries and/or versions
 - Locate the corresponding method `getCss()` or `getJavascript()`,
 - Add versions and wildcards to the switch function, keeping the latest above,
 - Add the needed data (take example as existing one).
+
+**If this project help you to reduce time to develop, you can [buy me a coffee](https://www.buymeacoffee.com/LaurentMarquet) :)**

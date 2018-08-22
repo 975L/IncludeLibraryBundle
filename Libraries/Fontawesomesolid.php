@@ -12,20 +12,32 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 use c975L\IncludeLibraryBundle\Libraries\CssInterface;
 use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
 
-/*
- * Fontawesome - https://fontawesome.com
+/**
+ * Data for Fontawesome Solid - https://fontawesome.com
+ * @author Laurent Marquet <laurent.marquet@laposte.net>
+ * @copyright 2018 975L <contact@975l.com>
  */
 class Fontawesomesolid implements CssInterface, JavascriptInterface
 {
-    /*
-     * Refer to README.md for how-to add versions
+    /**
+     * {@inheritdoc}
      */
-    public function getCss($version)
+    public function getCss(string $version)
     {
         switch ($version) {
             case 'latest':
 
             case '5.*':
+            case '5.2.*':
+            case '5.2.0':
+            case '5.2.0.*':
+                $data = array(
+                    'href' => 'https://use.fontawesome.com/releases/v5.2.0/css/solid.css',
+                    'integrity' => 'sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z',
+                    'crossorigin' => 'anonymous',
+                );
+                break;
+
             case '5.1.*':
             case '5.1.1':
             case '5.1.1.*':
@@ -117,15 +129,25 @@ class Fontawesomesolid implements CssInterface, JavascriptInterface
         return $data;
     }
 
-    /*
-     * Refer to README.md for how-to add versions
+    /**
+     * {@inheritdoc}
      */
-    public function getJavascript($version)
+    public function getJavascript(string $version)
     {
         switch ($version) {
             case 'latest':
 
             case '5.*':
+            case '5.2.*':
+            case '5.2.0':
+            case '5.2.0.*':
+                $data = array(
+                    'src' => 'https://use.fontawesome.com/releases/v5.2.0/js/solid.js',
+                    'integrity' => 'sha384-YmNA3b9AQuWW8KZguYfqJa/YhKNTwGVD5pQc1cN0ZAVRudFFtR17HR7rooNcVXe4',
+                    'crossorigin' => 'anonymous',
+                );
+                break;
+
             case '5.1.*':
             case '5.1.1':
             case '5.1.1.*':

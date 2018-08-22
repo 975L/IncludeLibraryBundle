@@ -9,15 +9,24 @@
 
 namespace c975L\IncludeLibraryBundle\Twig;
 
+use c975L\IncludeLibraryBundle\Service\IncludeLibraryService;
+
+/**
+ * Twig extension to provide Library's data using `inc_link`
+ * @author Laurent Marquet <laurent.marquet@laposte.net>
+ * @copyright 2018 975L <contact@975l.com>
+ */
 class IncludeLibraryLink extends \Twig_Extension
 {
-    private $service;
+    /**
+     * Stores IncludeLibrary Service
+     * @var IncludeLibraryService
+     */
+    private $includeLibraryService;
 
-    public function __construct(
-        \c975L\IncludeLibraryBundle\Service\IncludeLibraryService $service
-        )
+    public function __construct(IncludeLibraryService $includeLibraryService)
     {
-        $this->service = $service;
+        $this->includeLibraryService = $includeLibraryService;
     }
 
     public function getFunctions()
@@ -30,16 +39,21 @@ class IncludeLibraryLink extends \Twig_Extension
         );
     }
 
+    /**
+     * Returns the link of the requested library
+     * @return string
+     * @throws \Twig_Error
+     */
     public function Link($name, $type, $version = 'latest')
     {
         $type = strtolower($type);
 
         //Gets data
-        $data = $this->service->getData($name, $type, $version);
+        $data = $this->includeLibraryService->getData($name, $type, $version);
 
         //Returns the href or src part
-        if ($data !== null) {
-            return $type == 'css' ? $data['href'] : $data['src'];
+        if (null !== $data) {
+            return 'css' == $type ? $data['href'] : $data['src'];
         }
 
         //Throws an error if not found

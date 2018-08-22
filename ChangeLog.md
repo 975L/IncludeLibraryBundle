@@ -1,5 +1,18 @@
 # Changelog
 
+v1.8.1
+------
+- Added link to BuyMeCoffee (20/08/2018)
+- Added link to apidoc (20/08/2018)
+- Added `IncludeLibraryServiceInterface` (22/08/2018)
+- Removed FQCN (22/08/2018)
+- Made use of Yoda style (22/08/2018)
+- Added Bootstrap 4.1.3 (22/08/2018)
+- Added Fontawesome 5.2.0 (22/08/2018)
+- Added link for popeer without versioning as there is no more (22/08/2018)
+- Added Vue.js (without versioning) (22/08/2018)
+- Added React and React-dom (22/08/2018)
+
 v1.8
 ----
 - Added interfaces (21/07/2018)

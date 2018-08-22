@@ -12,11 +12,11 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
 
 /**
- * Data for jQuery UI - https://jquery.com/ui
+ * Data for React - https://reactjs.org
  * @author Laurent Marquet <laurent.marquet@laposte.net>
  * @copyright 2018 975L <contact@975l.com>
  */
-class Jqueryui implements JavascriptInterface
+class React implements JavascriptInterface
 {
     /**
      * {@inheritdoc}
@@ -26,15 +26,11 @@ class Jqueryui implements JavascriptInterface
         switch ($version) {
             case 'latest':
 
-            case '1.*':
-            case '1.12.*':
-            case '1.12.1':
-            case '1.12.1.*':
+            case '16':
+            case '16.*':
                 $data = array(
-                    'src' => 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
-                    'integrity' => 'sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=',
-                    'crossorigin' => 'anonymous',
-                );
+                    'src' => 'https://unpkg.com/react@16/umd/react.production.min.js',
+                    'crossorigin' => 'crossorigin',
                 break;
 
             default:

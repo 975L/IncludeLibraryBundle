@@ -11,13 +11,15 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 
 use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
 
-/*
- * Tinymce - https://www.tinymce.com
+/**
+ * Data for Tinymce - https://www.tinymce.com
+ * @author Laurent Marquet <laurent.marquet@laposte.net>
+ * @copyright 2018 975L <contact@975l.com>
  */
 class Tinymce implements JavascriptInterface
 {
-    /*
-     * Refer to README.md for how-to add versions
+    /**
+     * {@inheritdoc}
      */
     public function getJavascript($version)
     {

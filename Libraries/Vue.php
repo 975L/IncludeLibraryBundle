@@ -12,11 +12,11 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
 
 /**
- * Data for jQuery UI - https://jquery.com/ui
+ * Data for Vue.js - https://vuejs.org
  * @author Laurent Marquet <laurent.marquet@laposte.net>
  * @copyright 2018 975L <contact@975l.com>
  */
-class Jqueryui implements JavascriptInterface
+class Vue implements JavascriptInterface
 {
     /**
      * {@inheritdoc}
@@ -26,15 +26,12 @@ class Jqueryui implements JavascriptInterface
         switch ($version) {
             case 'latest':
 
-            case '1.*':
-            case '1.12.*':
-            case '1.12.1':
-            case '1.12.1.*':
+            case '2.*':
+            case '2.5.*':
+            case '2.5.17':
+            case '2.5.17.*':
                 $data = array(
-                    'src' => 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
-                    'integrity' => 'sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=',
-                    'crossorigin' => 'anonymous',
-                );
+                    'src' => 'https://cdn.jsdelivr.net/npm/vue',
                 break;
 
             default:

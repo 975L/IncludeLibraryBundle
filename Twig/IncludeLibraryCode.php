@@ -9,15 +9,24 @@
 
 namespace c975L\IncludeLibraryBundle\Twig;
 
+use c975L\IncludeLibraryBundle\Service\IncludeLibraryService;
+
+/**
+ * Twig extension to provide Library's data using `inc_lib`
+ * @author Laurent Marquet <laurent.marquet@laposte.net>
+ * @copyright 2018 975L <contact@975l.com>
+ */
 class IncludeLibraryCode extends \Twig_Extension
 {
-    private $service;
+    /**
+     * Stores IncludeLibrary Service
+     * @var IncludeLibraryService
+     */
+    private $includeLibraryService;
 
-    public function __construct(
-        \c975L\IncludeLibraryBundle\Service\IncludeLibraryService $service
-        )
+    public function __construct(IncludeLibraryService $includeLibraryService)
     {
-        $this->service = $service;
+        $this->includeLibraryService = $includeLibraryService;
     }
 
     public function getFunctions()
@@ -34,36 +43,41 @@ class IncludeLibraryCode extends \Twig_Extension
         );
     }
 
+    /**
+     * Returns the xhtml code to be included
+     * @return string
+     * @throws \Twig_Error
+     */
     public function Code(\Twig_Environment $environment, $name, $type, $version = 'latest', $params = null)
     {
         $type = strtolower($type);
 
         //Gets type for local file
         $local = false;
-        if ($type == 'local') {
+        if ('local' == $type) {
             $local = true;
             $type = strtolower(substr($name, strrpos($name, '.') + 1));
         }
 
         //Defines fragment to use
         $fragment = null;
-        if ($type == 'css') {
+        if ('css' == $type) {
             $fragment = '@c975LIncludeLibrary/fragments/css.html.twig';
-        } elseif ($type == 'js' || $type == 'javascript' || $type == 'jscript' || $type == 'script') {
+        } elseif ('js' == $type || 'javascript' == $type || 'jscript' == $type || 'script' == $type) {
             $fragment = '@c975LIncludeLibrary/fragments/javascript.html.twig';
             $type = 'javascript';
         }
 
         //Gets data for local file
-        if ($local === true) {
-            $data = $type == 'css' ? array('href' => $name) : array('src' => $name);
+        if (true === $local) {
+            $data = 'css' == $type ? array('href' => $name) : array('src' => $name);
         //Gets data for external library
         } else {
-            $data = $this->service->getData($name, $type, $version);
+            $data = $this->includeLibraryService->getData($name, $type, $version);
         }
 
-        //Returns xhtml code to be included
-        if ($fragment !== null && $data !== null) {
+        //Returns xhtml code
+        if (null != $fragment && null != $data) {
             $render = $environment->render($fragment, array(
                 'data' => $data,
                 'params' => $params,

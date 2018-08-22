@@ -12,21 +12,32 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 use c975L\IncludeLibraryBundle\Libraries\CssInterface;
 use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
 
-/*
- * Bootstrap - https://getbootstrap.com
+/**
+ * Data for Bootstrap - https://getbootstrap.com
+ * @author Laurent Marquet <laurent.marquet@laposte.net>
+ * @copyright 2018 975L <contact@975l.com>
  */
 class Bootstrap implements CssInterface, JavascriptInterface
 {
-    /*
-     * Refer to README.md for how-to add versions
+    /**
+     * {@inheritdoc}
      */
-    public function getCss($version)
+    public function getCss(string $version)
     {
         switch ($version) {
             case 'latest':
 
             case '4.*':
             case '4.1.*':
+            case '4.1.3':
+            case '4.1.3.*':
+                $data = array(
+                    'href' => 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css',
+                    'integrity' => 'sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO',
+                    'crossorigin' => 'anonymous',
+                );
+                break;
+
             case '4.1.2':
             case '4.1.2.*':
                 $data = array(
@@ -74,16 +85,25 @@ class Bootstrap implements CssInterface, JavascriptInterface
         return $data;
     }
 
-    /*
-     * Refer to README.md for how-to add versions
+    /**
+     * {@inheritdoc}
      */
-    public function getJavascript($version)
+    public function getJavascript(string $version)
     {
         switch ($version) {
             case 'latest':
 
             case '4.*':
             case '4.1.*':
+            case '4.1.2':
+            case '4.1.2.*':
+                $data = array(
+                    'src' => 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js',
+                    'integrity' => 'sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy',
+                    'crossorigin' => 'anonymous',
+                );
+                break;
+
             case '4.1.2':
             case '4.1.2.*':
                 $data = array(

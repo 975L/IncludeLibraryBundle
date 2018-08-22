@@ -12,11 +12,11 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
 
 /**
- * Data for jQuery UI - https://jquery.com/ui
+ * Data for AngularJS - https://angularjs.org
  * @author Laurent Marquet <laurent.marquet@laposte.net>
  * @copyright 2018 975L <contact@975l.com>
  */
-class Jqueryui implements JavascriptInterface
+class Angular implements JavascriptInterface
 {
     /**
      * {@inheritdoc}
@@ -27,14 +27,18 @@ class Jqueryui implements JavascriptInterface
             case 'latest':
 
             case '1.*':
-            case '1.12.*':
-            case '1.12.1':
-            case '1.12.1.*':
+            case '1.7.*':
+            case '1.7.2':
+            case '1.7.2.*':
                 $data = array(
-                    'src' => 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
-                    'integrity' => 'sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=',
-                    'crossorigin' => 'anonymous',
-                );
+                    'src' => 'https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js',
+                break;
+
+            case '1.2.*':
+            case '1.2.32':
+            case '1.2.32.*':
+                $data = array(
+                    'src' => 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js',
                 break;
 
             default:
