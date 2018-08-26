@@ -1,5 +1,9 @@
 # Changelog
 
+v1.8.1.1
+--------
+- Removed 'true ===' as not needed (25/08/2018)
+
 v1.8.1
 ------
 - Added link to BuyMeCoffee (20/08/2018)

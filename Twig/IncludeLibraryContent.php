@@ -59,7 +59,7 @@ class IncludeLibraryContent extends \Twig_Extension
         }
 
         //Gets data for local file
-        if (true === $local) {
+        if ($local) {
             $data = 'css' == $type ? array('href' => $name) : array('src' => $name);
         //Gets data for external library
         } else {
