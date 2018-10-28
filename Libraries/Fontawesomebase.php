@@ -28,102 +28,100 @@ class Fontawesomebase implements CssInterface, JavascriptInterface
             case 'latest':
 
             case '5.*':
+            case '5.4.*':
+            case '5.4.2':
+            case '5.4.2.*':
+                $version = '5.4.2';
+                $integrity = 'sha384-HU5rcgG/yUrsDGWsVACclYdzdCcn5yU8V/3V84zSrPDHwZEdjykadlgI6RHrxGrJ';
+                break;
+
+            case '5.4.1':
+            case '5.4.1.*':
+                $version = '5.4.1';
+                $integrity = 'sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I';
+                break;
+
+            case '5.3.*':
+            case '5.3.1':
+            case '5.3.1.*':
+                $version = '5.3.1';
+                $integrity = 'sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7';
+                break;
+
             case '5.2.*':
             case '5.2.0':
             case '5.2.0.*':
-                $data = array(
-                    'href' => 'https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css',
-                    'integrity' => 'sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.2.0';
+                $integrity = 'sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6';
                 break;
 
             case '5.1.*':
             case '5.1.1':
             case '5.1.1.*':
-                $data = array(
-                    'href' => 'https://use.fontawesome.com/releases/v5.1.1/css/fontawesome.css',
-                    'integrity' => 'sha384-0b7ERybvrT5RZyD80ojw6KNKz6nIAlgOKXIcJ0CV7A6Iia8yt2y1bBfLBOwoc9fQ',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.1.1';
+                $integrity = 'sha384-0b7ERybvrT5RZyD80ojw6KNKz6nIAlgOKXIcJ0CV7A6Iia8yt2y1bBfLBOwoc9fQ';
                 break;
 
             case '5.1.0':
             case '5.1.0.*':
-                $data = array(
-                    'href' => 'https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css',
-                    'integrity' => 'sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.1.0';
+                $integrity = 'sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG';
                 break;
 
             case '5.0.*':
             case '5.0.13':
             case '5.0.13.*':
-                $data = array(
-                    'href' => 'https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css',
-                    'integrity' => 'sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.0.13';
+                $integrity = 'sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV';
                 break;
 
             case '5.0.12':
             case '5.0.12.*':
-                $data = array(
-                    'href' => 'https://use.fontawesome.com/releases/v5.0.12/css/fontawesome.css',
-                    'integrity' => 'sha384-rnr8fdrJ6oj4zli02To2U/e6t1qG8dvJ8yNZZPsKHcU7wFK3MGilejY5R/cUc5kf',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.0.12';
+                $integrity = 'sha384-rnr8fdrJ6oj4zli02To2U/e6t1qG8dvJ8yNZZPsKHcU7wFK3MGilejY5R/cUc5kf';
                 break;
 
             case '5.0.10':
             case '5.0.10.*':
-                $data = array(
-                    'href' => 'https://use.fontawesome.com/releases/v5.0.10/css/fontawesome.css',
-                    'integrity' => 'sha384-8WwquHbb2jqa7gKWSoAwbJBV2Q+/rQRss9UXL5wlvXOZfSodONmVnifo/+5xJIWX',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.0.10';
+                $integrity = 'sha384-8WwquHbb2jqa7gKWSoAwbJBV2Q+/rQRss9UXL5wlvXOZfSodONmVnifo/+5xJIWX';
                 break;
 
             case '5.0.9':
             case '5.0.9.*':
-                $data = array(
-                    'href' => 'https://use.fontawesome.com/releases/v5.0.9/css/fontawesome.css',
-                    'integrity' => 'sha384-Lyz+8VfV0lv38W729WFAmn77iH5OSroyONnUva4+gYaQTic3iI2fnUKtDSpbVf0J',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.0.9';
+                $integrity = 'sha384-Lyz+8VfV0lv38W729WFAmn77iH5OSroyONnUva4+gYaQTic3iI2fnUKtDSpbVf0J';
                 break;
 
             case '5.0.8':
             case '5.0.8.*':
-                $data = array(
-                    'href' => 'https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css',
-                    'integrity' => 'sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.0.8';
+                $integrity = 'sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P';
                 break;
 
             case '5.0.6':
             case '5.0.6.*':
-                $data = array(
-                    'href' => 'https://use.fontawesome.com/releases/v5.0.6/css/fontawesome.css',
-                    'integrity' => 'sha384-dbkYY2NmVwxaFrr4gq04oVh6w39ovmevsgD80Il1Od3hwpgREqyPb3XqbpaSwN4x',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.0.6';
+                $integrity = 'sha384-dbkYY2NmVwxaFrr4gq04oVh6w39ovmevsgD80Il1Od3hwpgREqyPb3XqbpaSwN4x';
                 break;
 
             case '5.0.4':
             case '5.0.4.*':
-                $data = array(
-                    'href' => 'https://use.fontawesome.com/releases/v5.0.4/css/fontawesome.css',
-                    'integrity' => 'sha384-xdTUmhbcetyLRVL4PAriRajOve+/5pjOiy5sJABnhXMcRMVc9HI9s2KmOCjjDK/P',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.0.4';
+                $integrity = 'sha384-xdTUmhbcetyLRVL4PAriRajOve+/5pjOiy5sJABnhXMcRMVc9HI9s2KmOCjjDK/P';
                 break;
 
             default:
                 $data = null;
                 break;
+        }
+
+        if (isset($version)) {
+            $data = array(
+                'href' => 'https://use.fontawesome.com/releases/v' . $version  . '/css/fontawesome.css',
+                'integrity' => $integrity,
+                'crossorigin' => 'anonymous',
+            );
         }
 
         return $data;
@@ -138,102 +136,100 @@ class Fontawesomebase implements CssInterface, JavascriptInterface
             case 'latest':
 
             case '5.*':
+            case '5.4.*':
+            case '5.4.2':
+            case '5.4.2.*':
+                $version = '5.4.2';
+                $integrity = 'sha384-n1qPouQQJ9VNZnZeNZWSDiclpIOJwZBS2bkD6rEX+DTmMXTKXBVCZw2cGbU/I17z';
+                break;
+
+            case '5.4.1':
+            case '5.4.1.*':
+                $version = '5.4.1';
+                $integrity = 'sha384-ISRc+776vRkDOTSbmnyoZFmwHy7hw2UR3KJpb4YtcfOyqUqhLGou8j5YmYnvQQJ4';
+                break;
+
+            case '5.3.*':
+            case '5.3.1':
+            case '5.3.1.*':
+                $version = '5.3.1';
+                $integrity = 'sha384-2OfHGv4zQZxcNK+oL8TR9pA+ADXtUODqGpIRy1zOgioC4X3+2vbOAp5Qv7uHM4Z8';
+                break;
+
             case '5.2.*':
             case '5.2.0':
             case '5.2.0.*':
-                $data = array(
-                    'src' => 'https://use.fontawesome.com/releases/v5.2.0/js/fontawesome.js',
-                    'integrity' => 'sha384-QcnrgQuRmocjIBY6ByWMmDvUg3HO4MSdVjY7ynJwZfvTDhVPPQOUI9TRzc6/7ZO1',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.2.0';
+                $integrity = 'sha384-QcnrgQuRmocjIBY6ByWMmDvUg3HO4MSdVjY7ynJwZfvTDhVPPQOUI9TRzc6/7ZO1';
                 break;
 
             case '5.1.*':
             case '5.1.1':
             case '5.1.1.*':
-                $data = array(
-                    'src' => 'https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js',
-                    'integrity' => 'sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.1.1';
+                $integrity = 'sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe';
                 break;
 
             case '5.1.0':
             case '5.1.0.*':
-                $data = array(
-                    'src' => 'https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js',
-                    'integrity' => 'sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.1.0';
+                $integrity = 'sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM';
                 break;
 
             case '5.0.*':
             case '5.0.13':
             case '5.0.13.*':
-                $data = array(
-                    'src' => 'https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js',
-                    'integrity' => 'sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.0.13';
+                $integrity = 'sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY';
                 break;
 
             case '5.0.12':
             case '5.0.12.*':
-                $data = array(
-                    'src' => 'https://use.fontawesome.com/releases/v5.0.12/js/fontawesome.js',
-                    'integrity' => 'sha384-6AOxTjzzZLvbTJayrLOYweuPckqh0rrB4Sj+Js8Vzgr85/qm2e0DRqi+rBzyK52J',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.0.12';
+                $integrity = 'sha384-6AOxTjzzZLvbTJayrLOYweuPckqh0rrB4Sj+Js8Vzgr85/qm2e0DRqi+rBzyK52J';
                 break;
 
             case '5.0.10':
             case '5.0.10.*':
-                $data = array(
-                    'src' => 'https://use.fontawesome.com/releases/v5.0.10/js/fontawesome.js',
-                    'integrity' => 'sha384-M2FSA4xMm1G9m4CNXM49UcDHeWcDZNucAlz1WVHxohug0Uw1K+IpUhp/Wjg0y6qG',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.0.10';
+                $integrity = 'sha384-M2FSA4xMm1G9m4CNXM49UcDHeWcDZNucAlz1WVHxohug0Uw1K+IpUhp/Wjg0y6qG';
                 break;
 
             case '5.0.9':
             case '5.0.9.*':
-                $data = array(
-                    'src' => 'https://use.fontawesome.com/releases/v5.0.9/js/fontawesome.js',
-                    'integrity' => 'sha384-2IUdwouOFWauLdwTuAyHeMMRFfeyy4vqYNjodih+28v2ReC+8j+sLF9cK339k5hY',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.0.9';
+                $integrity = 'sha384-2IUdwouOFWauLdwTuAyHeMMRFfeyy4vqYNjodih+28v2ReC+8j+sLF9cK339k5hY';
                 break;
 
             case '5.0.8':
             case '5.0.8.*':
-                $data = array(
-                    'src' => 'https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js',
-                    'integrity' => 'sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.0.8';
+                $integrity = 'sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c';
                 break;
 
             case '5.0.6':
             case '5.0.6.*':
-                $data = array(
-                    'src' => 'https://use.fontawesome.com/releases/v5.0.6/js/fontawesome.js',
-                    'integrity' => 'sha384-rttr/ldR2uHigckjTCjMDe47ySeFVaL3Q7xUkJZir56u8Z8h/XnHJXHocgyfb25F',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.0.6';
+                $integrity = 'sha384-rttr/ldR2uHigckjTCjMDe47ySeFVaL3Q7xUkJZir56u8Z8h/XnHJXHocgyfb25F';
                 break;
 
             case '5.0.4':
             case '5.0.4.*':
-                $data = array(
-                    'src' => 'https://use.fontawesome.com/releases/v5.0.4/js/fontawesome.js',
-                    'integrity' => 'sha384-l7FyBM+wFIWpfmy8RYkWgEu/Me6Hrz98ijLu4nP3PkGbTtTCvtHB5ktI8hLEgEG3',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '5.0.4';
+                $integrity = 'sha384-l7FyBM+wFIWpfmy8RYkWgEu/Me6Hrz98ijLu4nP3PkGbTtTCvtHB5ktI8hLEgEG3';
                 break;
 
             default:
                 $data = null;
                 break;
+        }
+
+        if (isset($version)) {
+            $data = array(
+                'src' => 'https://use.fontawesome.com/releases/v' . $version  . '/js/fontawesome.js',
+                'integrity' => $integrity,
+                'crossorigin' => 'anonymous',
+            );
         }
 
         return $data;
