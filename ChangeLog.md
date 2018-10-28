@@ -1,5 +1,11 @@
 # Changelog
 
+v1.8.2
+------
+- Updated composer.json (01/09/2018)
+- Added Fontawesome 5.3.1, 5.4.1, 5.4.2 (28/10/2018)
+- Simplified Fontawesome calls (28/10/2018)
+
 v1.8.1.1
 --------
 - Removed 'true ===' as not needed (25/08/2018)
