@@ -21,7 +21,7 @@ class Jqueryui implements JavascriptInterface
     /**
      * {@inheritdoc}
      */
-    public function getJavascript($version)
+    public function getJavascript(string $version)
     {
         switch ($version) {
             case 'latest':

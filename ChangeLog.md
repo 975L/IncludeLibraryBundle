@@ -1,5 +1,9 @@
 # Changelog
 
+v1.8.3
+------
+- Corrected missing `string` declaration (03/12/2018)
+
 v1.8.2
 ------
 - Updated composer.json (01/09/2018)
