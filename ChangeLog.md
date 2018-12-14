@@ -1,5 +1,15 @@
 # Changelog
 
+v1.9
+----
+- Made all libraries like Fontawesome one (14/12/2018)
+- Added Bootstrap 4.1.1, 3.4.0 (14/12/2018)
+- Added Angular 1.7.3 -> 1.7.5 (14/12/2018)
+- Added React 16.1 -> 16.6 (14/12/2018)
+- Added Popper 1.14.4 -> 1.14.6 (14/12/2018)
+- Added Fontawesome 5.5.0, 5.6.0, 5.6.1 (28/10/2018)
+- Added SRI for all library based on https://www.srihash.org/ (14/12/2018)
+
 v1.8.3
 ------
 - Corrected missing `string` declaration (03/12/2018)

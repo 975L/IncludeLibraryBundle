@@ -28,6 +28,26 @@ class Fontawesomeregular implements CssInterface, JavascriptInterface
             case 'latest':
 
             case '5.*':
+            case '5.6.*':
+            case '5.6.1':
+            case '5.6.1.*':
+                $version = '5.6.1';
+                $integrity = 'sha384-l+NpTtA08hNNeMp0aMBg/cqPh507w3OvQSRoGnHcVoDCS9OtgxqgR7u8mLQv8poF';
+                break;
+
+            case '5.6.0':
+            case '5.6.0.*':
+                $version = '5.6.0';
+                $integrity = 'sha384-yWI8JeRmJFie/rrEn4skBd/XXXfUWuc7wAhaj9q71PzjdYD3JslHSEU7BXCCcVyP';
+                break;
+
+            case '5.5.*':
+            case '5.5.0':
+            case '5.5.0.*':
+                $version = '5.5.0';
+                $integrity = 'sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY';
+                break;
+
             case '5.4.*':
             case '5.4.2':
             case '5.4.2.*':
@@ -136,6 +156,26 @@ class Fontawesomeregular implements CssInterface, JavascriptInterface
             case 'latest':
 
             case '5.*':
+            case '5.6.*':
+            case '5.6.1':
+            case '5.6.1.*':
+                $version = '5.6.1';
+                $integrity = 'sha384-+e+pqX41PD6VrFw9HZ3YKJHFT+SZoEMBmnMpLUpHrdd5BE46xHCrzap9c6kfTi9H';
+                break;
+
+            case '5.6.0':
+            case '5.6.0.*':
+                $version = '5.6.0';
+                $integrity = 'sha384-gy4pB6yY1j4DPCG6rZcE6NX1Lnqz8ZJEfotVUvCN2EGwlUS3WUHxcn8rrEOYiyiS';
+                break;
+
+            case '5.5.*':
+            case '5.5.0':
+            case '5.5.0.*':
+                $version = '5.5.0';
+                $integrity = 'sha384-XrvTJeiQ46fxxPrZP6fay5yejA2FV4G1XsS8E4Piz6Fz+7FaEFTw7A7GR972irVV';
+                break;
+
             case '5.4.*':
             case '5.4.2':
             case '5.4.2.*':

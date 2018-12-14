@@ -27,41 +27,71 @@ class Popper implements JavascriptInterface
             case 'latest':
 
             case '1.*':
-                $data = array(
-                    'src' => 'https://unpkg.com/popper.js/dist/umd/popper.min.js',
-                );
+                $version = '';
+                $integrity = '';
                 break;
 
             case '1.14.*':
+            case '1.14.6':
+            case '1.14.6.*':
+                $version = '@1.14.6';
+                $integrity = 'sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut';
+                break;
+
+            case '1.14.5':
+            case '1.14.5.*':
+                $version = '@1.14.5';
+                $integrity = 'sha384-a3GqK/TQoh+gPFAiesulJK7xiYNo3loQBWP1a68OkSUM5SqmmQxhzdMUGuNlAw3r';
+                break;
+
+            case '1.14.4':
+            case '1.14.4.*':
+                $version = '@1.14.4';
+                $integrity = 'sha384-GM0Y80ecpwKxF1D5XCrGanKusGDy9WW0O2sSM84neB4iFhvKp3fwnoIRnPsQcN1R';
+                break;
+
             case '1.14.3':
             case '1.14.3.*':
-                $data = array(
-                    'src' => 'https://unpkg.com/popper.js@1.14.3/dist/umd/popper.min.js',
-                );
+                $version = '@1.14.3';
+                $integrity = 'sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49';
+                break;
+
+            case '1.14.2':
+            case '1.14.2.*':
+                $version = '@1.14.2';
+                $integrity = 'sha384-AXEnX7PDLv+jdnMoormAUbt+QXfB3RKKzS6zZY474XEGvwG9uMHSCAsKGnslQULy';
+                break;
+
+            case '1.14.1':
+            case '1.14.1.*':
+                $version = '@1.14.1';
+                $integrity = 'sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ';
                 break;
 
             case '1.14.0':
             case '1.14.0.*':
-                $data = array(
-                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js',
-                    'integrity' => 'sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '@1.14.0';
+                $integrity = 'sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ';
                 break;
 
             case '1.12.*':
             case '1.12.9':
             case '1.12.9.*':
-                $data = array(
-                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js',
-                    'integrity' => 'sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '@1.12.9';
+                $integrity = 'sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q';
                 break;
 
             default:
                 $data = null;
                 break;
+        }
+
+        if (isset($version)) {
+            $data = array(
+                'src' => 'https://unpkg.com/popper.js' . $version  . '/dist/umd/popper.min.js',
+                'integrity' => $integrity,
+                'crossorigin' => 'anonymous',
+            );
         }
 
         return $data;

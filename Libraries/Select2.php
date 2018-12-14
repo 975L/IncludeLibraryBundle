@@ -31,21 +31,26 @@ class Select2 implements CssInterface, JavascriptInterface
             case '4.0.*':
             case '4.0.6':
             case '4.0.6.*':
-                $data = array(
-                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css',
-                );
+                $version = '4.0.6-rc.0';
+                $integrity = 'sha384-RdQbeSCGSeSdSlTMGnUr2oDJZzOuGjJAkQy1MbKMu8fZT5G0qlBajY0n0sY/hKMK';
                 break;
 
             case '4.0.3':
             case '4.0.3.*':
-                $data = array(
-                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css',
-                );
+                $version = '4.0.3';
+                $integrity = 'sha384-HIipfSYbpCkh5/1V87AWAeR5SUrNiewznrUrtNz1ux4uneLhsAKzv/0FnMbj3m6g';
                 break;
 
             default:
                 $data = null;
                 break;
+        }
+
+        if (isset($version)) {
+            $data = array(
+                'href' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/' . $version . '/css/select2.min.css',
+                'crossorigin' => 'anonymous',
+            );
         }
 
         return $data;
@@ -63,21 +68,28 @@ class Select2 implements CssInterface, JavascriptInterface
             case '4.0.*':
             case '4.0.6':
             case '4.0.6.*':
-                $data = array(
-                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js',
-                );
+                $version = '4.0.6-rc.0';
+                $integrity = 'sha384-uQwKPrmNkEOvI7rrNdCSs6oS1F3GvnZkmPtkntOSIiPQN4CCbFSxv+Bj6qe0mWDb';
                 break;
 
             case '4.0.3':
             case '4.0.3.*':
-                $data = array(
-                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js',
-                );
+                $version = '4.0.3';
+                $integrity = 'sha384-222hzbb8Z8ZKe6pzP18nTSltQM3PdcAwxWKzGOKOIF+Y3bROr5n9zdQ8yTRHgQkQ';
                 break;
 
             default:
                 $data = null;
                 break;
+        }
+
+        if (isset($version)) {
+            $data = array(
+                'src' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/' . $version  . '/js/select2.min.js',
+                'integrity' => $integrity,
+                'crossorigin' => 'anonymous',
+                'defer' => false,
+            );
         }
 
         return $data;

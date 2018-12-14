@@ -31,22 +31,28 @@ class Cookieconsent implements CssInterface, JavascriptInterface
             case '3.1.*':
             case '3.1.0':
             case '3.1.0.*':
-                $data = array(
-                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css',
-                );
+                $version = '3.1.0';
+                $integrity = 'sha384-AJ82o1PQz2xMlVWjJ+IdPSfyCVS/nJeYbLcpPhm/cEPrewaEdaYkaG6LCsquvogf';
                 break;
 
             case '3.0.*':
             case '3.0.3':
             case '3.0.3.*':
-                $data = array(
-                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css',
-                );
+                $version = '3.0.3';
+                $integrity = 'sha384-6iYDyQZuuNT7DcPJGXx241czdv2+GDGUcXRiqw1iXrjgYMTorSetxFP3JCMQMwnR';
                 break;
 
             default:
                 $data = null;
                 break;
+        }
+
+        if (isset($version)) {
+            $data = array(
+                'href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' . $version . '/cookieconsent.min.css',
+                'integrity' => $integrity,
+                'crossorigin' => 'anonymous',
+            );
         }
 
         return $data;
@@ -64,22 +70,29 @@ class Cookieconsent implements CssInterface, JavascriptInterface
             case '3.1.*':
             case '3.1.0':
             case '3.1.0.*':
-                $data = array(
-                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js',
-                );
+                $version = '3.1.0';
+                $integrity = 'sha384-l+e8/kt7mRYg7RUc/i3MsNwDJlWxkWkFDX10LF/iNglZLT96GBMAPrbaH2GP2lQy';
                 break;
 
             case '3.0.*':
             case '3.0.3':
             case '3.0.3.*':
-                $data = array(
-                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js',
-                );
+                $version = '3.0.3';
+                $integrity = 'sha384-PDjg2ZdS3khPzd53i18+7tzB32JVQfFMrTXYo21RqPgUmEVAPwIhxOUF/8sP79CS';
                 break;
 
             default:
                 $data = null;
                 break;
+        }
+
+        if (isset($version)) {
+            $data = array(
+                'src' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' . $version  . '/cookieconsent.min.js',
+                'integrity' => $integrity,
+                'crossorigin' => 'anonymous',
+                'defer' => false,
+            );
         }
 
         return $data;

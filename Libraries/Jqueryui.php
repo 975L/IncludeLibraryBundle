@@ -30,16 +30,21 @@ class Jqueryui implements JavascriptInterface
             case '1.12.*':
             case '1.12.1':
             case '1.12.1.*':
-                $data = array(
-                    'src' => 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
-                    'integrity' => 'sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=',
-                    'crossorigin' => 'anonymous',
-                );
+                $version = '1.12.1';
+                $integrity = 'sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=';
                 break;
 
             default:
                 $data = null;
                 break;
+        }
+
+        if (isset($version)) {
+            $data = array(
+                'src' => 'https://code.jquery.com/ui/' . $version  . '/jquery-ui.min.js',
+                'integrity' => $integrity,
+                'crossorigin' => 'anonymous',
+            );
         }
 
         return $data;

@@ -25,13 +25,11 @@ class Vue implements JavascriptInterface
     {
         switch ($version) {
             case 'latest':
-
-            case '2.*':
-            case '2.5.*':
-            case '2.5.17':
-            case '2.5.17.*':
+            case 'stable':
                 $data = array(
                     'src' => 'https://cdn.jsdelivr.net/npm/vue',
+                    'crossorigin' => 'anonymous',
+                    );
                 break;
 
             default:

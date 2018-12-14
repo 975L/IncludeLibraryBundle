@@ -31,22 +31,28 @@ class Bootstrapdatepicker implements CssInterface, JavascriptInterface
             case '1.8.*':
             case '1.8.0':
             case '1.8.0.*':
-                $data = array(
-                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css',
-                );
+                $version = '1.8.0';
+                $integrity = 'sha384-UIjefFM/glLb4CFCVO/HC3zB9vuP1A5U/5PnGWifE037WUTJ/7BRi25dkmJBqZPa';
                 break;
 
             case '1.7.*':
             case '1.7.1':
             case '1.7.1.*':
-                $data = array(
-                    'href' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css',
-                );
+                $version = '1.7.1';
+                $integrity = 'sha384-v7OXjsQNUteMoQ8IjcHUr8dUe6KjmnT7POLvMclVMu83Hl3HkJ7CyPgMJOYuLhTQ';
                 break;
 
             default:
                 $data = null;
                 break;
+        }
+
+        if (isset($version)) {
+            $data = array(
+                'href' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/' . $version . '/css/bootstrap-datepicker.css',
+                'integrity' => $integrity,
+                'crossorigin' => 'anonymous',
+            );
         }
 
         return $data;
@@ -64,22 +70,29 @@ class Bootstrapdatepicker implements CssInterface, JavascriptInterface
             case '1.8.*':
             case '1.8.0':
             case '1.8.0.*':
-                $data = array(
-                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js',
-                );
+                $version = '1.8.0';
+                $integrity = 'sha384-vtZXrrXR60MGoprJb7ApH4t3Y59IhePhwtXXmbqg//ha9LHwSo3QCNR6XvF5oXVM';
                 break;
 
             case '1.7.*':
             case '1.7.1':
             case '1.7.1.*':
-                $data = array(
-                    'src' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js',
-                );
+                $version = '1.7.1';
+                $integrity = 'sha384-w48xMCwgWQu0zb3PvQI/rK5lfN6G+lSWu+qI4ukKZg3I5Xx3/VWA8IiaQ8O7tZur';
                 break;
 
             default:
                 $data = null;
                 break;
+        }
+
+        if (isset($version)) {
+            $data = array(
+                'src' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/' . $version  . '/js/bootstrap-datepicker.min.js',
+                'integrity' => $integrity,
+                'crossorigin' => 'anonymous',
+                'defer' => false,
+            );
         }
 
         return $data;

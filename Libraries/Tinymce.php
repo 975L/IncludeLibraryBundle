@@ -25,10 +25,9 @@ class Tinymce implements JavascriptInterface
     {
         switch ($version) {
             case 'latest':
-
-            case 'stable':
                 $data = array(
                     'src' => 'https://cloud.tinymce.com/stable/tinymce.min.js',
+                    'defer' => false,
                     );
                 break;
 
@@ -36,9 +35,6 @@ class Tinymce implements JavascriptInterface
                 $data = null;
                 break;
         }
-
-        //Removes defer attribute
-        $data['defer'] = false;
 
         return $data;
     }

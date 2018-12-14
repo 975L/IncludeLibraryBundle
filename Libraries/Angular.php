@@ -28,22 +28,48 @@ class Angular implements JavascriptInterface
 
             case '1.*':
             case '1.7.*':
+            case '1.7.5':
+            case '1.7.5.*':
+                $version = '1.7.5';
+                $integrity = 'sha384-kGrtvd68FCW4rm700QHDTxc+U3bQU+CnkhgAgqeJQoD4G9gWSlvNkZoXBfbMbTbk';
+                break;
+
+            case '1.7.4':
+            case '1.7.4.*':
+                $version = '1.7.4';
+                $integrity = 'sha384-rFekZRMAZzB3UIDUT2JvENq3wUQBQDk2z5/IK9xygZxxhQGeU9y05hWArLgnu2jV';
+                break;
+
+            case '1.7.3':
+            case '1.7.3.*':
+                $version = '1.7.3';
+                $integrity = 'sha384-+mxFfuX/P+plEuP/znWVr+T/nFdnSGfA5iOgWQRDF2BXdtNN7xqueSBaEnvwqrnd';
+                break;
+
             case '1.7.2':
             case '1.7.2.*':
-                $data = array(
-                    'src' => 'https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js',
+                $version = '1.7.2';
+                $integrity = 'sha384-R0RcY28wXErVrCnTuQi4b/UPpXUXzmUWTl/GEgX55yoegErbQZlFUW12h6JEEsoi';
                 break;
 
             case '1.2.*':
             case '1.2.32':
             case '1.2.32.*':
-                $data = array(
-                    'src' => 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js',
+                $version = '1.2.32';
+                $integrity = 'sha384-wIkUlWqDZgGRTyTEgoO743so47Fga6iCbEGBflBzRLrgzX2at1upKTOfZnlOP+kn';
                 break;
 
             default:
                 $data = null;
                 break;
+        }
+
+        if (isset($version)) {
+            $data = array(
+                'src' => 'https://ajax.googleapis.com/ajax/libs/angularjs/' . $version  . '/angular.min.js',
+                'integrity' => $integrity,
+                'crossorigin' => 'anonymous',
+            );
         }
 
         return $data;
