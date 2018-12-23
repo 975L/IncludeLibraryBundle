@@ -9,8 +9,6 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
-use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
-
 /**
  * Data for React - https://reactjs.org
  * @author Laurent Marquet <laurent.marquet@laposte.net>
@@ -165,7 +163,6 @@ class React implements JavascriptInterface
 
         if (isset($version)) {
             $data = array(
-                $data = array(
                 'src' => 'https://unpkg.com/react@' . $version  . '/umd/react.production.min.js',
                 'integrity' => $integrity,
                 'crossorigin' => 'anonymous',

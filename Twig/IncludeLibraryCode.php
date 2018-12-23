@@ -10,13 +10,15 @@
 namespace c975L\IncludeLibraryBundle\Twig;
 
 use c975L\IncludeLibraryBundle\Service\IncludeLibraryService;
+use Twig_Environment;
+use Twig_Extension;
 
 /**
  * Twig extension to provide Library's data using `inc_lib`
  * @author Laurent Marquet <laurent.marquet@laposte.net>
  * @copyright 2018 975L <contact@975l.com>
  */
-class IncludeLibraryCode extends \Twig_Extension
+class IncludeLibraryCode extends Twig_Extension
 {
     /**
      * Stores IncludeLibrary Service
@@ -32,7 +34,7 @@ class IncludeLibraryCode extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction(
+            new Twig_SimpleFunction(
                 'inc_lib',
                 array($this, 'Code'),
                 array(
@@ -46,9 +48,9 @@ class IncludeLibraryCode extends \Twig_Extension
     /**
      * Returns the xhtml code to be included
      * @return string
-     * @throws \Twig_Error
+     * @throws Twig_Error
      */
-    public function Code(\Twig_Environment $environment, $name, $type, $version = 'latest', $params = null)
+    public function Code(Twig_Environment $environment, $name, $type, $version = 'latest', $params = null)
     {
         $type = strtolower($type);
 
@@ -87,6 +89,6 @@ class IncludeLibraryCode extends \Twig_Extension
         }
 
         //Throws an error if not found
-        throw new \Twig_Error('The Library "' . $name . ' (' . $type . ') version ' . $version . '" requested via "inc_lib()" was not found. Please check name and supported library/versions.');
+        throw new Twig_Error('The Library "' . $name . ' (' . $type . ') version ' . $version . '" requested via "inc_lib()" was not found. Please check name and supported library/versions.');
     }
 }

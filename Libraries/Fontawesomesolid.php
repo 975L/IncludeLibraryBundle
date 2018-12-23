@@ -9,9 +9,6 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
-use c975L\IncludeLibraryBundle\Libraries\CssInterface;
-use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
-
 /**
  * Data for Fontawesome Solid - https://fontawesome.com
  * @author Laurent Marquet <laurent.marquet@laposte.net>

@@ -9,9 +9,6 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
-use c975L\IncludeLibraryBundle\Libraries\CssInterface;
-use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
-
 /**
  * Data for CookieConsent - https://cookieconsent.insites.com
  * @author Laurent Marquet <laurent.marquet@laposte.net>

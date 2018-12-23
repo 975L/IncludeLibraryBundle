@@ -10,13 +10,14 @@
 namespace c975L\IncludeLibraryBundle\Twig;
 
 use c975L\IncludeLibraryBundle\Service\IncludeLibraryService;
+use Twig_Extension;
 
 /**
  * Twig extension to provide Library's content using `inc_content`
  * @author Laurent Marquet <laurent.marquet@laposte.net>
  * @copyright 2018 975L <contact@975l.com>
  */
-class IncludeLibraryContent extends \Twig_Extension
+class IncludeLibraryContent extends Twig_Extension
 {
     /**
      * Stores IncludeLibrary Service
@@ -32,7 +33,7 @@ class IncludeLibraryContent extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction(
+            new Twig_SimpleFunction(
                 'inc_content',
                 array($this, 'Content'),
                 array(
@@ -45,7 +46,7 @@ class IncludeLibraryContent extends \Twig_Extension
     /**
      * Returns the content of the requested library
      * @return string
-     * @throws \Twig_Error
+     * @throws Twig_Error
      */
     public function Content($name, $type, $version = 'latest')
     {
@@ -79,6 +80,6 @@ class IncludeLibraryContent extends \Twig_Extension
         }
 
         //Throws an error if not found
-        throw new \Twig_Error('The Library "' . $name . ' (' . $type . ') version ' . $version . '" requested via "inc_content()" was not found. Please check name and supported library/versions.');
+        throw new Twig_Error('The Library "' . $name . ' (' . $type . ') version ' . $version . '" requested via "inc_content()" was not found. Please check name and supported library/versions.');
     }
 }

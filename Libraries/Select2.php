@@ -9,9 +9,6 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
-use c975L\IncludeLibraryBundle\Libraries\CssInterface;
-use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
-
 /**
  * Data for Select2 - https://select2.org
  * @author Laurent Marquet <laurent.marquet@laposte.net>

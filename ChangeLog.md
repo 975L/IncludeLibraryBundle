@@ -1,5 +1,11 @@
 # Changelog
 
+v1.9.1
+------
+- Added rector to composer dev part (23/12/2018)
+- Modified required versions in composer (23/12/2018)
+- Corrected React library file (23/12/2018)
+
 v1.9
 ----
 - Made all libraries like Fontawesome one (14/12/2018)
