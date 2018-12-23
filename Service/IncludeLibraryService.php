@@ -8,7 +8,6 @@
  */
 namespace c975L\IncludeLibraryBundle\Service;
 
-use c975L\IncludeLibraryBundle\Service\IncludeLibraryServiceInterface;
 
 /**
  * Main services related to IncludeLibrary

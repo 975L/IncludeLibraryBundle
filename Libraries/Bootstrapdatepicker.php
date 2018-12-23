@@ -9,9 +9,6 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
-use c975L\IncludeLibraryBundle\Libraries\CssInterface;
-use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
-
 /**
  * Data for Bootstrap DatePicker - https://cdnjs.com/libraries/bootstrap-datepicker
  * @author Laurent Marquet <laurent.marquet@laposte.net>

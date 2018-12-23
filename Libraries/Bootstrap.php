@@ -9,9 +9,6 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
-use c975L\IncludeLibraryBundle\Libraries\CssInterface;
-use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
-
 /**
  * Data for Bootstrap - https://getbootstrap.com - https://www.bootstrapcdn.com/legacy/bootstrap/
  * @author Laurent Marquet <laurent.marquet@laposte.net>

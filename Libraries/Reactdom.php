@@ -9,8 +9,6 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
-use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
-
 /**
  * Data for React Dom - https://reactjs.org
  * @author Laurent Marquet <laurent.marquet@laposte.net>

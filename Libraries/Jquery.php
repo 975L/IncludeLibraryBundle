@@ -9,8 +9,6 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
-use c975L\IncludeLibraryBundle\Libraries\JavascriptInterface;
-
 /**
  * Data for jQuery - https://code.jquery.com
  * @author Laurent Marquet <laurent.marquet@laposte.net>
