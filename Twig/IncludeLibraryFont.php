@@ -10,6 +10,7 @@
 namespace c975L\IncludeLibraryBundle\Twig;
 use Twig_Environment;
 use Twig_Extension;
+use Twig_SimpleFunction;
 
 /**
  * Twig extension to provide Library's data using `inc_font`

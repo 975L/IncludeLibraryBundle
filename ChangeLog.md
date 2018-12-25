@@ -1,5 +1,9 @@
 # Changelog
 
+v1.9.2
+------
+- Added missing use (25/12/2018)
+
 v1.9.1
 ------
 - Added rector to composer dev part (23/12/2018)

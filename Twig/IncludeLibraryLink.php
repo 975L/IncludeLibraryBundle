@@ -11,6 +11,7 @@ namespace c975L\IncludeLibraryBundle\Twig;
 
 use c975L\IncludeLibraryBundle\Service\IncludeLibraryService;
 use Twig_Extension;
+use Twig_SimpleFunction;
 
 /**
  * Twig extension to provide Library's data using `inc_link`
