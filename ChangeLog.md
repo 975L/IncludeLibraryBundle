@@ -1,5 +1,9 @@
 # Changelog
 
+v1.9.3
+------
+- Added bootstrap v4.2.1 and v4.3.0 (11/02/2019)
+
 v1.9.2
 ------
 - Added missing use (25/12/2018)
