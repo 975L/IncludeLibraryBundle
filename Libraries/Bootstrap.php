@@ -26,6 +26,12 @@ class Bootstrap implements CssInterface, JavascriptInterface
 
             case '4.*':
             case '4.3.*':
+            case '4.3.1':
+            case '4.3.1.*':
+                $version = '4.3.1';
+                $integrity = 'sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T';
+                break;
+
             case '4.3.0':
             case '4.3.0.*':
                 $version = '4.3.0';
@@ -73,6 +79,12 @@ class Bootstrap implements CssInterface, JavascriptInterface
 
             case '3.*':
             case '3.4.*':
+            case '3.4.1':
+            case '3.4.1.*':
+                $version = '3.4.1';
+                $integrity = 'sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu';
+                break;
+
             case '3.4.0':
             case '3.4.0.*':
                 $version = '3.4.0';
@@ -112,6 +124,12 @@ class Bootstrap implements CssInterface, JavascriptInterface
 
             case '4.*':
             case '4.3.*':
+            case '4.3.1':
+            case '4.3.1.*':
+                $version = '4.3.1';
+                $integrity = 'sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM';
+                break;
+
             case '4.3.0':
             case '4.3.0.*':
                 $version = '4.3.0';
@@ -159,6 +177,12 @@ class Bootstrap implements CssInterface, JavascriptInterface
 
             case '3.*':
             case '3.4.*':
+            case '3.4.1':
+            case '3.4.1.*':
+                $version = '3.4.1';
+                $integrity = 'sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd';
+                break;
+
             case '3.4.0':
             case '3.4.0.*':
                 $version = '3.4.0';
