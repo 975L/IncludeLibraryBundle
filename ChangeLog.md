@@ -1,5 +1,9 @@
 # Changelog
 
+v1.9.4.1
+--------
+- Modified Dependencyinjection rootNode to be not empty (13/02/2019)
+
 v1.9.4
 ------
 - Added bootstrap v3.4.1 and v4.3.1 (13/02/2019)
