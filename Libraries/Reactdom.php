@@ -19,9 +19,9 @@ class Reactdom implements JavascriptInterface
     /**
      * {@inheritdoc}
      */
-    public function getJavascript(string $version)
+    public function getJavascript(string $useVersion)
     {
-        switch ($version) {
+        switch ($useVersion) {
             case 'latest':
 
             case '16.*':
@@ -158,6 +158,7 @@ class Reactdom implements JavascriptInterface
 
             default:
                 $data = null;
+                $integrity = null;
                 break;
         }
 

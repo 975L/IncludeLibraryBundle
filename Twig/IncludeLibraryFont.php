@@ -8,21 +8,21 @@
  */
 
 namespace c975L\IncludeLibraryBundle\Twig;
-use Twig_Environment;
-use Twig_Extension;
-use Twig_SimpleFunction;
+use Twig\Environment;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
 /**
  * Twig extension to provide Library's data using `inc_font`
  * @author Laurent Marquet <laurent.marquet@laposte.net>
  * @copyright 2018 975L <contact@975l.com>
  */
-class IncludeLibraryFont extends Twig_Extension
+class IncludeLibraryFont extends AbstractExtension
 {
     public function getFunctions()
     {
         return array(
-            new Twig_SimpleFunction(
+            new TwigFunction(
                 'inc_font',
                 array($this, 'Font'),
                 array(
@@ -37,7 +37,7 @@ class IncludeLibraryFont extends Twig_Extension
      * Returns the font code to be included
      * @return string
      */
-    public function Font(Twig_Environment $environment, $name)
+    public function Font(Environment $environment, $name)
     {
         //Returns the font code
         $render = $environment->render('@c975LIncludeLibrary/fragments/font.html.twig', array(

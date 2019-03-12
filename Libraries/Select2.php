@@ -19,9 +19,9 @@ class Select2 implements CssInterface, JavascriptInterface
     /**
      * {@inheritdoc}
      */
-    public function getCss(string $version)
+    public function getCss(string $useVersion)
     {
-        switch ($version) {
+        switch ($useVersion) {
             case 'latest':
 
             case '4.*':
@@ -40,6 +40,7 @@ class Select2 implements CssInterface, JavascriptInterface
 
             default:
                 $data = null;
+                $integrity = null;
                 break;
         }
 
@@ -56,9 +57,9 @@ class Select2 implements CssInterface, JavascriptInterface
     /*
      * Refer to README.md for how-to add versions
      */
-    public function getJavascript(string $version)
+    public function getJavascript(string $useVersion)
     {
-        switch ($version) {
+        switch ($useVersion) {
             case 'latest':
 
             case '4.*':
@@ -77,6 +78,7 @@ class Select2 implements CssInterface, JavascriptInterface
 
             default:
                 $data = null;
+                $integrity = null;
                 break;
         }
 

@@ -19,9 +19,9 @@ class Popper implements JavascriptInterface
     /**
      * {@inheritdoc}
      */
-    public function getJavascript(string $version)
+    public function getJavascript(string $useVersion)
     {
-        switch ($version) {
+        switch ($useVersion) {
             case 'latest':
 
             case '1.*':
@@ -81,6 +81,7 @@ class Popper implements JavascriptInterface
 
             default:
                 $data = null;
+                $integrity = null;
                 break;
         }
 

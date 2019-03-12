@@ -19,9 +19,9 @@ class Angular implements JavascriptInterface
     /**
      * {@inheritdoc}
      */
-    public function getJavascript(string $version)
+    public function getJavascript(string $useVersion)
     {
-        switch ($version) {
+        switch ($useVersion) {
             case 'latest':
 
             case '1.*':
@@ -59,6 +59,7 @@ class Angular implements JavascriptInterface
 
             default:
                 $data = null;
+                $integrity = null;
                 break;
         }
 

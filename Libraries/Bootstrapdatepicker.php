@@ -19,9 +19,9 @@ class Bootstrapdatepicker implements CssInterface, JavascriptInterface
     /**
      * {@inheritdoc}
      */
-    public function getCss(string $version)
+    public function getCss(string $useVersion)
     {
-        switch ($version) {
+        switch ($useVersion) {
             case 'latest':
 
             case '1.*':
@@ -41,6 +41,7 @@ class Bootstrapdatepicker implements CssInterface, JavascriptInterface
 
             default:
                 $data = null;
+                $integrity = null;
                 break;
         }
 
@@ -58,9 +59,9 @@ class Bootstrapdatepicker implements CssInterface, JavascriptInterface
     /**
      * {@inheritdoc}
      */
-    public function getJavascript(string $version)
+    public function getJavascript(string $useVersion)
     {
-        switch ($version) {
+        switch ($useVersion) {
             case 'latest':
 
             case '1.*':
@@ -80,6 +81,7 @@ class Bootstrapdatepicker implements CssInterface, JavascriptInterface
 
             default:
                 $data = null;
+                $integrity = null;
                 break;
         }
 

@@ -1,5 +1,10 @@
 # Changelog
 
+v1.9.5
+------
+- Made use of Twig namespace (07/03/2019)
+- Modified variable naming for a better use (11/03/2019)
+
 v1.9.4.1
 --------
 - Modified Dependencyinjection rootNode to be not empty (13/02/2019)
