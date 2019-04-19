@@ -1,5 +1,9 @@
 # Changelog
 
+v1.9.6
+------
+- Added library [Friconix](https://friconix.com) (19/04/2019)
+
 v1.9.5.1
 --------
 - Changed Github's author reference url (08/04/2019)
