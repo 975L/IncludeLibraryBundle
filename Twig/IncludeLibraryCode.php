@@ -58,30 +58,30 @@ class IncludeLibraryCode extends AbstractExtension
 
         //Gets type for local file
         $local = false;
-        if ('local' == $type) {
+        if ('local' === $type) {
             $local = true;
             $type = strtolower(substr($name, strrpos($name, '.') + 1));
         }
 
         //Defines fragment to use
         $fragment = null;
-        if ('css' == $type) {
+        if ('css' === $type) {
             $fragment = '@c975LIncludeLibrary/fragments/css.html.twig';
-        } elseif ('js' == $type || 'javascript' == $type || 'jscript' == $type || 'script' == $type) {
+        } elseif ('js' === $type || 'javascript' === $type || 'jscript' === $type || 'script' === $type) {
             $fragment = '@c975LIncludeLibrary/fragments/javascript.html.twig';
             $type = 'javascript';
         }
 
         //Gets data for local file
         if ($local) {
-            $data = 'css' == $type ? array('href' => $name) : array('src' => $name);
+            $data = 'css' === $type ? array('href' => $name) : array('src' => $name);
         //Gets data for external library
         } else {
             $data = $this->includeLibraryService->getData($name, $type, $version);
         }
 
         //Returns xhtml code
-        if (null != $fragment && null != $data) {
+        if (null !== $fragment && null !== $data) {
             $render = $environment->render($fragment, array(
                 'data' => $data,
                 'params' => $params,

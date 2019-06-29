@@ -56,14 +56,14 @@ class IncludeLibraryContent extends AbstractExtension
 
         //Gets type for local file
         $local = false;
-        if ('local' == $type) {
+        if ('local' === $type) {
             $local = true;
             $type = strtolower(substr($name, strrpos($name, '.') + 1));
         }
 
         //Gets data for local file
         if ($local) {
-            $data = 'css' == $type ? array('href' => $name) : array('src' => $name);
+            $data = 'css' === $type ? array('href' => $name) : array('src' => $name);
         //Gets data for external library
         } else {
             $data = $this->includeLibraryService->getData($name, $type, $version);
@@ -72,9 +72,9 @@ class IncludeLibraryContent extends AbstractExtension
         //Returns the content from href or src part
         if (null != $data) {
             $content = null;
-            if ('css' == $type) {
+            if ('css' === $type) {
                 $content = '<style type="text/css">' . file_get_contents($data['href']) . '</style>';
-            } elseif ('js' == $type) {
+            } elseif ('js' === $type) {
                 $content = '<script type="text/javascript">' . file_get_contents($data['src']) . '</script>';
             }
 

@@ -22,7 +22,16 @@ class Tinymce implements JavascriptInterface
     public function getJavascript(string $version)
     {
         switch ($version) {
+            case 'stable':
             case 'latest':
+            case '5.*':
+                $data = array(
+                    'src' => 'https://cdn.tiny.cloud/1/API-KEY/tinymce/5/tinymce.min.js',
+                    'defer' => false,
+                    );
+                break;
+
+            case '4.*':
                 $data = array(
                     'src' => 'https://cloud.tinymce.com/stable/tinymce.min.js',
                     'defer' => false,

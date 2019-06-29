@@ -56,7 +56,7 @@ class IncludeLibraryLink extends AbstractExtension
 
         //Returns the href or src part
         if (null !== $data) {
-            return 'css' == $type ? $data['href'] : $data['src'];
+            return 'css' === $type ? $data['href'] : $data['src'];
         }
 
         //Throws an error if not found
