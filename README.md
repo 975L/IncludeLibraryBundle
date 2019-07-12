@@ -135,7 +135,7 @@ Use following names and versions (+ wildcard if wanted, as indicated above) in t
 - **[CookieConsent](https://cookieconsent.insites.com) (css + javascript)** -> `cookieconsent`: 3.0.3, 3.1.0
 - **[jQuery](https://jquery.com) (javascript)** -> `jquery`, `jquery-slim`: 2.2.4 > 3.3.1
 - **[jQueryUI](https://jquery.com/ui) (javascript)** -> `jquery-ui`: 1.12.1
-- **[FontAwesome](https://fontawesome.com) (css + javascript)** -> `fontawesome`, `fontawesome-base`, `fontawesome-regular`, `fontawesome-brands`, `fontawesome-solid`: 5.0.4, 5.0.6, 5.0.8, 5.0.9, 5.0.10, 5.0.12, 5.0.13, 5.1.0, 5.1.1, 5.2.0, 5.3.1, 5.4.1, 5.4.2, 5.5.0, 5.6.0, 5.6.1
+- **[FontAwesome](https://fontawesome.com) (css + javascript)** -> `fontawesome`, `fontawesome-base`, `fontawesome-regular`, `fontawesome-brands`, `fontawesome-solid`: 5.0.4, 5.0.6, 5.0.8, 5.0.9, 5.0.10, 5.0.12, 5.0.13, 5.1.0, 5.1.1, 5.2.0, 5.3.1, 5.4.1, 5.4.2, 5.5.0, 5.6.0, 5.6.1, 5.6.3, 5.7.0, 5.7.1, 5.7.2, 5.8.0, 5.8.1, 5.8.2, 5.9.0
 - **[Friconix](https://friconix.com) (javascript)** -> `friconix` : latest
 - **[Popper](https://popper.js.org) (javascript)** -> `popper`: 1.12.9, 1.14.0 -> 1.14.6
 - **[React](https://reactjs.org) (javascript)** -> `react`, `react-dom`: 16.0 -> 16.6

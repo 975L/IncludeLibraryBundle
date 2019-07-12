@@ -1,5 +1,10 @@
 # Changelog
 
+v1.9.8
+------
+- Added Fontawesome versions  5.6.3 -> 5.9.0 (12/07/2019)
+- Modified templates to not use 'integity' if null (12/07/2019)
+
 v1.9.7
 ------
 - Added new naming for TinyMce (29/06/2019)
