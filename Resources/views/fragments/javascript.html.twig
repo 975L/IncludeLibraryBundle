@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
 <script
     {% if not data.defer is defined or data.defer == true %}
         defer
@@ -16,4 +16,4 @@
         crossorigin="{{ data.crossorigin }}"
     {% endif %}
 ></script>
-{% endspaceless %}
+{% endapply %}

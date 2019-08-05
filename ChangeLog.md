@@ -1,5 +1,9 @@
 # Changelog
 
+v1.10
+-----
+- Made use of apply spaceless (05/08/2019)
+
 v1.9.8
 ------
 - Added Fontawesome versions  5.6.3 -> 5.9.0 (12/07/2019)
