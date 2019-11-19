@@ -1,5 +1,9 @@
 # Changelog
 
+v1.10.1
+-------
+- Added jQuery v3.4.0 + 3.4.1 (19/11/2019)
+
 v1.10
 -----
 - Made use of apply spaceless (05/08/2019)

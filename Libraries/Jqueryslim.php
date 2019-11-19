@@ -25,6 +25,19 @@ class Jqueryslim implements JavascriptInterface
             case 'latest':
 
             case '3.*':
+            case '3.4.*':
+            case '3.4.1':
+            case '3.4.1.*':
+                $version = '3.4.1';
+                $integrity = 'sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=';
+                break;
+
+            case '3.4.0':
+            case '3.4.0.*':
+                $version = '3.4.0';
+                $integrity = 'sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=';
+                break;
+
             case '3.3.*':
             case '3.3.1':
             case '3.3.1.*':

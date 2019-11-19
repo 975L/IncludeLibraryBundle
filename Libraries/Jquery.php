@@ -25,6 +25,19 @@ class Jquery implements JavascriptInterface
             case 'latest':
 
             case '3.*':
+            case '3.4.*':
+            case '3.4.1':
+            case '3.4.1.*':
+                $version = '3.4.1';
+                $integrity = 'sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=';
+                break;
+
+            case '3.4.0':
+            case '3.4.0.*':
+                $version = '3.4.0';
+                $integrity = 'sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=';
+                break;
+
             case '3.3.*':
             case '3.3.1':
             case '3.3.1.*':
