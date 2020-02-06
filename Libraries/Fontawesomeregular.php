@@ -25,6 +25,57 @@ class Fontawesomeregular implements CssInterface, JavascriptInterface
             case 'latest':
 
             case '5.*':
+            case '5.12.*':
+            case '5.12.1';
+            case '5.12.1.*';
+                $version = '5.12.1';
+                $integrity = null;
+                break;
+
+            case '5.12.0';
+            case '5.12.0.*';
+                $version = '5.12.0';
+                $integrity = null;
+                break;
+
+            case '5.11.*':
+            case '5.11.2';
+            case '5.11.2.*';
+                $version = '5.11.2';
+                $integrity = null;
+                break;
+
+            case '5.11.1';
+            case '5.11.1.*';
+                $version = '5.11.1';
+                $integrity = null;
+                break;
+
+            case '5.11.0';
+            case '5.11.0.*';
+                $version = '5.11.0';
+                $integrity = null;
+                break;
+
+            case '5.10.*':
+            case '5.10.2';
+            case '5.10.2.*';
+                $version = '5.10.2';
+                $integrity = null;
+                break;
+
+            case '5.10.1';
+            case '5.10.1.*';
+                $version = '5.10.1';
+                $integrity = null;
+                break;
+
+            case '5.10.0';
+            case '5.10.0.*';
+                $version = '5.10.0';
+                $integrity = null;
+                break;
+
             case '5.9.*':
             case '5.9.0':
             case '5.9.0.*':
@@ -205,6 +256,57 @@ class Fontawesomeregular implements CssInterface, JavascriptInterface
             case 'latest':
 
             case '5.*':
+            case '5.12.*':
+            case '5.12.1';
+            case '5.12.1.*';
+                $version = '5.12.1';
+                $integrity = null;
+                break;
+
+            case '5.12.0';
+            case '5.12.0.*';
+                $version = '5.12.0';
+                $integrity = null;
+                break;
+
+            case '5.11.*':
+            case '5.11.2';
+            case '5.11.2.*';
+                $version = '5.11.2';
+                $integrity = null;
+                break;
+
+            case '5.11.1';
+            case '5.11.1.*';
+                $version = '5.11.1';
+                $integrity = null;
+                break;
+
+            case '5.11.0';
+            case '5.11.0.*';
+                $version = '5.11.0';
+                $integrity = null;
+                break;
+
+            case '5.10.*':
+            case '5.10.2';
+            case '5.10.2.*';
+                $version = '5.10.2';
+                $integrity = null;
+                break;
+
+            case '5.10.1';
+            case '5.10.1.*';
+                $version = '5.10.1';
+                $integrity = null;
+                break;
+
+            case '5.10.0';
+            case '5.10.0.*';
+                $version = '5.10.0';
+                $integrity = null;
+                break;
+
             case '5.9.*':
             case '5.9.0':
             case '5.9.0.*':

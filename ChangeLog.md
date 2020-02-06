@@ -1,5 +1,11 @@
 # Changelog
 
+v1.10.2
+-------
+- Added Fontawesome versions  5.10.0 -> 5.12.1 (06/02/2020)
+- Added missing javascript Fontawesome base 5.6.3 -> 5.9 (06/02/2020)
+- Removed composer.lock from repo (06/02/2020)
+
 v1.10.1
 -------
 - Added jQuery v3.4.0 + 3.4.1 (19/11/2019)
