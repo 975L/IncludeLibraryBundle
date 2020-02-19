@@ -1,5 +1,9 @@
 # Changelog
 
+v1.11
+-----
+- Removed use of symplify/easy-coding-standard as abandonned (19/02/2020)
+
 v1.10.2
 -------
 - Added Fontawesome versions  5.10.0 -> 5.12.1 (06/02/2020)
