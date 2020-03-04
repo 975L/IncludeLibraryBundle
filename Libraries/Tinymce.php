@@ -62,6 +62,7 @@ class Tinymce implements JavascriptInterface
                     'src' => 'https://cloud.tinymce.com/stable/tinymce.min.js',
                     'defer' => false,
                 );
+            }
         }
 
         return $data;

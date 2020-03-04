@@ -38,7 +38,7 @@ class Vue implements JavascriptInterface
     /**
      * {@inheritdoc}
      */
-    public function getJavascript(string $useVersion)
+    public function getJavascript(string $version)
     {
         $useVersion = $this->getVersion($version);
 
