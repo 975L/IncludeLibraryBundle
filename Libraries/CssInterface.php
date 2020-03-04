@@ -20,5 +20,5 @@ interface CssInterface
      * Use this method to add data for css, keep latest version above
      * @return array|null
      */
-    public function getCss(string $version);
+    public function getCss(string $useVersion);
 }

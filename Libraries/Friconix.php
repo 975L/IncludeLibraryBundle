@@ -21,7 +21,7 @@ class Friconix implements JavascriptInterface
      */
     public function getJavascript(string $useVersion)
     {
-        switch ($version) {
+        switch ($useVersion) {
             case 'latest':
                 $data = array(
                     'src' => 'https://friconix.com/cdn/friconix.js',

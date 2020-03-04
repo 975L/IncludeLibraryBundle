@@ -19,9 +19,9 @@ class Tinymce implements JavascriptInterface
     /**
      * {@inheritdoc}
      */
-    public function getJavascript(string $version)
+    public function getJavascript(string $useVersion)
     {
-        switch ($version) {
+        switch ($useVersion) {
             case 'stable':
             case 'latest':
             case '5.*':
