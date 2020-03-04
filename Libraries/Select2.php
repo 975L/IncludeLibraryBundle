@@ -17,36 +17,49 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 class Select2 implements CssInterface, JavascriptInterface
 {
     /**
-     * {@inheritdoc}
+     * Use this method to get version to use
+     * @return string|null
      */
-    public function getCss(string $useVersion)
+    public function getVersion(string $version)
     {
-        switch ($useVersion) {
-            case 'latest':
+        $versions = array(
+            'latest' => '4.0.6-rc.0',
 
-            case '4.*':
-            case '4.0.*':
-            case '4.0.6':
-            case '4.0.6.*':
-                $version = '4.0.6-rc.0';
-                $integrity = 'sha384-RdQbeSCGSeSdSlTMGnUr2oDJZzOuGjJAkQy1MbKMu8fZT5G0qlBajY0n0sY/hKMK';
-                break;
+            '4.*' => '4.0.6-rc.0',
+            '4.0.*' => '4.0.6-rc.0',
+            '4.0.6' => '4.0.6-rc.0',
+            '4.0.6.*' => '4.0.6-rc.0',
 
-            case '4.0.3':
-            case '4.0.3.*':
-                $version = '4.0.3';
-                $integrity = 'sha384-HIipfSYbpCkh5/1V87AWAeR5SUrNiewznrUrtNz1ux4uneLhsAKzv/0FnMbj3m6g';
-                break;
+            '4.0.3' => '4.0.3',
+            '4.0.3.*' => '4.0.3',
+        );
 
-            default:
-                $data = null;
-                $integrity = null;
-                break;
+        if (isset($versions[$version])) {
+            return $versions[$version];
         }
 
-        if (isset($version)) {
+        return false;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getCss(string $version)
+    {
+        $useVersion = $this->getVersion($version);
+
+        //Data for specific version
+        $integrities = array(
+            '4.0.6-rc.0' => 'sha384-RdQbeSCGSeSdSlTMGnUr2oDJZzOuGjJAkQy1MbKMu8fZT5G0qlBajY0n0sY/hKMK',
+            '4.0.3' => 'sha384-HIipfSYbpCkh5/1V87AWAeR5SUrNiewznrUrtNz1ux4uneLhsAKzv/0FnMbj3m6g',
+        );
+
+        //Defines data to use
+        $data = null;
+        if (false !== $useVersion && isset($integrities[$useVersion])) {
             $data = array(
-                'href' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/' . $version . '/css/select2.min.css',
+                'href' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/' . $useVersion . '/css/select2.min.css',
+                'integrity' => $integrities[$useVersion],
                 'crossorigin' => 'anonymous',
             );
         }
@@ -57,35 +70,22 @@ class Select2 implements CssInterface, JavascriptInterface
     /*
      * Refer to README.md for how-to add versions
      */
-    public function getJavascript(string $useVersion)
+    public function getJavascript(string $version)
     {
-        switch ($useVersion) {
-            case 'latest':
+        $useVersion = $this->getVersion($version);
 
-            case '4.*':
-            case '4.0.*':
-            case '4.0.6':
-            case '4.0.6.*':
-                $version = '4.0.6-rc.0';
-                $integrity = 'sha384-uQwKPrmNkEOvI7rrNdCSs6oS1F3GvnZkmPtkntOSIiPQN4CCbFSxv+Bj6qe0mWDb';
-                break;
+        //Data for specific version
+        $integrities = array(
+            '4.0.6-rc.0' => 'sha384-uQwKPrmNkEOvI7rrNdCSs6oS1F3GvnZkmPtkntOSIiPQN4CCbFSxv+Bj6qe0mWDb',
+            '4.0.3' => 'sha384-222hzbb8Z8ZKe6pzP18nTSltQM3PdcAwxWKzGOKOIF+Y3bROr5n9zdQ8yTRHgQkQ',
+        );
 
-            case '4.0.3':
-            case '4.0.3.*':
-                $version = '4.0.3';
-                $integrity = 'sha384-222hzbb8Z8ZKe6pzP18nTSltQM3PdcAwxWKzGOKOIF+Y3bROr5n9zdQ8yTRHgQkQ';
-                break;
-
-            default:
-                $data = null;
-                $integrity = null;
-                break;
-        }
-
-        if (isset($version)) {
+        //Defines data to use
+        $data = null;
+        if (false !== $useVersion && isset($integrities[$useVersion])) {
             $data = array(
-                'src' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/' . $version  . '/js/select2.min.js',
-                'integrity' => $integrity,
+                'src' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/' . $useVersion  . '/js/select2.min.js',
+                'integrity' => $integrities[$useVersion],
                 'crossorigin' => 'anonymous',
                 'defer' => false,
             );

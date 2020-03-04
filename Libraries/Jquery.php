@@ -17,91 +17,87 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 class Jquery implements JavascriptInterface
 {
     /**
-     * {@inheritdoc}
+     * Use this method to get version to use
+     * @return string|null
      */
-    public function getJavascript(string $useVersion)
+    public function getVersion(string $version)
     {
-        switch ($useVersion) {
-            case 'latest':
+        $versions = array(
+            'latest' => '3.4.1',
 
-            case '3.*':
-            case '3.4.*':
-            case '3.4.1':
-            case '3.4.1.*':
-                $version = '3.4.1';
-                $integrity = 'sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=';
-                break;
+            '3.*' => '3.4.1',
+            '3.4.*' => '3.4.1',
+            '3.4.1' => '3.4.1',
+            '3.4.1.*' => '3.4.1',
 
-            case '3.4.0':
-            case '3.4.0.*':
-                $version = '3.4.0';
-                $integrity = 'sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=';
-                break;
+            '3.4.0' => '3.4.0',
+            '3.4.0.*' => '3.4.0',
 
-            case '3.3.*':
-            case '3.3.1':
-            case '3.3.1.*':
-                $version = '3.3.1';
-                $integrity = 'sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=';
-                break;
+            '3.3.*' => '3.3.1',
+            '3.3.1' => '3.3.1',
+            '3.3.1.*' => '3.3.1',
 
-            case '3.3.0':
-            case '3.3.0.*':
-                $version = '3.3.0';
-                $integrity = 'sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=';
-                break;
+            '3.3.0' => '3.3.0',
+            '3.3.0.*' => '3.3.0',
 
-            case '3.2.*':
-            case '3.2.1':
-            case '3.2.1.*':
-                $version = '3.2.1';
-                $integrity = 'sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=';
-                break;
+            '3.2.*' => '3.2.1',
+            '3.2.1' => '3.2.1',
+            '3.2.1.*' => '3.2.1',
 
-            case '3.2.0':
-            case '3.2.0.*':
-                $version = '3.2.0';
-                $integrity = 'sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=';
-                break;
+            '3.2.0' => '3.2.0',
+            '3.2.0.*' => '3.2.0',
 
-            case '3.1.*':
-            case '3.1.1':
-            case '3.1.1.*':
-                $version = '3.1.1';
-                $integrity = 'sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=';
-                break;
+            '3.1.*' => '3.1.1',
+            '3.1.1' => '3.1.1',
+            '3.1.1.*' => '3.1.1',
 
-            case '3.1.0':
-            case '3.1.0.*':
-                $version = '3.1.0';
-                $integrity = 'sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=';
-                break;
+            '3.1.0' => '3.1.0',
+            '3.1.0.*' => '3.1.0',
 
-            case '3.0.*':
-            case '3.0.0':
-            case '3.0.0.*':
-                $version = '3.0.0';
-                $integrity = 'sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=';
-                break;
+            '3.0.*' => '3.0.0',
+            '3.0.0' => '3.0.0',
+            '3.0.0.*' => '3.0.0',
 
-            case '2.*':
-            case '2.2.*':
-            case '2.2.4':
-            case '2.2.4.*':
-                $version = '2.2.4';
-                $integrity = 'sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=';
-                break;
+            '2.*' => '2.2.4',
+            '2.2.*' => '2.2.4',
+            '2.2.4' => '2.2.4',
+            '2.2.4.*' => '2.2.4',
+        );
 
-            default:
-                $data = null;
-                $integrity = null;
-                break;
+        if (isset($versions[$version])) {
+            return $versions[$version];
         }
 
-        if (isset($version)) {
+        return false;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getJavascript(string $version)
+    {
+        $useVersion = $this->getVersion($version);
+
+        //Data for specific version
+        $integrities = array(
+            '3.4.1' => 'sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=',
+            '3.4.0' => 'sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=',
+            '3.3.1' => 'sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=',
+            '3.3.0' => 'sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=',
+            '3.2.1' => 'sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=',
+            '3.2.0' => 'sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=',
+            '3.1.1' => 'sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=',
+            '3.1.0' => 'sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=',
+            '3.0.0' => 'sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=',
+            '2.2.4' => 'sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=',
+        );
+
+        //Defines data to use
+        $data = null;
+        if (false !== $useVersion && isset($integrities[$useVersion])) {
             $data = array(
-                'src' => 'https://code.jquery.com/jquery-' . $version  . '.min.js',
-                'integrity' => $integrity,
+                'src' => 'https://code.jquery.com/jquery-' . $useVersion  . '.min.js',
+                'integrity' => $integrities[$useVersion],
                 'crossorigin' => 'anonymous',
                 'defer' => false,
             );

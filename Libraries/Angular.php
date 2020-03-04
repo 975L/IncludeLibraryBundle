@@ -17,56 +17,65 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 class Angular implements JavascriptInterface
 {
     /**
-     * {@inheritdoc}
+     * Use this method to get version to use
+     * @return string|null
      */
-    public function getJavascript(string $useVersion)
+    public function getVersion(string $version)
     {
-        switch ($useVersion) {
-            case 'latest':
+        $versions = array(
+            'latest' => '1.7.5',
 
-            case '1.*':
-            case '1.7.*':
-            case '1.7.5':
-            case '1.7.5.*':
-                $version = '1.7.5';
-                $integrity = 'sha384-kGrtvd68FCW4rm700QHDTxc+U3bQU+CnkhgAgqeJQoD4G9gWSlvNkZoXBfbMbTbk';
-                break;
+            '1.*' => '1.7.5',
 
-            case '1.7.4':
-            case '1.7.4.*':
-                $version = '1.7.4';
-                $integrity = 'sha384-rFekZRMAZzB3UIDUT2JvENq3wUQBQDk2z5/IK9xygZxxhQGeU9y05hWArLgnu2jV';
-                break;
+            '1.7.*' => '1.7.5',
 
-            case '1.7.3':
-            case '1.7.3.*':
-                $version = '1.7.3';
-                $integrity = 'sha384-+mxFfuX/P+plEuP/znWVr+T/nFdnSGfA5iOgWQRDF2BXdtNN7xqueSBaEnvwqrnd';
-                break;
+            '1.7.5' => '1.7.5',
+            '1.7.5.*' => '1.7.5',
 
-            case '1.7.2':
-            case '1.7.2.*':
-                $version = '1.7.2';
-                $integrity = 'sha384-R0RcY28wXErVrCnTuQi4b/UPpXUXzmUWTl/GEgX55yoegErbQZlFUW12h6JEEsoi';
-                break;
+            '1.7.4' => '1.7.4',
+            '1.7.4.*' => '1.7.4',
 
-            case '1.2.*':
-            case '1.2.32':
-            case '1.2.32.*':
-                $version = '1.2.32';
-                $integrity = 'sha384-wIkUlWqDZgGRTyTEgoO743so47Fga6iCbEGBflBzRLrgzX2at1upKTOfZnlOP+kn';
-                break;
+            '1.7.3' => '1.7.3',
+            '1.7.3.*' => '1.7.3',
 
-            default:
-                $data = null;
-                $integrity = null;
-                break;
+            '1.7.2' => '1.7.2',
+            '1.7.2.*' => '1.7.2',
+
+            '1.2.*' => '1.2.32',
+
+            '1.2.32' => '1.2.32',
+            '1.2.32.*' => '1.2.32',
+        );
+
+        if (isset($versions[$version])) {
+            return $versions[$version];
         }
 
-        if (isset($version)) {
+        return false;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getJavascript(string $version)
+    {
+        $useVersion = $this->getVersion($version);
+
+        //Data for specific version
+        $integrities = array(
+            '1.7.5' => 'sha384-kGrtvd68FCW4rm700QHDTxc+U3bQU+CnkhgAgqeJQoD4G9gWSlvNkZoXBfbMbTbk',
+            '1.7.4' => 'sha384-rFekZRMAZzB3UIDUT2JvENq3wUQBQDk2z5/IK9xygZxxhQGeU9y05hWArLgnu2jV',
+            '1.7.3' => 'sha384-+mxFfuX/P+plEuP/znWVr+T/nFdnSGfA5iOgWQRDF2BXdtNN7xqueSBaEnvwqrnd',
+            '1.7.2' => 'sha384-R0RcY28wXErVrCnTuQi4b/UPpXUXzmUWTl/GEgX55yoegErbQZlFUW12h6JEEsoi',
+            '1.2.32' => 'sha384-wIkUlWqDZgGRTyTEgoO743so47Fga6iCbEGBflBzRLrgzX2at1upKTOfZnlOP+kn',
+        );
+
+        //Defines data to use
+        $data = null;
+        if (isset($useVersion)) {
             $data = array(
-                'src' => 'https://ajax.googleapis.com/ajax/libs/angularjs/' . $version  . '/angular.min.js',
-                'integrity' => $integrity,
+                'src' => 'https://ajax.googleapis.com/ajax/libs/angularjs/' . $useVersion  . '/angular.min.js',
+                'integrity' => $integrities[$useVersion],
                 'crossorigin' => 'anonymous',
             );
         }

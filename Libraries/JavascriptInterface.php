@@ -20,5 +20,5 @@ interface JavascriptInterface
      * Use this method to add data for javascript, keep latest version above
      * @return array|null
      */
-    public function getJavascript(string $useVersion);
+    public function getJavascript(string $version);
 }

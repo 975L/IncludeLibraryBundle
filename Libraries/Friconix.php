@@ -17,22 +17,43 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 class Friconix implements JavascriptInterface
 {
     /**
+     * Use this method to get version to use
+     * @return string|null
+     */
+    public function getVersion(string $version)
+    {
+        $versions = array(
+            'latest' => '',
+        );
+
+        if (isset($versions[$version])) {
+            return $versions[$version];
+        }
+
+        return false;
+    }
+
+    /**
      * {@inheritdoc}
      */
-    public function getJavascript(string $useVersion)
+    public function getJavascript(string $version)
     {
-        switch ($useVersion) {
-            case 'latest':
-                $data = array(
-                    'src' => 'https://friconix.com/cdn/friconix.js',
-                    'defer' => true,
-                    'crossorigin' => 'anonymous',
-                    );
-                break;
+        $useVersion = $this->getVersion($version);
 
-            default:
-                $data = null;
-                break;
+        //Data for specific version
+        $integrities = array(
+            'latest' => '',
+        );
+
+        //Defines data to use
+        $data = null;
+        if (false !== $useVersion && isset($integrities[$useVersion])) {
+            $data = array(
+                'src' => 'https://friconix.com/cdn/friconix.js',
+                'integrity' => $integrities[$useVersion],
+                'crossorigin' => 'anonymous',
+                'defer' => true,
+            );
         }
 
         return $data;

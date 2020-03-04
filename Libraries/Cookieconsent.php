@@ -17,38 +17,50 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 class Cookieconsent implements CssInterface, JavascriptInterface
 {
     /**
-     * {@inheritdoc}
+     * Use this method to get version to use
+     * @return string|null
      */
-    public function getCss(string $useVersion)
+    public function getVersion(string $version)
     {
-        switch ($useVersion) {
-            case 'latest':
+        $versions = array(
+            'latest' => '',
 
-            case '3.*':
-            case '3.1.*':
-            case '3.1.0':
-            case '3.1.0.*':
-                $version = '3.1.0';
-                $integrity = 'sha384-AJ82o1PQz2xMlVWjJ+IdPSfyCVS/nJeYbLcpPhm/cEPrewaEdaYkaG6LCsquvogf';
-                break;
+            '3.*' => '3.1.0',
+            '3.1.*' => '3.1.0',
+            '3.1.0' => '3.1.0',
+            '3.1.0.*' => '3.1.0',
 
-            case '3.0.*':
-            case '3.0.3':
-            case '3.0.3.*':
-                $version = '3.0.3';
-                $integrity = 'sha384-6iYDyQZuuNT7DcPJGXx241czdv2+GDGUcXRiqw1iXrjgYMTorSetxFP3JCMQMwnR';
-                break;
+            '3.0.*' => '3.0.3',
+            '3.0.3' => '3.0.3',
+            '3.0.3.*' => '3.0.3',
+        );
 
-            default:
-                $data = null;
-                $integrity = null;
-                break;
+        if (isset($versions[$version])) {
+            return $versions[$version];
         }
 
-        if (isset($version)) {
+        return false;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getCss(string $version)
+    {
+        $useVersion = $this->getVersion($version);
+
+        //Data for specific version
+        $integrities = array(
+            '3.1.0' => 'sha384-AJ82o1PQz2xMlVWjJ+IdPSfyCVS/nJeYbLcpPhm/cEPrewaEdaYkaG6LCsquvogf',
+            '3.0.3' => 'sha384-6iYDyQZuuNT7DcPJGXx241czdv2+GDGUcXRiqw1iXrjgYMTorSetxFP3JCMQMwnR',
+        );
+
+        //Defines data to use
+        $data = null;
+        if (false !== $useVersion && isset($integrities[$useVersion])) {
             $data = array(
-                'href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' . $version . '/cookieconsent.min.css',
-                'integrity' => $integrity,
+                'href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' . $useVersion . '/cookieconsent.min.css',
+                'integrity' => $integrities[$useVersion],
                 'crossorigin' => 'anonymous',
             );
         }
@@ -59,36 +71,22 @@ class Cookieconsent implements CssInterface, JavascriptInterface
     /**
      * {@inheritdoc}
      */
-    public function getJavascript(string $useVersion)
+    public function getJavascript(string $version)
     {
-        switch ($useVersion) {
-            case 'latest':
+        $useVersion = $this->getVersion($version);
 
-            case '3.*':
-            case '3.1.*':
-            case '3.1.0':
-            case '3.1.0.*':
-                $version = '3.1.0';
-                $integrity = 'sha384-l+e8/kt7mRYg7RUc/i3MsNwDJlWxkWkFDX10LF/iNglZLT96GBMAPrbaH2GP2lQy';
-                break;
+        //Data for specific version
+        $integrities = array(
+            '3.1.0' => 'sha384-l+e8/kt7mRYg7RUc/i3MsNwDJlWxkWkFDX10LF/iNglZLT96GBMAPrbaH2GP2lQy',
+            '3.0.3' => 'sha384-PDjg2ZdS3khPzd53i18+7tzB32JVQfFMrTXYo21RqPgUmEVAPwIhxOUF/8sP79CS',
+        );
 
-            case '3.0.*':
-            case '3.0.3':
-            case '3.0.3.*':
-                $version = '3.0.3';
-                $integrity = 'sha384-PDjg2ZdS3khPzd53i18+7tzB32JVQfFMrTXYo21RqPgUmEVAPwIhxOUF/8sP79CS';
-                break;
-
-            default:
-                $data = null;
-                $integrity = null;
-                break;
-        }
-
-        if (isset($version)) {
+        //Defines data to use
+        $data = null;
+        if (false !== $useVersion && isset($integrities[$useVersion])) {
             $data = array(
-                'src' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' . $version  . '/cookieconsent.min.js',
-                'integrity' => $integrity,
+                'src' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' . $useVersion  . '/cookieconsent.min.js',
+                'integrity' => $integrities[$useVersion],
                 'crossorigin' => 'anonymous',
                 'defer' => false,
             );

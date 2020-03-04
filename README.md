@@ -147,12 +147,13 @@ Use following names and versions (+ wildcard if wanted, as indicated above) in t
 
 ## How to add libraries and/or versions
 
-Feel free to make PR's to add other libraries/versions :-)
-
 - Go into the folder `Libraries`,
 - Open the library class (or add it if not present),
 - Locate the corresponding method `getCss()` or `getJavascript()`,
+- if you add new Library, add method `getVersion()`,
 - Add versions and wildcards to the switch function, keeping the latest above,
 - Add the needed data (take example as existing one).
+
+Feel free to make PR's to add other libraries/versions :-)
 
 If this project **help you to reduce time to develop**, you can sponsor me via the "Sponsor" button at the top :)

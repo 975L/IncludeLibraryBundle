@@ -17,22 +17,43 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 class Vue implements JavascriptInterface
 {
     /**
+     * Use this method to get version to use
+     * @return string|null
+     */
+    public function getVersion(string $version)
+    {
+        $versions = array(
+            'stable' => 'latest',
+            'latest' => 'latest',
+        );
+
+        if (isset($versions[$version])) {
+            return $versions[$version];
+        }
+
+        return false;
+    }
+
+
+    /**
      * {@inheritdoc}
      */
     public function getJavascript(string $useVersion)
     {
-        switch ($useVersion) {
-            case 'latest':
-            case 'stable':
-                $data = array(
-                    'src' => 'https://cdn.jsdelivr.net/npm/vue',
-                    'crossorigin' => 'anonymous',
-                    );
-                break;
+        $useVersion = $this->getVersion($version);
 
-            default:
-                $data = null;
-                break;
+        //Data for specific version
+        $integrities = array(
+            'latest' => '',
+        );
+
+        $data = null;
+        if (false !== $useVersion && isset($integrities[$useVersion])) {
+            $data = array(
+                'src' => 'https://cdn.jsdelivr.net/npm/vue',
+                'crossorigin' => 'anonymous',
+                'defer' => true,
+            );
         }
 
         return $data;

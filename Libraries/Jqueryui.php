@@ -17,31 +17,45 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 class Jqueryui implements JavascriptInterface
 {
     /**
-     * {@inheritdoc}
+     * Use this method to get version to use
+     * @return string|null
      */
-    public function getJavascript(string $useVersion)
+    public function getVersion(string $version)
     {
-        switch ($useVersion) {
-            case 'latest':
+        $versions = array(
+            'latest' => '1.12.1',
 
-            case '1.*':
-            case '1.12.*':
-            case '1.12.1':
-            case '1.12.1.*':
-                $version = '1.12.1';
-                $integrity = 'sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=';
-                break;
+            '1.*' => '1.12.1',
+            '1.12.*' => '1.12.1',
+            '1.12.1' => '1.12.1',
+            '1.12.1.*' => '1.12.1',
+        );
 
-            default:
-                $data = null;
-                $integrity = null;
-                break;
+        if (isset($versions[$version])) {
+            return $versions[$version];
         }
 
-        if (isset($version)) {
+        return false;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getJavascript(string $version)
+    {
+        $useVersion = $this->getVersion($version);
+
+        //Data for specific version
+        $integrities = array(
+            '1.12.1' => 'sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=',
+        );
+
+        //Defines data to use
+        $data = null;
+        if (false !== $useVersion && isset($integrities[$useVersion])) {
             $data = array(
-                'src' => 'https://code.jquery.com/ui/' . $version  . '/jquery-ui.min.js',
-                'integrity' => $integrity,
+                'src' => 'https://code.jquery.com/ui/' . $useVersion  . '/jquery-ui.min.js',
+                'integrity' => $integrities[$useVersion],
                 'crossorigin' => 'anonymous',
             );
         }

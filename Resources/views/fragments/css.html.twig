@@ -6,7 +6,7 @@
         href="{{ data.href }}"
     {% endif %}
 {# integrity #}
-    {% if data.integrity is defined and null != data.integrity %}
+    {% if data.integrity is defined and null != data.integrity and '' != data.integrity %}
         integrity="{{ data.integrity }}"
     {% endif %}
 {# crossorigin #}

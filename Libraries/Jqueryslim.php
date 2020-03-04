@@ -9,6 +9,8 @@
 
 namespace c975L\IncludeLibraryBundle\Libraries;
 
+use c975L\IncludeLibraryBundle\Libraries\Jquery;
+
 /**
  * Data for jQuery Slim - https://code.jquery.com
  * @author Laurent Marquet <laurent.marquet@laposte.net>
@@ -17,83 +19,42 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 class Jqueryslim implements JavascriptInterface
 {
     /**
+     * Use this method to get version to use
+     * @return string|null
+     */
+    public function getVersion(string $version)
+    {
+        $jQuery = new Jquery();
+
+        return $jQuery->getVersion($version);
+    }
+
+    /**
      * {@inheritdoc}
      */
-    public function getJavascript(string $useVersion)
+    public function getJavascript(string $version)
     {
-        switch ($useVersion) {
-            case 'latest':
+        $useVersion = $this->getVersion($version);
 
-            case '3.*':
-            case '3.4.*':
-            case '3.4.1':
-            case '3.4.1.*':
-                $version = '3.4.1';
-                $integrity = 'sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=';
-                break;
+        //Data for specific version
+        $integrities = array(
+            '3.4.1' => 'sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=',
+            '3.4.0' => 'sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=',
+            '3.3.1' => 'sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=',
+            '3.3.0' => 'sha256-AMg3I7ya76OLPD9M+Mk7kqrA29HUn/FuGBfT/9Uf9ls=',
+            '3.2.1' => 'sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=',
+            '3.2.0' => 'sha256-qLAv0kBAihcHZLI3fv3WITKeRsUX27hd6upBBa0MSow=',
+            '3.1.1' => 'sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=',
+            '3.1.0' => 'sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=',
+            '3.0.0' => 'sha256-Rf4BadfyCtsvHmO89BUZcbYvNNvZvOT08ALfEzvCsD0=',
+        );
 
-            case '3.4.0':
-            case '3.4.0.*':
-                $version = '3.4.0';
-                $integrity = 'sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=';
-                break;
-
-            case '3.3.*':
-            case '3.3.1':
-            case '3.3.1.*':
-                $version = '3.3.1';
-                $integrity = 'sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=';
-                break;
-
-            case '3.3.0':
-            case '3.3.0.*':
-                $version = '3.3.0';
-                $integrity = 'sha256-AMg3I7ya76OLPD9M+Mk7kqrA29HUn/FuGBfT/9Uf9ls=';
-                break;
-
-            case '3.2.*':
-            case '3.2.1':
-            case '3.2.1.*':
-                $version = '3.2.1';
-                $integrity = 'sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=';
-                break;
-
-            case '3.2.0':
-            case '3.2.0.*':
-                $version = '3.2.0';
-                $integrity = 'sha256-qLAv0kBAihcHZLI3fv3WITKeRsUX27hd6upBBa0MSow=';
-                break;
-
-            case '3.1.*':
-            case '3.1.1':
-            case '3.1.1.*':
-                $version = '3.1.1';
-                $integrity = 'sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=';
-                break;
-
-            case '3.1.0':
-            case '3.1.0.*':
-                $version = '3.1.0';
-                $integrity = 'sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=';
-                break;
-
-            case '3.0.*':
-            case '3.0.0':
-            case '3.0.0.*':
-                $version = '3.0.0';
-                $integrity = 'sha256-Rf4BadfyCtsvHmO89BUZcbYvNNvZvOT08ALfEzvCsD0=';
-                break;
-
-            default:
-                $data = null;
-                $integrity = null;
-                break;
-        }
-
-        if (isset($version)) {
+        //Defines data to use
+        $data = null;
+        if (false !== $useVersion && isset($integrities[$useVersion])) {
             $data = array(
-                'src' => 'https://code.jquery.com/jquery-' . $version  . '.slim.min.js',
-                'integrity' => $integrity,
+                'src' => 'https://code.jquery.com/jquery-' . $useVersion  . '.slim.min.js',
+                'integrity' => $integrities[$useVersion],
                 'crossorigin' => 'anonymous',
                 'defer' => false,
             );

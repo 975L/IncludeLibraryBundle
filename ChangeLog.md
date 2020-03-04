@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.12
+
+- Reduced Cyclomatic complexity (04/03/2020)
+
 ## v1.11.1
 
 - Cosmetic changes due to Codacy review (04/03/2020)

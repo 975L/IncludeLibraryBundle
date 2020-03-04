@@ -17,78 +17,75 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 class Popper implements JavascriptInterface
 {
     /**
-     * {@inheritdoc}
+     * Use this method to get version to use
+     * @return string|null
      */
-    public function getJavascript(string $useVersion)
+    public function getVersion(string $version)
     {
-        switch ($useVersion) {
-            case 'latest':
+        $versions = array(
+            'latest' => '@1.14.6',
 
-            case '1.*':
-                $version = '';
-                $integrity = '';
-                break;
+            '1.*' => '@1.14.6',
 
-            case '1.14.*':
-            case '1.14.6':
-            case '1.14.6.*':
-                $version = '@1.14.6';
-                $integrity = 'sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut';
-                break;
+            '1.14.*' => '@1.14.6',
+            '1.14.6' => '@1.14.6',
+            '1.14.6.*' => '@1.14.6',
 
-            case '1.14.5':
-            case '1.14.5.*':
-                $version = '@1.14.5';
-                $integrity = 'sha384-a3GqK/TQoh+gPFAiesulJK7xiYNo3loQBWP1a68OkSUM5SqmmQxhzdMUGuNlAw3r';
-                break;
+            '1.14.5' => '@1.14.5',
+            '1.14.5.*' => '@1.14.5',
 
-            case '1.14.4':
-            case '1.14.4.*':
-                $version = '@1.14.4';
-                $integrity = 'sha384-GM0Y80ecpwKxF1D5XCrGanKusGDy9WW0O2sSM84neB4iFhvKp3fwnoIRnPsQcN1R';
-                break;
+            '1.14.4' => '@1.14.4',
+            '1.14.4.*' => '@1.14.4',
 
-            case '1.14.3':
-            case '1.14.3.*':
-                $version = '@1.14.3';
-                $integrity = 'sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49';
-                break;
+            '1.14.3' => '@1.14.3',
+            '1.14.3.*' => '@1.14.3',
 
-            case '1.14.2':
-            case '1.14.2.*':
-                $version = '@1.14.2';
-                $integrity = 'sha384-AXEnX7PDLv+jdnMoormAUbt+QXfB3RKKzS6zZY474XEGvwG9uMHSCAsKGnslQULy';
-                break;
+            '1.14.2' => '@1.14.2',
+            '1.14.2.*' => '@1.14.2',
 
-            case '1.14.1':
-            case '1.14.1.*':
-                $version = '@1.14.1';
-                $integrity = 'sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ';
-                break;
+            '1.14.1' => '@1.14.1',
+            '1.14.1.*' => '@1.14.1',
 
-            case '1.14.0':
-            case '1.14.0.*':
-                $version = '@1.14.0';
-                $integrity = 'sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ';
-                break;
+            '1.14.0' => '@1.14.0',
+            '1.14.0.*' => '@1.14.0',
 
-            case '1.12.*':
-            case '1.12.9':
-            case '1.12.9.*':
-                $version = '@1.12.9';
-                $integrity = 'sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q';
-                break;
+            '1.12.*' => '@1.12.9',
+            '1.12.9' => '@1.12.9',
+            '1.12.9.*' => '@1.12.9',
+        );
 
-            default:
-                $data = null;
-                $integrity = null;
-                break;
+        if (isset($versions[$version])) {
+            return $versions[$version];
         }
 
-        if (isset($version)) {
+        return false;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getJavascript(string $version)
+    {
+        $useVersion = $this->getVersion($version);
+
+        //Data for specific version
+        $integrities = array(
+            '@1.14.6' => 'sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut',
+            '@1.14.5' => 'sha384-a3GqK/TQoh+gPFAiesulJK7xiYNo3loQBWP1a68OkSUM5SqmmQxhzdMUGuNlAw3r',
+            '@1.14.4' => 'sha384-GM0Y80ecpwKxF1D5XCrGanKusGDy9WW0O2sSM84neB4iFhvKp3fwnoIRnPsQcN1R',
+            '@1.14.3' => 'sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49',
+            '@1.14.2' => 'sha384-AXEnX7PDLv+jdnMoormAUbt+QXfB3RKKzS6zZY474XEGvwG9uMHSCAsKGnslQULy',
+            '@1.14.1' => 'sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ',
+            '@1.14.0' => 'sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ',
+            '@1.12.9' => 'sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q',
+        );
+
+        //Defines data to use
+        $data = null;
+        if (false !== $useVersion && isset($integrities[$useVersion])) {
             $data = array(
-                'src' => 'https://unpkg.com/popper.js' . $version  . '/dist/umd/popper.min.js',
-                'integrity' => $integrity,
+                'src' => 'https://unpkg.com/popper.js' . $useVersion  . '/dist/umd/popper.min.js',
+                'integrity' => $integrities[$useVersion],
                 'crossorigin' => 'anonymous',
             );
         }
