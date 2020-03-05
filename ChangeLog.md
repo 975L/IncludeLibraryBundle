@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.12.1.1
+
+- Updated README.md (05/03/2020)
+
 ## v1.12.1
 
 - Corrected files (04/03/2020)

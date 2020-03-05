@@ -150,9 +150,9 @@ Use following names and versions (+ wildcard if wanted, as indicated above) in t
 - Go into the folder `Libraries`,
 - Open the library class (or add it if not present),
 - Locate the corresponding method `getCss()` or `getJavascript()`,
-- if you add new Library, add method `getVersion()`,
-- Add versions and wildcards to the switch function, keeping the latest above,
-- Add the needed data (take example as existing one).
+- If you add new Library, add method `getVersion()`,
+- Add versions and wildcards to the methods `getVersion()`, keeping the latest above,
+- Add the needed data (take example on existing ones).
 
 Feel free to make PR's to add other libraries/versions :-)
 
