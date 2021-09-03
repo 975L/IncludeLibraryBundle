@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.13.1
+
+- Removed twig/extensions (03/09/2021)
+
 ## v1.13
 
 - Removed versions constraints in composer (03/09/2021)
