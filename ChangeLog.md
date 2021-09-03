@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.13
+
+- Removed versions constraints in composer (03/09/2021)
+
 ## v1.12.1.1
 
 - Updated README.md (05/03/2020)
