@@ -21,25 +21,21 @@ use Twig\TwigFunction;
  */
 class IncludeLibraryLink extends AbstractExtension
 {
-    /**
-     * Stores IncludeLibrary Service
-     * @var IncludeLibraryService
-     */
-    private $includeLibraryService;
-
-    public function __construct(IncludeLibraryService $includeLibraryService)
+    public function __construct(
+        /**
+         * Stores IncludeLibrary Service
+         */
+        private readonly IncludeLibraryService $includeLibraryService
+    )
     {
-        $this->includeLibraryService = $includeLibraryService;
     }
 
     public function getFunctions()
     {
-        return array(
-            new TwigFunction(
-                'inc_link',
-                array($this, 'Link')
-            ),
-        );
+        return [new TwigFunction(
+            'inc_link',
+            $this->Link(...)
+        )];
     }
 
     /**
@@ -49,7 +45,7 @@ class IncludeLibraryLink extends AbstractExtension
      */
     public function Link($name, $type, $version = 'latest')
     {
-        $type = strtolower($type);
+        $type = strtolower((string) $type);
 
         //Gets data
         $data = $this->includeLibraryService->getData($name, $type, $version);

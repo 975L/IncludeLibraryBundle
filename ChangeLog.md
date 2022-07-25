@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0
+
+- Changed compatibility to PHP 8
+
 ## v1.13.1
 
 - Removed twig/extensions (03/09/2021)

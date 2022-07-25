@@ -22,13 +22,7 @@ class Tinymce implements JavascriptInterface
      */
     public function getVersion(string $version)
     {
-        $versions = array(
-            'stable' => '5',
-            'latest' => '5',
-
-            '5.*' => '5',
-            '4.*' => '4',
-        );
+        $versions = ['stable' => '5', 'latest' => '5', '5.*' => '5', '4.*' => '4'];
 
         if (isset($versions[$version])) {
             return $versions[$version];
@@ -45,23 +39,14 @@ class Tinymce implements JavascriptInterface
         $useVersion = $this->getVersion($version);
 
         //Data for specific version
-        $integrities = array(
-            '5' => '',
-            '4' => '',
-        );
+        $integrities = ['5' => '', '4' => ''];
 
         $data = null;
         if (false !== $useVersion && isset($integrities[$useVersion])) {
-            $data = array(
-                'src' => 'https://cdn.tiny.cloud/1/API-KEY/tinymce/5/tinymce.min.js',
-                'defer' => false,
-            );
+            $data = ['src' => 'https://cdn.tiny.cloud/1/API-KEY/tinymce/5/tinymce.min.js', 'defer' => false];
 
             if ('4' === $useVersion) {
-                $data = array(
-                    'src' => 'https://cloud.tinymce.com/stable/tinymce.min.js',
-                    'defer' => false,
-                );
+                $data = ['src' => 'https://cloud.tinymce.com/stable/tinymce.min.js', 'defer' => false];
             }
         }
 

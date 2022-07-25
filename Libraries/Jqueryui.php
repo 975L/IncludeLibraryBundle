@@ -22,14 +22,7 @@ class Jqueryui implements JavascriptInterface
      */
     public function getVersion(string $version)
     {
-        $versions = array(
-            'latest' => '1.12.1',
-
-            '1.*' => '1.12.1',
-            '1.12.*' => '1.12.1',
-            '1.12.1' => '1.12.1',
-            '1.12.1.*' => '1.12.1',
-        );
+        $versions = ['latest' => '1.12.1', '1.*' => '1.12.1', '1.12.*' => '1.12.1', '1.12.1' => '1.12.1', '1.12.1.*' => '1.12.1'];
 
         if (isset($versions[$version])) {
             return $versions[$version];
@@ -46,18 +39,12 @@ class Jqueryui implements JavascriptInterface
         $useVersion = $this->getVersion($version);
 
         //Data for specific version
-        $integrities = array(
-            '1.12.1' => 'sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=',
-        );
+        $integrities = ['1.12.1' => 'sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU='];
 
         //Defines data to use
         $data = null;
         if (false !== $useVersion && isset($integrities[$useVersion])) {
-            $data = array(
-                'src' => 'https://code.jquery.com/ui/' . $useVersion  . '/jquery-ui.min.js',
-                'integrity' => $integrities[$useVersion],
-                'crossorigin' => 'anonymous',
-            );
+            $data = ['src' => 'https://code.jquery.com/ui/' . $useVersion  . '/jquery-ui.min.js', 'integrity' => $integrities[$useVersion], 'crossorigin' => 'anonymous'];
         }
 
         return $data;

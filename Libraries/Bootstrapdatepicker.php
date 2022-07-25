@@ -22,18 +22,7 @@ class Bootstrapdatepicker implements CssInterface, JavascriptInterface
      */
     public function getVersion(string $version)
     {
-        $versions = array(
-            'latest' => '1.8.0',
-
-            '1.*' => '1.8.0',
-            '1.8.*' => '1.8.0',
-            '1.8.0' => '1.8.0',
-            '1.8.0.*' => '1.8.0',
-
-            '1.7.*' => '1.7.1',
-            '1.7.1' => '1.7.1',
-            '1.7.1.*' => '1.7.1',
-        );
+        $versions = ['latest' => '1.8.0', '1.*' => '1.8.0', '1.8.*' => '1.8.0', '1.8.0' => '1.8.0', '1.8.0.*' => '1.8.0', '1.7.*' => '1.7.1', '1.7.1' => '1.7.1', '1.7.1.*' => '1.7.1'];
 
         if (isset($versions[$version])) {
             return $versions[$version];
@@ -50,19 +39,12 @@ class Bootstrapdatepicker implements CssInterface, JavascriptInterface
         $useVersion = $this->getVersion($version);
 
         //Data for specific version
-        $integrities = array(
-            '1.8.0' => 'sha384-UIjefFM/glLb4CFCVO/HC3zB9vuP1A5U/5PnGWifE037WUTJ/7BRi25dkmJBqZPa',
-            '1.7.1' => 'sha384-v7OXjsQNUteMoQ8IjcHUr8dUe6KjmnT7POLvMclVMu83Hl3HkJ7CyPgMJOYuLhTQ',
-        );
+        $integrities = ['1.8.0' => 'sha384-UIjefFM/glLb4CFCVO/HC3zB9vuP1A5U/5PnGWifE037WUTJ/7BRi25dkmJBqZPa', '1.7.1' => 'sha384-v7OXjsQNUteMoQ8IjcHUr8dUe6KjmnT7POLvMclVMu83Hl3HkJ7CyPgMJOYuLhTQ'];
 
         //Defines data to use
         $data = null;
         if (false !== $useVersion && isset($integrities[$useVersion])) {
-            $data = array(
-                'href' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/' . $useVersion . '/css/bootstrap-datepicker.css',
-                'integrity' => $integrities[$useVersion],
-                'crossorigin' => 'anonymous',
-            );
+            $data = ['href' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/' . $useVersion . '/css/bootstrap-datepicker.css', 'integrity' => $integrities[$useVersion], 'crossorigin' => 'anonymous'];
         }
 
         return $data;
@@ -76,20 +58,12 @@ class Bootstrapdatepicker implements CssInterface, JavascriptInterface
         $useVersion = $this->getVersion($version);
 
         //Data for specific version
-        $integrities = array(
-            '1.8.0' => 'sha384-vtZXrrXR60MGoprJb7ApH4t3Y59IhePhwtXXmbqg//ha9LHwSo3QCNR6XvF5oXVM',
-            '1.7.1' => 'sha384-w48xMCwgWQu0zb3PvQI/rK5lfN6G+lSWu+qI4ukKZg3I5Xx3/VWA8IiaQ8O7tZur',
-        );
+        $integrities = ['1.8.0' => 'sha384-vtZXrrXR60MGoprJb7ApH4t3Y59IhePhwtXXmbqg//ha9LHwSo3QCNR6XvF5oXVM', '1.7.1' => 'sha384-w48xMCwgWQu0zb3PvQI/rK5lfN6G+lSWu+qI4ukKZg3I5Xx3/VWA8IiaQ8O7tZur'];
 
         //Defines data to use
         $data = null;
         if (false !== $useVersion && isset($integrities[$useVersion])) {
-            $data = array(
-                'src' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/' . $useVersion  . '/js/bootstrap-datepicker.min.js',
-                'integrity' => $integrities[$useVersion],
-                'crossorigin' => 'anonymous',
-                'defer' => false,
-            );
+            $data = ['src' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/' . $useVersion  . '/js/bootstrap-datepicker.min.js', 'integrity' => $integrities[$useVersion], 'crossorigin' => 'anonymous', 'defer' => false];
         }
 
         return $data;

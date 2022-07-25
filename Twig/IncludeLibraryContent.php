@@ -21,28 +21,22 @@ use Twig\TwigFunction;
  */
 class IncludeLibraryContent extends AbstractExtension
 {
-    /**
-     * Stores IncludeLibrary Service
-     * @var IncludeLibraryService
-     */
-    private $includeLibraryService;
-
-    public function __construct(IncludeLibraryService $includeLibraryService)
+    public function __construct(
+        /**
+         * Stores IncludeLibrary Service
+         */
+        private readonly IncludeLibraryService $includeLibraryService
+    )
     {
-        $this->includeLibraryService = $includeLibraryService;
     }
 
     public function getFunctions()
     {
-        return array(
-            new TwigFunction(
-                'inc_content',
-                array($this, 'Content'),
-                array(
-                    'is_safe' => array('html'),
-                )
-            ),
-        );
+        return [new TwigFunction(
+            'inc_content',
+            $this->Content(...),
+            ['is_safe' => ['html']]
+        )];
     }
 
     /**
@@ -52,18 +46,18 @@ class IncludeLibraryContent extends AbstractExtension
      */
     public function Content($name, $type, $version = 'latest')
     {
-        $type = strtolower($type);
+        $type = strtolower((string) $type);
 
         //Gets type for local file
         $local = false;
         if ('local' === $type) {
             $local = true;
-            $type = strtolower(substr($name, strrpos($name, '.') + 1));
+            $type = strtolower(substr((string) $name, strrpos((string) $name, '.') + 1));
         }
 
         //Gets data for local file
         if ($local) {
-            $data = 'css' === $type ? array('href' => $name) : array('src' => $name);
+            $data = 'css' === $type ? ['href' => $name] : ['src' => $name];
         //Gets data for external library
         } else {
             $data = $this->includeLibraryService->getData($name, $type, $version);

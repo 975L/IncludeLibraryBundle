@@ -22,9 +22,7 @@ class Friconix implements JavascriptInterface
      */
     public function getVersion(string $version)
     {
-        $versions = array(
-            'latest' => '',
-        );
+        $versions = ['latest' => ''];
 
         if (isset($versions[$version])) {
             return $versions[$version];
@@ -41,19 +39,12 @@ class Friconix implements JavascriptInterface
         $useVersion = $this->getVersion($version);
 
         //Data for specific version
-        $integrities = array(
-            'latest' => '',
-        );
+        $integrities = ['latest' => ''];
 
         //Defines data to use
         $data = null;
         if (false !== $useVersion && isset($integrities[$useVersion])) {
-            $data = array(
-                'src' => 'https://friconix.com/cdn/friconix.js',
-                'integrity' => $integrities[$useVersion],
-                'crossorigin' => 'anonymous',
-                'defer' => true,
-            );
+            $data = ['src' => 'https://friconix.com/cdn/friconix.js', 'integrity' => $integrities[$useVersion], 'crossorigin' => 'anonymous', 'defer' => true];
         }
 
         return $data;

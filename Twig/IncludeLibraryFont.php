@@ -21,16 +21,11 @@ class IncludeLibraryFont extends AbstractExtension
 {
     public function getFunctions()
     {
-        return array(
-            new TwigFunction(
-                'inc_font',
-                array($this, 'Font'),
-                array(
-                    'needs_environment' => true,
-                    'is_safe' => array('html'),
-                )
-            ),
-        );
+        return [new TwigFunction(
+            'inc_font',
+            $this->Font(...),
+            ['needs_environment' => true, 'is_safe' => ['html']]
+        )];
     }
 
     /**
@@ -40,10 +35,8 @@ class IncludeLibraryFont extends AbstractExtension
     public function Font(Environment $environment, $name)
     {
         //Returns the font code
-        $render = $environment->render('@c975LIncludeLibrary/fragments/font.html.twig', array(
-            'name' => str_replace(' ', '+', $name),
-            ));
+        $render = $environment->render('@c975LIncludeLibrary/fragments/font.html.twig', ['name' => str_replace(' ', '+', (string) $name)]);
 
-        return str_replace(array("\n", '  ', '  ', '  ', '  ', '  '), ' ', $render);
+        return str_replace(["\n", '  ', '  ', '  ', '  ', '  '], ' ', $render);
     }
 }

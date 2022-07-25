@@ -22,7 +22,7 @@ class IncludeLibraryService implements IncludeLibraryServiceInterface
     public function getData(string $name, string $type, string $version)
     {
         //Gets Library name
-        $libraryName = ucfirst(strtolower(str_replace(array('_', '-'), '', $name)));
+        $libraryName = ucfirst(strtolower(str_replace(['_', '-'], '', $name)));
 
         //Loads data from library
         if (file_exists(__DIR__ . '/../Libraries/' . $libraryName . '.php')) {

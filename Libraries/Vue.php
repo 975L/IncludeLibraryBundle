@@ -22,10 +22,7 @@ class Vue implements JavascriptInterface
      */
     public function getVersion(string $version)
     {
-        $versions = array(
-            'stable' => 'latest',
-            'latest' => 'latest',
-        );
+        $versions = ['stable' => 'latest', 'latest' => 'latest'];
 
         if (isset($versions[$version])) {
             return $versions[$version];
@@ -43,17 +40,11 @@ class Vue implements JavascriptInterface
         $useVersion = $this->getVersion($version);
 
         //Data for specific version
-        $integrities = array(
-            'latest' => '',
-        );
+        $integrities = ['latest' => ''];
 
         $data = null;
         if (false !== $useVersion && isset($integrities[$useVersion])) {
-            $data = array(
-                'src' => 'https://cdn.jsdelivr.net/npm/vue',
-                'crossorigin' => 'anonymous',
-                'defer' => true,
-            );
+            $data = ['src' => 'https://cdn.jsdelivr.net/npm/vue', 'crossorigin' => 'anonymous', 'defer' => true];
         }
 
         return $data;

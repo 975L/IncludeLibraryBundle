@@ -22,29 +22,22 @@ use Twig\TwigFunction;
  */
 class IncludeLibraryCode extends AbstractExtension
 {
-    /**
-     * Stores IncludeLibrary Service
-     * @var IncludeLibraryService
-     */
-    private $includeLibraryService;
-
-    public function __construct(IncludeLibraryService $includeLibraryService)
+    public function __construct(
+        /**
+         * Stores IncludeLibrary Service
+         */
+        private readonly IncludeLibraryService $includeLibraryService
+    )
     {
-        $this->includeLibraryService = $includeLibraryService;
     }
 
     public function getFunctions()
     {
-        return array(
-            new TwigFunction(
-                'inc_lib',
-                array($this, 'Code'),
-                array(
-                    'needs_environment' => true,
-                    'is_safe' => array('html'),
-                )
-            ),
-        );
+        return [new TwigFunction(
+            'inc_lib',
+            $this->Code(...),
+            ['needs_environment' => true, 'is_safe' => ['html']]
+        )];
     }
 
     /**
@@ -54,13 +47,13 @@ class IncludeLibraryCode extends AbstractExtension
      */
     public function Code(Environment $environment, $name, $type, $version = 'latest', $params = null)
     {
-        $type = strtolower($type);
+        $type = strtolower((string) $type);
 
         //Gets type for local file
         $local = false;
         if ('local' === $type) {
             $local = true;
-            $type = strtolower(substr($name, strrpos($name, '.') + 1));
+            $type = strtolower(substr((string) $name, strrpos((string) $name, '.') + 1));
         }
 
         //Defines fragment to use
@@ -74,7 +67,7 @@ class IncludeLibraryCode extends AbstractExtension
 
         //Gets data for local file
         if ($local) {
-            $data = 'css' === $type ? array('href' => $name) : array('src' => $name);
+            $data = 'css' === $type ? ['href' => $name] : ['src' => $name];
         //Gets data for external library
         } else {
             $data = $this->includeLibraryService->getData($name, $type, $version);
@@ -82,12 +75,9 @@ class IncludeLibraryCode extends AbstractExtension
 
         //Returns xhtml code
         if (null !== $fragment && null !== $data) {
-            $render = $environment->render($fragment, array(
-                'data' => $data,
-                'params' => $params,
-                ));
+            $render = $environment->render($fragment, ['data' => $data, 'params' => $params]);
 
-            return str_replace(array("\n", '  ', '  ', '  ', '  ', '  '), ' ', $render);
+            return str_replace(["\n", '  ', '  ', '  ', '  ', '  '], ' ', $render);
         }
 
         //Throws an error if not found
