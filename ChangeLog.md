@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.1
+
+- Added missing return type (06/04/2023)
+
 ## v2.0
 
 - Changed compatibility to PHP 8
