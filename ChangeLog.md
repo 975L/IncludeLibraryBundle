@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.0
+
+- Changed to new recomended bundle SF 7 structure (15/01/2024)
+
+Upgrading from v2.x? **Check UPGRADE.md**
+
 ## v2.0.2
 
 - Added TreeBuilder return type (29/05/2023)
@@ -11,6 +17,8 @@
 ## v2.0
 
 - Changed compatibility to PHP 8
+
+Upgrading from v1.x? **Check UPGRADE.md**
 
 ## v1.13.1
 

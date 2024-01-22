@@ -5,7 +5,7 @@ services:
         public: true
 
     c975L\IncludeLibraryBundle\Service\:
-        resource: '../../Service/*'
+        resource: '../src/Service/*'
 
     c975L\IncludeLibraryBundle\Twig\:
-        resource: '../../Twig/*'
+        resource: '../src/Twig/*'
