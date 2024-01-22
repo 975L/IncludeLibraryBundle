@@ -2,7 +2,7 @@
 
 ## v3.0
 
-- Changed to new recomended bundle SF 7 structure (15/01/2024)
+- Changed to new recomended bundle SF 7 structure (22/01/2024)
 
 Upgrading from v2.x? **Check UPGRADE.md**
 
