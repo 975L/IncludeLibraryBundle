@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.0.1
+
+- Corrected ChangeLog (22/01/2024)
+
 ## v3.0
 
 - Changed to new recomended bundle SF 7 structure (22/01/2024)
