@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.1
+
+- Simplified (greatly) the way to manage verions of libraries (23/01/2024)
+- Removed support of Friconix (23/01/2024)
+- Removed support of Vue (23/01/2024)
+- Changed cdn for Bootstrap (23/01/2024)
+
 ## v3.0.1
 
 - Corrected ChangeLog (22/01/2024)

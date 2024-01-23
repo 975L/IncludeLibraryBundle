@@ -17,36 +17,14 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 class Jqueryui implements JavascriptInterface
 {
     /**
-     * Use this method to get version to use
-     * @return string|null
-     */
-    public function getVersion(string $version)
-    {
-        $versions = ['latest' => '1.12.1', '1.*' => '1.12.1', '1.12.*' => '1.12.1', '1.12.1' => '1.12.1', '1.12.1.*' => '1.12.1'];
-
-        if (isset($versions[$version])) {
-            return $versions[$version];
-        }
-
-        return false;
-    }
-
-    /**
      * {@inheritdoc}
      */
-    public function getJavascript(string $version)
+    public function getJavascript(string $version, string $integrity)
     {
-        $useVersion = $this->getVersion($version);
-
-        //Data for specific version
-        $integrities = ['1.12.1' => 'sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU='];
-
-        //Defines data to use
-        $data = null;
-        if (false !== $useVersion && isset($integrities[$useVersion])) {
-            $data = ['src' => 'https://code.jquery.com/ui/' . $useVersion  . '/jquery-ui.min.js', 'integrity' => $integrities[$useVersion], 'crossorigin' => 'anonymous'];
-        }
-
-        return $data;
+        return [
+            'src' => 'https://code.jquery.com/ui/' . $version  . '/jquery-ui.min.js',
+            'integrity' => $integrity,
+            'crossorigin' => 'anonymous'
+        ];
     }
 }

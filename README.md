@@ -47,24 +47,6 @@ Use [Composer](https://getcomposer.org) to install the library
     composer require c975l/includelibrary-bundle
 ```
 
-### Step 2: Enable the Bundle
-
-Then, enable the bundle by adding it to the list of registered bundles in the `app/AppKernel.php` file of your project:
-
-```php
-<?php
-class AppKernel extends Kernel
-{
-    public function registerBundles()
-    {
-        $bundles = [
-            // ...
-            new c975L\IncludeLibraryBundle\c975LIncludeLibraryBundle(),
-        ];
-    }
-}
-```
-
 ### How to use
 
 IncludeLibraryBundle provide the following Twig extension functions `inc_lib()`, `inc_link()`, `inc_content()` and `inc_font()`
@@ -130,20 +112,19 @@ All you have to do is to worry about its name! Find your [Google Font](https://f
 ## Supported libraries
 
 Use following names and versions (+ wildcard if wanted, as indicated above) in the functions `inc_lib`, `inc_link` or `inc_content`:
+To find supported versions check the sub-folders of `src/integrities`
 
-- **[Angular](https://angularjs.org) (javascript)** -> `angular`: 1.2.32, 1.7.2 -> 1.7.5
-- **[Bootstrap](http://getbootstrap.com) (css + javascript)** -> `bootstrap`: 3.3.7, 3.4.0, 3.4.1, 4.0.0, 4.1.0 -> 4.1.3, 4.2.1, 4.3.0, 4.3.1
-- **[Bootstrap DatePicker](https://github.com/uxsolutions/bootstrap-datepicker) (css + javascript)** -> `bootstrap-datepicker`: 1.7.1, 1.8.0
-- **[CookieConsent](https://cookieconsent.insites.com) (css + javascript)** -> `cookieconsent`: 3.0.3, 3.1.0
-- **[jQuery](https://jquery.com) (javascript)** -> `jquery`, `jquery-slim`: 2.2.4 > 3.4.1
-- **[jQueryUI](https://jquery.com/ui) (javascript)** -> `jquery-ui`: 1.12.1
-- **[FontAwesome](https://fontawesome.com) (css + javascript)** -> `fontawesome`, `fontawesome-base`, `fontawesome-regular`, `fontawesome-brands`, `fontawesome-solid`: 5.0.4, 5.0.6, 5.0.8, 5.0.9, 5.0.10, 5.0.12, 5.0.13, 5.1.0, 5.1.1, 5.2.0, 5.3.1, 5.4.1, 5.4.2, 5.5.0, 5.6.0, 5.6.1, 5.6.3, 5.7.0, 5.7.1, 5.7.2, 5.8.0, 5.8.1, 5.8.2, 5.9.0, 5.10.0, 5.10.1, 5.10.2, 5.11.0, 5.11.1, 5.11.2, 5.12.0, 5.12.1
-- **[Friconix](https://friconix.com) (javascript)** -> `friconix` : latest
-- **[Popper](https://popper.js.org) (javascript)** -> `popper`: 1.12.9, 1.14.0 -> 1.14.6
-- **[React](https://reactjs.org) (javascript)** -> `react`, `react-dom`: 16.0 -> 16.6
-- **[Select2](https://select2.org) (css + javascript)** -> `select2`: 4.0.3, 4.0.6-rc-.0
-- **[Tinymce](https://www.tinymce.com) (javascript)** -> `tinymce`: stable
-- **[Vue.js](https://vuejs.org) (javascript)** -> vue: 2.5.17 (without versioning)
+- **[Angular](https://angularjs.org) (javascript)**
+- **[Bootstrap](http://getbootstrap.com) (css + javascript)**
+- **[Bootstrap DatePicker](https://github.com/uxsolutions/bootstrap-datepicker) (css + javascript)**
+- **[CookieConsent](https://cookieconsent.insites.com) (css + javascript)**
+- **[jQuery + Slim](https://jquery.com) (javascript)**
+- **[jQueryUI](https://jquery.com/ui) (javascript)**
+- **[FontAwesome + Base + Regular + Brands + Solid](https://fontawesome.com) (css + javascript)**
+- **[Popper](https://popper.js.org) (javascript)**
+- **[React](https://reactjs.org) (javascript)**
+- **[Select2](https://select2.org) (css + javascript)**
+- **[Tinymce](https://www.tinymce.com) (javascript)**
 
 ## How to add libraries and/or versions
 

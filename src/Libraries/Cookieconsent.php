@@ -17,55 +17,27 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 class Cookieconsent implements CssInterface, JavascriptInterface
 {
     /**
-     * Use this method to get version to use
-     * @return string|null
+     * {@inheritdoc}
      */
-    public function getVersion(string $version)
+    public function getCss(string $version, string $integrity)
     {
-        $versions = ['latest' => '', '3.*' => '3.1.0', '3.1.*' => '3.1.0', '3.1.0' => '3.1.0', '3.1.0.*' => '3.1.0', '3.0.*' => '3.0.3', '3.0.3' => '3.0.3', '3.0.3.*' => '3.0.3'];
-
-        if (isset($versions[$version])) {
-            return $versions[$version];
-        }
-
-        return false;
+        return [
+            'href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' . $version . '/cookieconsent.min.css',
+            'integrity' => $integrity,
+            'crossorigin' => 'anonymous'
+        ];
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getCss(string $version)
+    public function getJavascript(string $version, string $integrity)
     {
-        $useVersion = $this->getVersion($version);
-
-        //Data for specific version
-        $integrities = ['3.1.0' => 'sha384-AJ82o1PQz2xMlVWjJ+IdPSfyCVS/nJeYbLcpPhm/cEPrewaEdaYkaG6LCsquvogf', '3.0.3' => 'sha384-6iYDyQZuuNT7DcPJGXx241czdv2+GDGUcXRiqw1iXrjgYMTorSetxFP3JCMQMwnR'];
-
-        //Defines data to use
-        $data = null;
-        if (false !== $useVersion && isset($integrities[$useVersion])) {
-            $data = ['href' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' . $useVersion . '/cookieconsent.min.css', 'integrity' => $integrities[$useVersion], 'crossorigin' => 'anonymous'];
-        }
-
-        return $data;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getJavascript(string $version)
-    {
-        $useVersion = $this->getVersion($version);
-
-        //Data for specific version
-        $integrities = ['3.1.0' => 'sha384-l+e8/kt7mRYg7RUc/i3MsNwDJlWxkWkFDX10LF/iNglZLT96GBMAPrbaH2GP2lQy', '3.0.3' => 'sha384-PDjg2ZdS3khPzd53i18+7tzB32JVQfFMrTXYo21RqPgUmEVAPwIhxOUF/8sP79CS'];
-
-        //Defines data to use
-        $data = null;
-        if (false !== $useVersion && isset($integrities[$useVersion])) {
-            $data = ['src' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' . $useVersion  . '/cookieconsent.min.js', 'integrity' => $integrities[$useVersion], 'crossorigin' => 'anonymous', 'defer' => false];
-        }
-
-        return $data;
+        return [
+            'src' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' . $version  . '/cookieconsent.min.js',
+            'integrity' => $integrity,
+            'crossorigin' => 'anonymous',
+            'defer' => false
+        ];
     }
 }

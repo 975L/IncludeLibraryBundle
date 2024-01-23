@@ -17,39 +17,20 @@ namespace c975L\IncludeLibraryBundle\Libraries;
 class Tinymce implements JavascriptInterface
 {
     /**
-     * Use this method to get version to use
-     * @return string|null
-     */
-    public function getVersion(string $version)
-    {
-        $versions = ['stable' => '5', 'latest' => '5', '5.*' => '5', '4.*' => '4'];
-
-        if (isset($versions[$version])) {
-            return $versions[$version];
-        }
-
-        return false;
-    }
-
-    /**
      * {@inheritdoc}
      */
-    public function getJavascript(string $version)
+    public function getJavascript(string $version, string $integrity)
     {
-        $useVersion = $this->getVersion($version);
-
-        //Data for specific version
-        $integrities = ['5' => '', '4' => ''];
-
-        $data = null;
-        if (false !== $useVersion && isset($integrities[$useVersion])) {
-            $data = ['src' => 'https://cdn.tiny.cloud/1/API-KEY/tinymce/5/tinymce.min.js', 'defer' => false];
-
-            if ('4' === $useVersion) {
-                $data = ['src' => 'https://cloud.tinymce.com/stable/tinymce.min.js', 'defer' => false];
-            }
+        if ('5' === $version) {
+            return [
+                'src' => 'https://cdn.tiny.cloud/1/API-KEY/tinymce/5/tinymce.min.js',
+                'defer' => false
+            ];
+        } elseif ('4' === $version) {
+            return [
+                'src' => 'https://cloud.tinymce.com/stable/tinymce.min.js',
+                'defer' => false
+            ];
         }
-
-        return $data;
     }
 }
