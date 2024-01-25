@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.1.1
+
+- Suppressed trailing slashes (25/01/2024)
+
 ## v3.1
 
 - Simplified (greatly) the way to manage verions of libraries (23/01/2024)
