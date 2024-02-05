@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.2
+
+- Added Bootstrapbundle (05/02/2024)
+- Corrected integrity for Bootstrap (05/02/2024)
+
 ## v3.1.1
 
 - Suppressed trailing slashes (25/01/2024)
