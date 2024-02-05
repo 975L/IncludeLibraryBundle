@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.2.1
+
+- Added "&display=swap" for font (05/02/2024)
+
 ## v3.2
 
 - Added Bootstrapbundle (05/02/2024)
