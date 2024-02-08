@@ -24,7 +24,8 @@ class Jqueryui implements JavascriptInterface
         return [
             'src' => 'https://code.jquery.com/ui/' . $version  . '/jquery-ui.min.js',
             'integrity' => $integrity,
-            'crossorigin' => 'anonymous'
+            'crossorigin' => 'anonymous',
+            'defer' => true
         ];
     }
 }

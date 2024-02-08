@@ -37,7 +37,7 @@ class Bootstrapdatepicker implements CssInterface, JavascriptInterface
             'src' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/' . $version  . '/js/bootstrap-datepicker.min.js',
             'integrity' => $integrity,
             'crossorigin' => 'anonymous',
-            'defer' => false
+            'defer' => true
         ];
     }
 }

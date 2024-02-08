@@ -37,7 +37,7 @@ class Cookieconsent implements CssInterface, JavascriptInterface
             'src' => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' . $version  . '/cookieconsent.min.js',
             'integrity' => $integrity,
             'crossorigin' => 'anonymous',
-            'defer' => false
+            'defer' => true
         ];
     }
 }

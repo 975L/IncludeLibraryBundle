@@ -24,7 +24,8 @@ class Popper implements JavascriptInterface
         return [
             'src' => 'https://unpkg.com/popper.js' . $version  . '/dist/umd/popper.min.js',
             'integrity' => $integrity,
-            'crossorigin' => 'anonymous'
+            'crossorigin' => 'anonymous',
+            'defer' => true
         ];
     }
 }

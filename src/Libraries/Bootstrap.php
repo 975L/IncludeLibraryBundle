@@ -37,7 +37,7 @@ class Bootstrap implements CssInterface, JavascriptInterface
             'src' => 'https://cdn.jsdelivr.net/npm/bootstrap@' . $version . '/dist/js/bootstrap.min.js',
             'integrity' => $integrity,
             'crossorigin' => 'anonymous',
-            'defer' => false
+            'defer' => true
         ];
     }
 }

@@ -1,6 +1,10 @@
 # Changelog
 
-## v3.2.1
+## v3.3
+
+- Added defer on all javascript except jQuery (08/02/2024)
+
+## v3.2.1
 
 - Added "&display=swap" for font (05/02/2024)
 

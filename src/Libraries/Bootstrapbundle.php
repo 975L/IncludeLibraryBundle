@@ -25,7 +25,7 @@ class Bootstrapbundle implements JavascriptInterface
             'src' => 'https://cdn.jsdelivr.net/npm/bootstrap@' . $version . '/dist/js/bootstrap.bundle.min.js',
             'integrity' => $integrity,
             'crossorigin' => 'anonymous',
-            'defer' => false
+            'defer' => true
         ];
     }
 }

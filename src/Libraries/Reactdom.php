@@ -26,7 +26,8 @@ class Reactdom implements JavascriptInterface
         return [
             'src' => 'https://unpkg.com/react-dom@' . $version  . '/umd/react-dom.production.min.js',
             'integrity' => $integrity,
-            'crossorigin' => 'anonymous'
+            'crossorigin' => 'anonymous',
+            'defer' => true
         ];
     }
 }

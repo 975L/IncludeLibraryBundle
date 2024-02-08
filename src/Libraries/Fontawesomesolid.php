@@ -38,7 +38,8 @@ class Fontawesomesolid implements CssInterface, JavascriptInterface
         return [
             'src' => 'https://use.fontawesome.com/releases/v' . $version  . '/js/solid.js',
             'integrity' => $integrity,
-            'crossorigin' => 'anonymous'
+            'crossorigin' => 'anonymous',
+            'defer' => true
         ];
     }
 }

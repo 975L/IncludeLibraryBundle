@@ -24,7 +24,8 @@ class React implements JavascriptInterface
         return [
             'src' => 'https://unpkg.com/react@' . $version  . '/umd/react.production.min.js',
             'integrity' => $integrity,
-            'crossorigin' => 'anonymous'
+            'crossorigin' => 'anonymous',
+            'defer' => true
         ];
     }
 }

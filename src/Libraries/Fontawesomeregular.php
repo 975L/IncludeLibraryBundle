@@ -38,7 +38,8 @@ class Fontawesomeregular implements CssInterface, JavascriptInterface
         return [
             'src' => 'https://use.fontawesome.com/releases/v' . $version  . '/js/regular.js',
             'integrity' => $integrity,
-            'crossorigin' => 'anonymous'
+            'crossorigin' => 'anonymous',
+            'defer' => true
         ];
     }
 }

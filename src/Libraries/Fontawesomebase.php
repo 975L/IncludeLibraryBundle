@@ -38,7 +38,8 @@ class Fontawesomebase implements CssInterface, JavascriptInterface
         return [
             'src' => 'https://use.fontawesome.com/releases/v' . $version  . '/js/fontawesome.js',
             'integrity' => $integrity,
-            'crossorigin' => 'anonymous'
+            'crossorigin' => 'anonymous',
+            'defer' => true
         ];
     }
 }

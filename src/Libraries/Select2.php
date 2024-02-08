@@ -37,7 +37,7 @@ class Select2 implements CssInterface, JavascriptInterface
             'src' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/' . $version  . '/js/select2.min.js',
             'integrity' => $integrity,
             'crossorigin' => 'anonymous',
-            'defer' => false
+            'defer' => true
         ];
     }
 }

@@ -24,12 +24,12 @@ class Tinymce implements JavascriptInterface
         if ('5' === $version) {
             return [
                 'src' => 'https://cdn.tiny.cloud/1/API-KEY/tinymce/5/tinymce.min.js',
-                'defer' => false
+                'defer' => true
             ];
         } elseif ('4' === $version) {
             return [
                 'src' => 'https://cloud.tinymce.com/stable/tinymce.min.js',
-                'defer' => false
+                'defer' => true
             ];
         }
     }

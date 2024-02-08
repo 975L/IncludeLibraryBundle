@@ -24,7 +24,8 @@ class Angular implements JavascriptInterface
         return [
             'src' => 'https://ajax.googleapis.com/ajax/libs/angularjs/' . $version  . '/angular.min.js',
             'integrity' => $integrity,
-            'crossorigin' => 'anonymous'
+            'crossorigin' => 'anonymous',
+            'defer' => true
         ];
     }
 }
