@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.3.1
+
+- Added googe font preconnect (12/02/2024)
+
 ## v3.3
 
 - Added defer on all javascript except jQuery (08/02/2024)
