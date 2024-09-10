@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.3.2
+
+- Changed DependencyInjection Extension (10/09/2024)
+
 ## v3.3.1
 
 - Added googe font preconnect (12/02/2024)
