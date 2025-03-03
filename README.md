@@ -1,5 +1,7 @@
 # IncludeLibraryBundle
 
+**--- THIS BUNDLE IS NOT MAINTAINED ANYMORE ---**
+
 Fed up of having to look to latest, or specifc, version of jQuery, Bootstrap, etc. IncludeLibraryBundle is made for you ;-)
 
 Want to replace this

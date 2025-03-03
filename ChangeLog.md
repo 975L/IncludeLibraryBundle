@@ -1,5 +1,9 @@
 # Changelog
 
+## V3.4.1
+
+- Indication as not maintained anymore (03/03/2025)
+
 ## v3.4
 
 - Suppressed spaceless filter as it's deprecated (12/09/2024)
